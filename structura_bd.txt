@@ -1,0 +1,9 @@
+Administrator: 'username' <string>, 'parola' <string>, 'email' <string>
+
+Articol: ‘titlu’ <string>, ‘continut’ <string>, ‘imagine’ <BinData>, 'tags' ["string"..], 'sursa' { site <string>, autor <string>, data <Date>}, audio <BinData> - optional
+
+Administratorul are drept de editare,adaugare,modificare a articolelor din baza de date prin intermediul interfatei, pentru a evita lucrul la linia de comanda.
+
+Articolele vor fi niste obiecte ce urmeaza structura de mai sus, continand o lista de taguri prin care front-end-ul va putea afisa utilizatorului articole in functie de preferintele personale.
+In momentul conectarii la site se vor alege prin intermediul unor checkbox-uri, de exemplu, niste categorii de stiri, iar aceste categorii vor duce la alegerea articolelor ce au in lista de tag-uri categoriile respective.
+Se vor stoca si informatiile din articolele ce contin imagini sau audio(stiri de exemplu), pentru a putea fi redate si prin intermediul site-ului nostru. De asemenea se vor pastra si informatii despre sursa articolului parsat in obiectul sursa ce contine site-ul sursa, autorul si data la care a fost postat articolul.
