@@ -6,33 +6,26 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection="admins")
 public class AdminModel {
     @Id
-    private String id;
+    private String id; //username
 
-    private String username;
-
-    private String parola;
+    private String password;
 
     private String email;
 
     public AdminModel() {}
 
-    public AdminModel(String id, String username, String parola, String email) {
-        this.id = id;
-        this.username = username;
-        this.parola = parola;
+    public AdminModel(String username, String password, String email) {
+        this.id = username;
+        this.password = password;
         this.email = email;
     }
 
-    public String getId() {
+    public String getUsername() {
         return id;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public String getParola() {
-        return parola;
+    public String getPassword() {
+        return password;
     }
 
     public String getEmail() {
@@ -40,11 +33,11 @@ public class AdminModel {
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.id = username;
     }
 
-    public void setParola(String parola) {
-        this.parola = parola;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setEmail(String email) {
