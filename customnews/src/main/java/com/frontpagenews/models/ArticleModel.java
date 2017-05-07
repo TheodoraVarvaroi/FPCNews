@@ -18,17 +18,17 @@ public class ArticleModel {
 
     private SourceModel source;
 
-    private byte[] audio;
+    private String videoUrl;
 
     public ArticleModel() {}
 
-    public ArticleModel(String title, String content, byte[] image, List<String> tags, SourceModel source, byte[] audio) {
+    public ArticleModel(String title, String content, byte[] image, List<String> tags, SourceModel source, String videoUrl) {
         this.id = title;
         this.content = content;
         this.image = image;
         this.tags = tags;
         this.source = source;
-        this.audio = audio;
+        this.videoUrl = videoUrl;
     }
 
     public String getTitle() {
@@ -51,8 +51,8 @@ public class ArticleModel {
         return source;
     }
 
-    public byte[] getAudio() {
-        return audio;
+    public String getVideoUrl() {
+        return videoUrl;
     }
 
     public void setTitle(String title) {
@@ -75,7 +75,7 @@ public class ArticleModel {
         this.source = source;
     }
 
-    public void setAudio(byte[] audio) {
-        this.audio = audio;
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
     }
 }

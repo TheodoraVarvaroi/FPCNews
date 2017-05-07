@@ -47,7 +47,7 @@ public class ArticleController {
         articleData.setImage(article.getImage());
         articleData.setTags(article.getTags());
         articleData.setSource(article.getSource());
-        articleData.setAudio(article.getAudio());
+        articleData.setVideoUrl(article.getVideoUrl());
         ArticleModel updatedArticle = articleService.save(articleData);
         return new ResponseEntity<ArticleModel>(updatedArticle, HttpStatus.OK);
     }
