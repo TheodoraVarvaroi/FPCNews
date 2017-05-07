@@ -44,10 +44,10 @@ public class ArticleController {
         }
         articleData.setTitle(article.getTitle());
         articleData.setContent(article.getContent());
-        articleData.setImage(article.getImage());
+        articleData.setImageUrl(article.getImageUrl());
         articleData.setTags(article.getTags());
         articleData.setSource(article.getSource());
-        articleData.setAudio(article.getAudio());
+        articleData.setVideoUrl(article.getVideoUrl());
         ArticleModel updatedArticle = articleService.save(articleData);
         return new ResponseEntity<ArticleModel>(updatedArticle, HttpStatus.OK);
     }
