@@ -1,0 +1,46 @@
+* {
+  font-family: 'Verdana', 'Helvetica', sans-serif;
+}
+
+body
+{
+
+  padding:5px;
+  margin:10px;
+  margin-top: 20px; 
+}
+p {
+  color: white;
+    text-shadow: 2px 2px 4px #000000;
+  margin:auto; 
+  padding: 20px 0;    
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+}
+  
+.textInput
+{
+margin-top:2px;
+height:28px;
+border:1px solid #5E6E66;
+font-size:16px;
+padding:1px;
+width:100%;
+background: linear-gradient(to bottom, grey, rgba(0,127,0,0.5));
+ text-shadow: 2px 2px 5px red;
+}
+
+
+
+input[type='submit'] {
+  color: white;
+    background-color:#00539F;
+}
+input[type='checkbox'] {
+  color: white;
+    background-color:#00539F;
+}
+
+:focus {
+  background-color: red;
+}
