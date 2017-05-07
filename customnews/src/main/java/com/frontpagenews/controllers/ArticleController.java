@@ -44,7 +44,7 @@ public class ArticleController {
         }
         articleData.setTitle(article.getTitle());
         articleData.setContent(article.getContent());
-        articleData.setImage(article.getImage());
+        articleData.setImageUrl(article.getImageUrl());
         articleData.setTags(article.getTags());
         articleData.setSource(article.getSource());
         articleData.setVideoUrl(article.getVideoUrl());
