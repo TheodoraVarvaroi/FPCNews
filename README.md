@@ -1,2 +1,2 @@
-# FPCNews
-FrontPage Custom News - IP 2017
+# Custom-News-FrontEnd
+Front End for Custom News Project
