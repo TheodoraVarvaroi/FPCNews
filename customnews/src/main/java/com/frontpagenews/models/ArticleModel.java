@@ -8,78 +8,71 @@ import java.util.List;
 @Document(collection="articles")
 public class ArticleModel {
     @Id
-    private String id;
+    private String id; //title
 
-    private String titlu;
+    private String content;
 
-    private String continut;
-
-    private byte[] imagine;
+    private byte[] image;
 
     private List<String> tags;
 
-    private SourceModel sursa;
+    private SourceModel source;
 
     private byte[] audio;
 
     public ArticleModel() {}
 
-    public ArticleModel(String id, String titlu, String continut, byte[] imagine, List<String> tags, SourceModel sursa, byte[] audio) {
-        this.id = id;
-        this.titlu = titlu;
-        this.continut = continut;
-        this.imagine = imagine;
+    public ArticleModel(String title, String content, byte[] image, List<String> tags, SourceModel source, byte[] audio) {
+        this.id = title;
+        this.content = content;
+        this.image = image;
         this.tags = tags;
-        this.sursa = sursa;
+        this.source = source;
         this.audio = audio;
     }
 
-    public String getId() {
+    public String getTitle() {
         return id;
     }
 
-    public String getTitlu() {
-        return titlu;
+    public String getContent() {
+        return content;
     }
 
-    public String getContinut() {
-        return continut;
-    }
-
-    public byte[] getImagine() {
-        return imagine;
+    public byte[] getImage() {
+        return image;
     }
 
     public List<String> getTags() {
         return tags;
     }
 
-    public SourceModel getSursa() {
-        return sursa;
+    public SourceModel getSource() {
+        return source;
     }
 
     public byte[] getAudio() {
         return audio;
     }
 
-    public void setTitlu(String titlu) {
-        this.titlu = titlu;
+    public void setTitle(String title) {
+        this.id = title;
     }
 
-    public void setContinut(String continut) {
-        this.continut = continut;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public void setImagine(byte[] imagine) {
-        this.imagine = imagine;
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 
     public void setTags(List<String> tags) {
         this.tags = tags;
     }
 
-    public void setSursa(SourceModel sursa) {
-        this.sursa = sursa;
+    public void setSource(SourceModel source) {
+        this.source = source;
     }
 
     public void setAudio(byte[] audio) {

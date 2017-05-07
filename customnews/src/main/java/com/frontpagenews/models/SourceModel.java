@@ -7,39 +7,39 @@ import java.util.Date;
 public class SourceModel {
     private String site;
 
-    private String autor;
+    private String author;
 
-    private Date data;
+    private Date date;
 
     public SourceModel() {}
 
-    public SourceModel(String site, String autor, Date data) {
+    public SourceModel(String site, String author, Date date) {
         this.site = site;
-        this.autor = autor;
-        this.data = data;
+        this.author = author;
+        this.date = date;
     }
 
     public String getSite() {
         return site;
     }
 
-    public String getAutor() {
-        return autor;
+    public String getAuthor() {
+        return author;
     }
 
-    public Date getData() {
-        return data;
+    public Date getDate() {
+        return date;
     }
 
     public void setSite(String site) {
         this.site = site;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public void setData(Date data) {
-        this.data = data;
+    public void setDate(Date date) {
+        this.date = date;
     }
 }
