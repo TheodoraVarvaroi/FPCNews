@@ -6,8 +6,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -17,11 +20,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Controller
+@Component
 public class NationalGeographicParser  {
     @Autowired
     ArticleService articleService;
 
+    @Scheduled(initialDelay = 5000, fixedDelay=3600000)
     public void parseAll() {
         try {
             Document doc = Jsoup.connect("https://www.nationalgeographic.org/news/").get();
