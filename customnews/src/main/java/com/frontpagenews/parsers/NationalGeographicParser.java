@@ -1,12 +1,13 @@
-package parsers;
+package com.frontpagenews.parsers;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
-import com.frontpagenews.repositories.ArticleRepository;
+import com.frontpagenews.services.ArticleService;
 import org.jsoup.Jsoup;
-import org.jsoup.helper.Validate;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -16,9 +17,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
+@Controller
 public class NationalGeographicParser  {
-    private ArticleRepository repository;
+    @Autowired
+    ArticleService articleService;
 
     public void parseAll() {
         try {
@@ -41,7 +43,7 @@ public class NationalGeographicParser  {
 
             Document doc = Jsoup.connect(article_url).get();
             Elements title = doc.select("meta[property=\"og:title\"]");
-            String f_id = title.attr("content");
+            String f_title = title.attr("content");
             //System.out.println(f_id);
 
             Elements content = doc.select("div[itemprop = articleBody]");
@@ -83,14 +85,14 @@ public class NationalGeographicParser  {
             source.setAuthor(f_author);
 
             ArticleModel article = new ArticleModel();
-            article.setTitle(f_id);
+            article.setTitle(f_title);
             article.setContent(f_content);
             article.setImageUrl(f_image);
             article.setTags(f_tags);
             article.setSource(source);
 
-            repository.save(article);
-
+            System.out.println (article);
+            articleService.save(article);
 
         }catch (IOException e){
             System.out.println (e.toString());
@@ -98,10 +100,8 @@ public class NationalGeographicParser  {
     }
 
     public static void main(String[] args){
-        NationalGeographicParser p =new NationalGeographicParser();
+        NationalGeographicParser p = new NationalGeographicParser();
         p.parseAll();
-
-
     }
 
 

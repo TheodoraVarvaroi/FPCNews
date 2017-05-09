@@ -31,7 +31,7 @@ public class AdminServiceImpl implements AdminService {
     }
 
     public AdminModel getByUsernameAndPassword(String username, String password) {
-        return this.repository.findByIdAndPassword(username, password);
+        return this.repository.findByUsernameAndPassword(username, password);
     }
 
     public boolean verifyAdmin (String username, String password) {

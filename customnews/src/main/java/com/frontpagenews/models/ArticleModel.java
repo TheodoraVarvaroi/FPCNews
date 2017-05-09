@@ -1,14 +1,19 @@
 package com.frontpagenews.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Document(collection="articles")
 public class ArticleModel {
     @Id
-    private String id; //title
+    private String id;
+
+    @Indexed(unique = true)
+    private String title;
 
     private String content;
 
@@ -20,10 +25,17 @@ public class ArticleModel {
 
     private String videoUrl;
 
-    public ArticleModel() {}
+    public ArticleModel() {
+        this.title = " ";
+        this.content = " ";
+        this.imageUrl = " ";
+        this.tags = new ArrayList<String>();
+        this.source = new SourceModel();
+        this.videoUrl = " ";
+    }
 
     public ArticleModel(String title, String content, String imageUrl, List<String> tags, SourceModel source, String videoUrl) {
-        this.id = title;
+        this.title = title;
         this.content = content;
         this.imageUrl = imageUrl;
         this.tags = tags;
@@ -32,7 +44,7 @@ public class ArticleModel {
     }
 
     public String getTitle() {
-        return id;
+        return title;
     }
 
     public String getContent() {
@@ -56,7 +68,7 @@ public class ArticleModel {
     }
 
     public void setTitle(String title) {
-        this.id = title;
+        this.title = title;
     }
 
     public void setContent(String content) {
@@ -77,5 +89,14 @@ public class ArticleModel {
 
     public void setVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
+    }
+
+    public String toString(){
+        String ret =  "Title: " + title + "\nContent: " + content + "\nImageUrl: " + imageUrl + "\nTags: ";
+        for(int i = 0; i < tags.size(); i ++) {
+            ret += tags.get(i)+ " ";
+        }
+        ret += "\nSource: " + source + "\nVideoUrl: " + videoUrl;
+        return ret;
     }
 }
