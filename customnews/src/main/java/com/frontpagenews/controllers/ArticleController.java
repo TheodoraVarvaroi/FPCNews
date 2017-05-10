@@ -1,7 +1,7 @@
 package com.frontpagenews.controllers;
 
 import com.frontpagenews.models.ArticleModel;
-import com.frontpagenews.repositories.ArticleRepository;
+import com.frontpagenews.services.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,21 +14,21 @@ import java.util.List;
 @RequestMapping("/api/articles")
 public class ArticleController {
     @Autowired
-    ArticleRepository articleRepository;
+    ArticleService articleService;
 
     @RequestMapping(method= RequestMethod.GET)
     public List<ArticleModel> getAllArticles() {
-        return articleRepository.findAll();
+        return articleService.getAll();
     }
 
     @RequestMapping(method=RequestMethod.POST)
     public ArticleModel createArticle(@Valid @RequestBody ArticleModel admin) {
-        return articleRepository.save(admin);
+        return articleService.save(admin);
     }
 
     @RequestMapping(value="{id}", method=RequestMethod.GET)
     public ResponseEntity<ArticleModel> getArticleById(@PathVariable("id") String id) {
-        ArticleModel article = articleRepository.findOne(id);
+        ArticleModel article = articleService.getById(id);
         if(article == null) {
             return new ResponseEntity<ArticleModel>(HttpStatus.NOT_FOUND);
         } else {
@@ -38,22 +38,22 @@ public class ArticleController {
 
     @RequestMapping(value="{id}", method=RequestMethod.PUT)
     public ResponseEntity<ArticleModel> updateArticle(@Valid @RequestBody ArticleModel article, @PathVariable("id") String id) {
-        ArticleModel articleData = articleRepository.findOne(id);
+        ArticleModel articleData = articleService.getById(id);
         if(articleData == null) {
             return new ResponseEntity<ArticleModel>(HttpStatus.NOT_FOUND);
         }
-        articleData.setTitlu(article.getTitlu());
-        articleData.setContinut(article.getContinut());
-        articleData.setImagine(article.getImagine());
+        articleData.setTitle(article.getTitle());
+        articleData.setContent(article.getContent());
+        articleData.setImageUrl(article.getImageUrl());
         articleData.setTags(article.getTags());
-        articleData.setSursa(article.getSursa());
-        articleData.setAudio(article.getAudio());
-        ArticleModel updatedArticle = articleRepository.save(articleData);
+        articleData.setSource(article.getSource());
+        articleData.setVideoUrl(article.getVideoUrl());
+        ArticleModel updatedArticle = articleService.save(articleData);
         return new ResponseEntity<ArticleModel>(updatedArticle, HttpStatus.OK);
     }
 
     @RequestMapping(value="{id}", method=RequestMethod.DELETE)
     public void deleteArticle(@PathVariable("id") String id) {
-        articleRepository.delete(id);
+        articleService.delete(id);
     }
 }
