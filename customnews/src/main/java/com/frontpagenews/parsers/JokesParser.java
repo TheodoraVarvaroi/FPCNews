@@ -1,4 +1,4 @@
-package com.mkyong;
+package com.frontpagenews.parsers;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -7,7 +7,7 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-public class JokesHtmlParser {
+public class JokesParser {
 
     public static void main(String[] args) {
 
