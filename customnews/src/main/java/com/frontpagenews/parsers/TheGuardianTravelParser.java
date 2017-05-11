@@ -9,6 +9,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.stereotype.Component;
 
 import java.text.ParseException;
 import java.util.Date;
@@ -18,6 +19,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.io.IOException;
 
+@Component
 public class TheGuardianTravelParser {
   @Autowired
   private ArticleService articleService;
