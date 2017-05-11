@@ -90,7 +90,15 @@ public class EurosportParser {
     public void insertAllArticles()
     {
         for(int i=0;i<articles.size();i++)
-           articleService.save(articles.get(i));
+        {
+            try{
+                articleService.save(articles.get(i));
+            }
+            catch(Exception e)
+            {
+                System.out.println(e.getMessage());
+            }
+        }
     }
     private String getTitle(String htmlCode)
     {
@@ -115,7 +123,6 @@ public class EurosportParser {
                     sb.append(html.charAt(i));
                     i++;
                 }
-                sb.append('\n');
             }
         }
         String subcontent=sb.toString();
