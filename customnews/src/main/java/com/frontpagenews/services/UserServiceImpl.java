@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
         UserModel admin = getByUsernameAndPassword(username, password);
         if (admin.getUsername().length() > 0) {
             return true;
-        };
+        }
         return false;
-    };
+    }
 }

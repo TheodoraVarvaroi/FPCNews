@@ -2,6 +2,7 @@ package com.frontpagenews.parsers;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
+import com.mongodb.MongoException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -96,7 +97,11 @@ public class NationalGeographicParser  {
             article.setSource(source);
 
             System.out.println (article);
-            articleService.save(article);
+            try {
+                articleService.save(article);
+            } catch ( MongoException e){
+                System.out.println (e.toString());
+            }
 
         }catch (IOException e){
             System.out.println (e.toString());

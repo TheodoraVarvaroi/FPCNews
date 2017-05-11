@@ -14,13 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-
-import java.io.IOException;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -37,6 +31,16 @@ public class ArticleController {
     @RequestMapping(method=RequestMethod.POST)
     public ArticleModel createArticle(@Valid @RequestBody ArticleModel admin) {
         return articleService.save(admin);
+    }
+
+    @RequestMapping(value="/page/{page}", method=RequestMethod.GET)
+    public List<ArticleModel> getArticlePage(@PathVariable("page") String page) {
+        if(page.equals("0"))
+            return null;
+        int pagestart = (Integer.parseInt(page) - 1) * 10;
+        List<ArticleModel> list = articleService.getAll().subList(pagestart, pagestart+10);
+
+        return list;
     }
 
     @RequestMapping(value="{id}", method=RequestMethod.GET)
