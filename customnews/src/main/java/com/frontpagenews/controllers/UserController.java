@@ -16,18 +16,13 @@ import java.util.List;
 @RequestMapping("/api/user")
 public class UserController {
     @Autowired
-    UserService userService;
     private UserService userService;
 
-    @RequestMapping(method= RequestMethod.GET)
     @RequestMapping(method=RequestMethod.GET)
     public List<UserModel> getAllUsers() {
         return userService.getAll();
     }
 
-    @RequestMapping(method=RequestMethod.POST)
-    public UserModel createUser(@Valid @RequestBody UserModel user) {
-        return userService.save(user);
     @RequestMapping(method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> createUser(@Valid @RequestBody UserModel user) {
         UserModel usr = userService.getByUsernameAndPassword(user.getUsername(), user.getPassword());
