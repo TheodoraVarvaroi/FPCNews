@@ -1,4 +1,3 @@
-/*
 package com.frontpagenews.parsers;
 
 import com.frontpagenews.models.ArticleModel;
@@ -134,15 +133,20 @@ public class BBCHealthParser {
                 source.setDate(articleDate);
                 source.setAuthor(author);
 
-                ArticleModel article = new ArticleModel();
-                article.setTitle(title);
-                article.setContent(content);
-                article.setImageUrl(urlImg);
-                article.setTags(tags);
-                article.setSource(i);
+                ArticleModel article2 = new ArticleModel();
+                article2.setTitle(title);
+                article2.setContent(content);
+                article2.setImageUrl(urlImg);
+                article2.setTags(tags);
+                article2.setSource(source);
 
-                System.out.println (article);
-                articleService.save(article);
+                System.out.println (article2);
+                try {
+                    articleService.save(article2);
+                }catch(Exception e)
+                {
+                    System.out.println(e.getMessage());
+                }
 
             }
         }  //end for care parcurge liste de url-urile articolelor           
@@ -154,4 +158,3 @@ public class BBCHealthParser {
     }
     
 }
-*/
