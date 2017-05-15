@@ -1,0 +1,2121 @@
+15:20:31.414 Got a kill message. Killing runner.
+15:20:35.490 Killing runner with PID:1720 forcefully
+15:21:21.815 Checking updates...
+15:21:25.649 Unable to start plugin html-report. Plugin html-report is not installed. To install, run `gauge --install html-report`.
+15:21:25.668 # The Bookery Web App
+15:21:25.670 ## Let's simply load the page on our first test
+15:21:26.337 Error Message: org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: WIN10
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '192.168.0.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: FirefoxDriver
+15:21:26.337 Stacktrace: 
+org.openqa.selenium.firefox.internal.Executable.<init>(Executable.java:75)
+org.openqa.selenium.firefox.FirefoxBinary.<init>(FirefoxBinary.java:60)
+org.openqa.selenium.firefox.FirefoxBinary.<init>(FirefoxBinary.java:56)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:13)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:21:26.337 Error Message: java.lang.NullPointerException
+15:21:26.337 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:28)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:21:26.542 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:21:26.542 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:21:26.542 
+Total time taken: 692ms
+15:22:34.200 Checking updates...
+15:22:43.086 # The Bookery Web App
+15:22:43.088 ## Let's simply load the page on our first test
+15:22:43.810 Error Message: org.openqa.selenium.WebDriverException: Cannot find firefox binary in PATH. Make sure firefox is installed. OS appears to be: WIN10
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '192.168.0.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: FirefoxDriver
+15:22:43.811 Stacktrace: 
+org.openqa.selenium.firefox.internal.Executable.<init>(Executable.java:75)
+org.openqa.selenium.firefox.FirefoxBinary.<init>(FirefoxBinary.java:60)
+org.openqa.selenium.firefox.FirefoxBinary.<init>(FirefoxBinary.java:56)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:13)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:22:43.811 Error Message: java.lang.NullPointerException
+15:22:43.811 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:28)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:22:44.131 Plugin [Html Report] with pid [9956] has exited
+15:22:44.344 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:22:44.344 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:22:44.344 
+Total time taken: 784ms
+15:37:21.068 Checking updates...
+15:37:25.003 # The Bookery Web App
+15:37:25.005 ## Let's simply load the page on our first test
+15:37:26.378 Error Message: java.lang.NoClassDefFoundError: org/apache/commons/logging/LogFactory
+15:37:26.378 Stacktrace: 
+org.apache.http.conn.ssl.AbstractVerifier.<init>(AbstractVerifier.java:60)
+org.apache.http.conn.ssl.AllowAllHostnameVerifier.<init>(AllowAllHostnameVerifier.java:43)
+org.apache.http.conn.ssl.AllowAllHostnameVerifier.<clinit>(AllowAllHostnameVerifier.java:45)
+org.apache.http.conn.ssl.SSLConnectionSocketFactory.<clinit>(SSLConnectionSocketFactory.java:144)
+org.openqa.selenium.remote.internal.HttpClientFactory.getClientConnectionManager(HttpClientFactory.java:71)
+org.openqa.selenium.remote.internal.HttpClientFactory.<init>(HttpClientFactory.java:57)
+org.openqa.selenium.remote.internal.HttpClientFactory.<init>(HttpClientFactory.java:60)
+org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.getDefaultHttpClientFactory(ApacheHttpClient.java:252)
+org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.<init>(ApacheHttpClient.java:229)
+org.openqa.selenium.remote.HttpCommandExecutor.getDefaultClientFactory(HttpCommandExecutor.java:96)
+org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:70)
+org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:58)
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:87)
+org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:18)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:37:26.378 Error Message: java.lang.NullPointerException
+15:37:26.378 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:33)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:37:26.491 Plugin [Html Report] with pid [1504] has exited
+15:37:26.702 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:37:26.702 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:37:26.703 
+Total time taken: 1.476s
+15:40:02.666 Checking updates...
+15:40:02.987 # The Bookery Web App
+15:40:02.989 ## Let's simply load the page on our first test
+15:40:03.934 Error Message: java.lang.NoClassDefFoundError: org/apache/commons/logging/LogFactory
+15:40:03.934 Stacktrace: 
+org.apache.http.conn.ssl.AbstractVerifier.<init>(AbstractVerifier.java:60)
+org.apache.http.conn.ssl.AllowAllHostnameVerifier.<init>(AllowAllHostnameVerifier.java:43)
+org.apache.http.conn.ssl.AllowAllHostnameVerifier.<clinit>(AllowAllHostnameVerifier.java:45)
+org.apache.http.conn.ssl.SSLConnectionSocketFactory.<clinit>(SSLConnectionSocketFactory.java:144)
+org.openqa.selenium.remote.internal.HttpClientFactory.getClientConnectionManager(HttpClientFactory.java:71)
+org.openqa.selenium.remote.internal.HttpClientFactory.<init>(HttpClientFactory.java:57)
+org.openqa.selenium.remote.internal.HttpClientFactory.<init>(HttpClientFactory.java:60)
+org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.getDefaultHttpClientFactory(ApacheHttpClient.java:252)
+org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.<init>(ApacheHttpClient.java:229)
+org.openqa.selenium.remote.HttpCommandExecutor.getDefaultClientFactory(HttpCommandExecutor.java:96)
+org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:70)
+org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:58)
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:87)
+org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:14)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:40:03.934 Error Message: java.lang.NullPointerException
+15:40:03.935 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:40:04.043 Plugin [Html Report] with pid [10284] has exited
+15:40:04.243 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:40:04.243 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:40:04.243 
+Total time taken: 1.014s
+15:42:54.370 Checking updates...
+15:42:58.008 # The Bookery Web App
+15:42:58.010 ## Let's simply load the page on our first test
+15:42:59.177 Error Message: java.lang.NoClassDefFoundError: org/apache/commons/exec/Executor
+15:42:59.178 Stacktrace: 
+org.openqa.selenium.os.CommandLine.<init>(CommandLine.java:47)
+org.openqa.selenium.firefox.FirefoxBinary.startProfile(FirefoxBinary.java:97)
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:100)
+org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:14)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:42:59.178 Error Message: java.lang.NullPointerException
+15:42:59.178 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:42:59.283 Plugin [Html Report] with pid [15720] has exited
+15:42:59.491 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:42:59.491 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:42:59.491 
+Total time taken: 1.244s
+15:44:50.347 Checking updates...
+15:44:55.714 # The Bookery Web App
+15:44:55.715 ## Let's simply load the page on our first test
+15:44:57.116 Error Message: java.lang.NoClassDefFoundError: org/apache/commons/exec/Executor
+15:44:57.116 Stacktrace: 
+org.openqa.selenium.os.CommandLine.<init>(CommandLine.java:47)
+org.openqa.selenium.firefox.FirefoxBinary.startProfile(FirefoxBinary.java:97)
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:100)
+org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:14)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:44:57.117 Error Message: java.lang.NullPointerException
+15:44:57.117 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:44:57.222 Plugin [Html Report] with pid [424] has exited
+15:44:57.599 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:44:57.599 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:44:57.599 
+Total time taken: 1.464s
+15:48:30.961 Checking updates...
+15:48:35.262 # The Bookery Web App
+15:48:35.265 ## Let's simply load the page on our first test
+15:48:36.632 Error Message: java.lang.NoClassDefFoundError: org/apache/commons/exec/Executor
+15:48:36.632 Stacktrace: 
+org.openqa.selenium.os.CommandLine.<init>(CommandLine.java:47)
+org.openqa.selenium.firefox.FirefoxBinary.startProfile(FirefoxBinary.java:97)
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:100)
+org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:14)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:48:36.632 Error Message: java.lang.NullPointerException
+15:48:36.632 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+15:48:36.740 Plugin [Html Report] with pid [9856] has exited
+15:48:37.043 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:48:37.043 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:48:37.044 
+Total time taken: 1.439s
+16:13:13.643 Got a kill message. Killing runner.
+16:13:17.664 Killing runner with PID:676 forcefully
+16:13:53.512 Checking updates...
+16:13:57.193 # The Bookery Web App
+16:13:57.195 ## Let's simply load the page on our first test
+16:13:58.661 Error Message: java.lang.NoClassDefFoundError: org/apache/commons/exec/Executor
+16:13:58.661 Stacktrace: 
+org.openqa.selenium.os.CommandLine.<init>(CommandLine.java:47)
+org.openqa.selenium.firefox.FirefoxBinary.startProfile(FirefoxBinary.java:97)
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:100)
+org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:14)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+16:13:58.661 Error Message: java.lang.NullPointerException
+16:13:58.661 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+16:13:58.791 Plugin [Html Report] with pid [15500] has exited
+16:13:59.152 Specifications:	1 executed	0 passed	1 failed	0 skipped
+16:13:59.152 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+16:13:59.153 
+Total time taken: 1.547s
+09:01:49.201 Got a kill message. Killing runner.
+09:01:53.330 Killing runner with PID:7328 forcefully
+11:17:09.354 Got a kill message. Killing runner.
+11:17:13.434 Killing runner with PID:13492 forcefully
+11:49:18.135 Checking updates...
+11:49:22.594 # The Bookery Web App
+11:49:22.596 ## Let's simply load the page on our first test
+11:49:27.084 Error Message: java.lang.NoClassDefFoundError: org/apache/commons/exec/Executor
+11:49:27.084 Stacktrace: 
+org.openqa.selenium.os.CommandLine.<init>(CommandLine.java:47)
+org.openqa.selenium.firefox.FirefoxBinary.startProfile(FirefoxBinary.java:97)
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:100)
+org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:14)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:49:27.084 Error Message: java.lang.NullPointerException
+11:49:27.084 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:49:27.191 Plugin [Html Report] with pid [2320] has exited
+11:49:27.391 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:49:27.391 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:49:27.391 
+Total time taken: 4.621s
+11:51:29.291 Checking updates...
+11:51:36.576 # The Bookery Web App
+11:51:36.578 ## Let's simply load the page on our first test
+11:51:39.017 Error Message: java.lang.NoClassDefFoundError: org/apache/commons/exec/Executor
+11:51:39.017 Stacktrace: 
+org.openqa.selenium.os.CommandLine.<init>(CommandLine.java:47)
+org.openqa.selenium.firefox.FirefoxBinary.startProfile(FirefoxBinary.java:97)
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:100)
+org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:14)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:51:39.017 Error Message: java.lang.NullPointerException
+11:51:39.017 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:51:39.122 Plugin [Html Report] with pid [15396] has exited
+11:51:39.322 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:51:39.322 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:51:39.322 
+Total time taken: 2.496s
+11:53:06.299 Checking updates...
+11:53:10.372 # The Bookery Web App
+11:53:10.372 ## Let's simply load the page on our first test
+11:53:58.961 Error Message: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+ershare.com_xpi","installDate":1475613826240,"updateDate":1475613826240,"applyBackgroundUpdates":1,"bootstrap":false,"skinnable":false,"size":259422,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":true,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"3.6","maxVersion":"48.0"}],"targetPlatforms":[],"multiprocessCompatible":false,"signedState":2,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null}
+1494492793601	DeferredSave.extensions.json	DEBUG	Save changes
+1494492793601	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1494492793601	addons.xpi-utils	DEBUG	Updating add-on states
+1494492793602	addons.xpi-utils	DEBUG	Writing add-ons list
+1494492793609	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1494492793609	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 2.0
+1494492793610	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1494492793611	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.14
+1494492793612	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1494492793612	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1494492793613	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1494492793614	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.0
+1494492793616	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1494492793616	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1494492793616	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1494492793616	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1494492793617	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1494492793617	addons.manager	DEBUG	Starting provider: GMPProvider
+1494492793622	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1494492793622	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1494492793622	addons.manager	DEBUG	Starting provider: PluginProvider
+1494492793622	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1494492793623	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1494492793623	addons.manager	DEBUG	Completed startup sequence
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0
+1494492794048	DeferredSave.extensions.json	DEBUG	Starting timer
+1494492794063	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1494492794063	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1494492794063	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1494492794289	DeferredSave.extensions.json	DEBUG	Starting write
+1494492794485	addons.repository	DEBUG	No addons.json found.
+1494492794486	DeferredSave.addons.json	DEBUG	Save changes
+1494492794490	DeferredSave.addons.json	DEBUG	Starting timer
+1494492795471	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1494492795471	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1494492795471	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1494492795475	DeferredSave.addons.json	DEBUG	Starting write
+1494492795506	DeferredSave.extensions.json	DEBUG	Write succeeded
+1494492795549	DeferredSave.addons.json	DEBUG	Write succeeded
+Crash Annotation GraphicsCriticalError: |[C0][GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0 (t=3.186) [GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0
+
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.17.254.209', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: FirefoxDriver
+11:53:58.961 Stacktrace: 
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:125)
+org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:14)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:53:58.966 Error Message: java.lang.NullPointerException
+11:53:58.966 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:53:59.069 Plugin [Html Report] with pid [14452] has exited
+11:53:59.269 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:53:59.269 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:53:59.269 
+Total time taken: 48.652s
+11:54:49.431 Checking updates...
+11:54:55.530 # The Bookery Web App
+11:54:55.545 ## Let's simply load the page on our first test
+11:55:35.655 Checking updates...
+11:55:39.754 # The Bookery Web App
+11:55:39.757 ## Let's simply load the page on our first test
+11:56:32.173 Checking updates...
+11:56:34.899 # The Bookery Web App
+11:56:34.902 ## Let's simply load the page on our first test
+11:57:24.937 Error Message: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+c8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"3.6","maxVersion":"48.0"}],"targetPlatforms":[],"multiprocessCompatible":false,"signedState":2,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null}
+1494492995936	DeferredSave.extensions.json	DEBUG	Save changes
+1494492995937	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1494492995938	addons.xpi-utils	DEBUG	Updating add-on states
+1494492995939	addons.xpi-utils	DEBUG	Writing add-ons list
+1494492995942	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1494492995943	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 2.0
+1494492995944	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1494492995944	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.14
+1494492995945	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1494492995946	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1494492995947	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1494492995947	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.0
+1494492995949	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1494492995949	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1494492995949	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1494492995950	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1494492995950	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1494492995950	addons.manager	DEBUG	Starting provider: GMPProvider
+1494492995954	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1494492995955	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1494492995955	addons.manager	DEBUG	Starting provider: PluginProvider
+1494492995955	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1494492995955	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1494492995955	addons.manager	DEBUG	Completed startup sequence
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0
+1494492996301	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1494492996302	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1494492996302	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1494492996487	DeferredSave.extensions.json	DEBUG	Write succeeded
+1494492996487	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 19
+1494492996487	DeferredSave.extensions.json	DEBUG	Starting timer
+1494492996508	addons.repository	DEBUG	No addons.json found.
+1494492996509	DeferredSave.addons.json	DEBUG	Save changes
+1494492996512	DeferredSave.addons.json	DEBUG	Starting timer
+1494492996540	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1494492996540	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1494492996540	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1494492996543	DeferredSave.extensions.json	DEBUG	Starting write
+1494492996570	DeferredSave.addons.json	DEBUG	Starting write
+1494492996572	DeferredSave.extensions.json	DEBUG	Write succeeded
+1494492996584	DeferredSave.addons.json	DEBUG	Write succeeded
+Crash Annotation GraphicsCriticalError: |[C0][GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0 (t=0.96645) [GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0
+[GPU 11992] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.17.254.209', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: FirefoxDriver
+11:57:24.938 Stacktrace: 
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:125)
+org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:14)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:57:24.943 Error Message: java.lang.NullPointerException
+11:57:24.943 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:57:25.048 Plugin [Html Report] with pid [13032] has exited
+11:57:25.265 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:57:25.265 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:57:25.265 
+Total time taken: 50.093s
+12:11:10.214 Got a kill message. Killing runner.
+12:11:14.263 Killing runner with PID:17792 forcefully
+12:12:06.233 Checking updates...
+12:12:10.373 # The Bookery Web App
+12:12:10.376 ## Let's simply load the page on our first test
+12:12:57.858 Error Message: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+me":"Wondershare Video Converter Ultimate","description":"Download YouTube and other online videos","creator":"Wondershare","homepageURL":"http://www.Wondershare.com"},"visible":true,"active":false,"userDisabled":true,"appDisabled":false,"descriptor":"C:\\ProgramData\\Wondershare\\Video Converter Ultimate\\WSVCU@Wondershare.com_xpi","installDate":1475613826240,"updateDate":1475613826240,"applyBackgroundUpdates":1,"bootstrap":false,"skinnable":false,"size":259422,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":true,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"3.6","maxVersion":"48.0"}],"targetPlatforms":[],"multiprocessCompatible":false,"signedState":2,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null}
+1494493932405	DeferredSave.extensions.json	DEBUG	Save changes
+1494493932405	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1494493932405	addons.xpi-utils	DEBUG	Updating add-on states
+1494493932406	addons.xpi-utils	DEBUG	Writing add-ons list
+1494493932408	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1494493932409	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 2.0
+1494493932410	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1494493932413	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1494493932416	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1494493932417	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.0
+1494493932419	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1494493932420	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1494493932420	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1494493932420	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1494493932420	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1494493932420	addons.manager	DEBUG	Starting provider: GMPProvider
+1494493932427	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1494493932427	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1494493932427	addons.manager	DEBUG	Starting provider: PluginProvider
+1494493932427	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1494493932428	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1494493932428	addons.manager	DEBUG	Completed startup sequence
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0
+1494493932920	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1494493932920	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1494493932920	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1494493933282	DeferredSave.extensions.json	DEBUG	Write succeeded
+1494493933282	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 19
+1494493933282	DeferredSave.extensions.json	DEBUG	Starting timer
+1494493933301	addons.repository	DEBUG	No addons.json found.
+1494493933302	DeferredSave.addons.json	DEBUG	Save changes
+1494493933306	DeferredSave.addons.json	DEBUG	Starting timer
+1494493933381	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1494493933381	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1494493933381	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1494493933384	DeferredSave.extensions.json	DEBUG	Starting write
+1494493933387	DeferredSave.addons.json	DEBUG	Starting write
+1494493933444	DeferredSave.extensions.json	DEBUG	Write succeeded
+1494493933501	DeferredSave.addons.json	DEBUG	Write succeeded
+
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.17.254.209', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: FirefoxDriver
+12:12:57.858 Stacktrace: 
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:125)
+org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:14)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+12:12:57.863 Error Message: java.lang.NullPointerException
+12:12:57.863 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+12:12:57.968 Plugin [Html Report] with pid [17524] has exited
+12:12:58.168 Specifications:	1 executed	0 passed	1 failed	0 skipped
+12:12:58.168 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+12:12:58.168 
+Total time taken: 47.562s
+10:24:58.812 Got a kill message. Killing runner.
+10:25:02.971 Killing runner with PID:6964 forcefully
+11:13:39.316 Got a kill message. Killing runner.
+11:13:43.499 Killing runner with PID:18304 forcefully
+11:14:30.190 Checking updates...
+11:14:32.079 # The Bookery Web App
+11:14:32.081 ## Let's simply load the page on our first test
+11:15:19.724 Error Message: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+me":"Wondershare Video Converter Ultimate","description":"Download YouTube and other online videos","creator":"Wondershare","homepageURL":"http://www.Wondershare.com"},"visible":true,"active":false,"userDisabled":true,"appDisabled":false,"descriptor":"C:\\ProgramData\\Wondershare\\Video Converter Ultimate\\WSVCU@Wondershare.com_xpi","installDate":1475613826240,"updateDate":1475613826240,"applyBackgroundUpdates":1,"bootstrap":false,"skinnable":false,"size":259422,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":true,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"3.6","maxVersion":"48.0"}],"targetPlatforms":[],"multiprocessCompatible":false,"signedState":2,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null}
+1494663273437	DeferredSave.extensions.json	DEBUG	Save changes
+1494663273437	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1494663273437	addons.xpi-utils	DEBUG	Updating add-on states
+1494663273438	addons.xpi-utils	DEBUG	Writing add-ons list
+1494663273441	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1494663273441	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 2.0
+1494663273443	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1494663273444	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1494663273446	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1494663273447	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.0
+1494663273450	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1494663273450	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1494663273450	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1494663273450	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1494663273450	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1494663273451	addons.manager	DEBUG	Starting provider: GMPProvider
+1494663273456	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1494663273457	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1494663273457	addons.manager	DEBUG	Starting provider: PluginProvider
+1494663273457	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1494663273457	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1494663273458	addons.manager	DEBUG	Completed startup sequence
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0
+1494663273863	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1494663273864	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1494663273864	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1494663274138	DeferredSave.extensions.json	DEBUG	Write succeeded
+1494663274138	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 19
+1494663274138	DeferredSave.extensions.json	DEBUG	Starting timer
+1494663274158	addons.repository	DEBUG	No addons.json found.
+1494663274159	DeferredSave.addons.json	DEBUG	Save changes
+1494663274163	DeferredSave.addons.json	DEBUG	Starting timer
+1494663274219	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1494663274219	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1494663274220	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1494663274223	DeferredSave.extensions.json	DEBUG	Starting write
+1494663274227	DeferredSave.addons.json	DEBUG	Starting write
+1494663274345	DeferredSave.extensions.json	DEBUG	Write succeeded
+1494663274364	DeferredSave.addons.json	DEBUG	Write succeeded
+
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: FirefoxDriver
+11:15:19.724 Stacktrace: 
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:125)
+org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:14)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:15:19.729 Error Message: java.lang.NullPointerException
+11:15:19.729 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:15:19.843 Plugin [Html Report] with pid [10292] has exited
+11:15:20.241 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:15:20.241 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:15:20.262 
+Total time taken: 47.713s
+11:15:20.330 Updates are available. Run gauge --check-updates for more info.
+11:17:53.966 Checking updates...
+11:17:57.664 # The Bookery Web App
+11:17:57.668 ## Let's simply load the page on our first test
+11:18:44.626 Error Message: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+me":"Wondershare Video Converter Ultimate","description":"Download YouTube and other online videos","creator":"Wondershare","homepageURL":"http://www.Wondershare.com"},"visible":true,"active":false,"userDisabled":true,"appDisabled":false,"descriptor":"C:\\ProgramData\\Wondershare\\Video Converter Ultimate\\WSVCU@Wondershare.com_xpi","installDate":1475613826240,"updateDate":1475613826240,"applyBackgroundUpdates":1,"bootstrap":false,"skinnable":false,"size":259422,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":true,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"3.6","maxVersion":"48.0"}],"targetPlatforms":[],"multiprocessCompatible":false,"signedState":2,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null}
+1494663479126	DeferredSave.extensions.json	DEBUG	Save changes
+1494663479126	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1494663479126	addons.xpi-utils	DEBUG	Updating add-on states
+1494663479127	addons.xpi-utils	DEBUG	Writing add-ons list
+1494663479130	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1494663479130	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 2.0
+1494663479132	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1494663479134	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1494663479136	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1494663479136	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.0
+1494663479139	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1494663479139	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1494663479139	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1494663479139	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1494663479140	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1494663479140	addons.manager	DEBUG	Starting provider: GMPProvider
+1494663479144	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1494663479144	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1494663479144	addons.manager	DEBUG	Starting provider: PluginProvider
+1494663479145	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1494663479145	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1494663479145	addons.manager	DEBUG	Completed startup sequence
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0
+1494663479529	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1494663479529	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1494663479530	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1494663479841	DeferredSave.extensions.json	DEBUG	Write succeeded
+1494663479841	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 19
+1494663479841	DeferredSave.extensions.json	DEBUG	Starting timer
+1494663479860	addons.repository	DEBUG	No addons.json found.
+1494663479860	DeferredSave.addons.json	DEBUG	Save changes
+1494663479862	DeferredSave.addons.json	DEBUG	Starting timer
+1494663479889	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1494663479889	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1494663479889	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1494663479893	DeferredSave.extensions.json	DEBUG	Starting write
+1494663479973	DeferredSave.addons.json	DEBUG	Starting write
+1494663480032	DeferredSave.extensions.json	DEBUG	Write succeeded
+1494663480054	DeferredSave.addons.json	DEBUG	Write succeeded
+
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: FirefoxDriver
+11:18:44.626 Stacktrace: 
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:125)
+org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+FirstTest.setup(FirstTest.java:14)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:18:44.627 Error Message: java.lang.NullPointerException
+11:18:44.627 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:29)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:18:44.731 Plugin [Html Report] with pid [10272] has exited
+11:18:44.932 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:18:44.932 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:18:44.932 
+Total time taken: 47.03s
+11:18:44.932 Updates are available. Run gauge --check-updates for more info.
+11:21:34.447 Checking updates...
+11:21:37.333 # The Bookery Web App
+11:21:37.333 ## Let's simply load the page on our first test
+11:21:37.912 Error Message: java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
+11:21:37.912 Stacktrace: 
+com.google.common.base.Preconditions.checkState(Preconditions.java:177)
+org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:109)
+org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:296)
+org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
+FirstTest.setup(FirstTest.java:15)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionStartingProcessor.process(ScenarioExecutionStartingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:21:37.912 Error Message: java.lang.NullPointerException
+11:21:37.912 Stacktrace: 
+FirstTest.tearDown(FirstTest.java:30)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:21:38.015 Plugin [Html Report] with pid [8608] has exited
+11:21:38.216 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:21:38.216 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:21:38.216 
+Total time taken: 633ms
+11:21:38.216 Updates are available. Run gauge --check-updates for more info.
+11:30:12.065 Checking updates...
+11:30:15.242 # The Bookery Web App
+11:30:15.248 ## Let's simply load the page on our first test
+11:30:18.024 * Navigate to "https://google.ro"
+11:30:19.192 
+Failed Step: Navigate to "https://google.ro"
+11:30:19.192 Specification: specs\FirstTest.spec:7
+11:30:19.192 Error Message: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir10404_28705}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e2eb984da6f8226920cbe695f12cf31e
+11:30:19.192 Stacktrace: 
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
+FirstTest.navigateTo(FirstTest.java:22)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:30:22.060 Error Message: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir10404_28705}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e2eb984da6f8226920cbe695f12cf31e
+11:30:22.060 Stacktrace: 
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:526)
+FirstTest.tearDown(FirstTest.java:32)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:30:22.164 Plugin [Html Report] with pid [4000] has exited
+11:30:22.365 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:30:22.365 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:30:22.365 
+Total time taken: 6.918s
+11:30:22.366 Updates are available. Run gauge --check-updates for more info.
+11:33:17.021 Checking updates...
+11:33:19.846 # The Bookery Web App
+11:33:19.846 ## Let's simply load the page on our first test
+11:33:21.391 * Navigate to "https://google.ro"
+11:33:22.360 
+Failed Step: Navigate to "https://google.ro"
+11:33:22.360 Specification: specs\FirstTest.spec:7
+11:33:22.360 Error Message: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir8532_25590}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 89305766eeb0474050ddf3aa716da2f8
+11:33:22.360 Stacktrace: 
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
+FirstTest.navigateTo(FirstTest.java:22)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:33:25.255 Error Message: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir8532_25590}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 89305766eeb0474050ddf3aa716da2f8
+11:33:25.255 Stacktrace: 
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:526)
+FirstTest.tearDown(FirstTest.java:32)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:33:25.359 Plugin [Html Report] with pid [10584] has exited
+11:33:25.560 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:33:25.560 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:33:25.560 
+Total time taken: 5.467s
+11:33:25.560 Updates are available. Run gauge --check-updates for more info.
+11:34:12.614 Checking updates...
+11:34:15.721 # The Bookery Web App
+11:34:15.724 ## Let's simply load the page on our first test
+11:34:17.321 * Navigate to "https://google.ro"
+11:34:18.257 
+Failed Step: Navigate to "https://google.ro"
+11:34:18.257 Specification: specs\FirstTest.spec:7
+11:34:18.257 Error Message: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir2420_9563}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3a89cfec8e229b545f1f1a4751b565cb
+11:34:18.258 Stacktrace: 
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
+FirstTest.navigateTo(FirstTest.java:22)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:34:21.306 Error Message: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir2420_9563}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3a89cfec8e229b545f1f1a4751b565cb
+11:34:21.306 Stacktrace: 
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:526)
+FirstTest.tearDown(FirstTest.java:32)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:34:21.410 Plugin [Html Report] with pid [6348] has exited
+11:34:21.611 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:34:21.611 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:34:21.611 
+Total time taken: 5.63s
+11:34:21.611 Updates are available. Run gauge --check-updates for more info.
+11:37:00.173 Got a kill message. Killing runner.
+11:37:04.391 Killing runner with PID:13832 forcefully
+11:37:31.437 Checking updates...
+11:37:35.009 # The Bookery Web App
+11:37:35.012 ## Let's simply load the page on our first test
+11:37:37.369 * Navigate to "https://google.ro"
+11:37:38.269 
+Failed Step: Navigate to "https://google.ro"
+11:37:38.269 Specification: specs\FirstTest.spec:7
+11:37:38.269 Error Message: org.openqa.selenium.WebDriverException: java.net.SocketException: Connection reset
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: RemoteWebDriver
+11:37:38.269 Stacktrace: 
+org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:91)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+FirstTest.navigateTo(FirstTest.java:22)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:37:41.167 Error Message: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to localhost:5246 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: RemoteWebDriver
+11:37:41.167 Stacktrace: 
+org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:91)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
+FirstTest.tearDown(FirstTest.java:32)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.executeHook(HooksExecutor.java:99)
+com.thoughtworks.gauge.execution.HooksExecutor$TaggedHookExecutor.execute(HooksExecutor.java:85)
+com.thoughtworks.gauge.execution.HooksExecutor.execute(HooksExecutor.java:42)
+com.thoughtworks.gauge.processor.MethodExecutionMessageProcessor.executeHooks(MethodExecutionMessageProcessor.java:54)
+com.thoughtworks.gauge.processor.ScenarioExecutionEndingProcessor.process(ScenarioExecutionEndingProcessor.java:26)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:37:41.272 Plugin [Html Report] with pid [10048] has exited
+11:37:41.592 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:37:41.592 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:37:41.592 
+Total time taken: 6.221s
+11:37:41.593 Updates are available. Run gauge --check-updates for more info.
+11:42:05.233 Checking updates...
+11:42:09.773 # The Bookery Web App
+11:42:09.776 ## Let's simply load the page on our first test
+11:42:12.692 * Navigate to "https://google.ro"
+11:42:14.772 * Page title should be "The Bookery"
+11:42:15.060 
+Failed Step: Page title should be "The Bookery"
+11:42:15.060 Specification: specs\FirstTest.spec:8
+11:42:15.060 Error Message: org.junit.ComparisonFailure: expected:<[Google]> but was:<[The Bookery]>
+11:42:15.060 Stacktrace: 
+org.junit.Assert.assertEquals(Assert.java:115)
+org.junit.Assert.assertEquals(Assert.java:144)
+FirstTest.pageTitleShouldBe(FirstTest.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:42:15.978 Plugin [Html Report] with pid [11044] has exited
+11:42:16.179 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:42:16.179 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:42:16.179 
+Total time taken: 6.15s
+11:42:16.180 Updates are available. Run gauge --check-updates for more info.
+11:43:48.846 Checking updates...
+11:43:52.685 # The Bookery Web App
+11:43:52.689 ## Let's simply load the page on our first test
+11:43:55.213 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+11:44:52.237 * Page title should be "The Bookery"
+11:44:52.647 
+Failed Step: Page title should be "The Bookery"
+11:44:52.647 Specification: specs\FirstTest.spec:8
+11:44:52.647 Error Message: org.junit.ComparisonFailure: expected:<[News Feed]> but was:<[The Bookery]>
+11:44:52.647 Stacktrace: 
+org.junit.Assert.assertEquals(Assert.java:115)
+org.junit.Assert.assertEquals(Assert.java:144)
+FirstTest.pageTitleShouldBe(FirstTest.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:44:53.575 Plugin [Html Report] with pid [17636] has exited
+11:44:53.777 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:44:53.777 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:44:53.777 
+Total time taken: 1m0.836s
+11:44:53.777 Updates are available. Run gauge --check-updates for more info.
+11:45:32.467 Checking updates...
+11:45:36.505 # The Bookery Web App
+11:45:36.507 ## Let's simply load the page on our first test
+11:45:39.041 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+11:45:53.553 * Page title should be "The Bookery"
+11:45:53.905 
+Failed Step: Page title should be "The Bookery"
+11:45:53.905 Specification: specs\FirstTest.spec:8
+11:45:53.905 Error Message: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 8 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir14288_19399}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 2dc6e511b65e0699d4dff9c488b6e5f0
+11:45:53.905 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:368)
+FirstTest.pageTitleShouldBe(FirstTest.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:45:54.733 Plugin [Html Report] with pid [15932] has exited
+11:45:54.934 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:45:54.934 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:45:54.934 
+Total time taken: 18.173s
+11:45:54.934 Updates are available. Run gauge --check-updates for more info.
+11:46:18.954 Checking updates...
+11:46:23.722 # The Bookery Web App
+11:46:23.729 ## Let's simply load the page on our first test
+11:46:26.278 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+11:46:28.672 * Page title should be "News Feed"
+11:46:29.070 
+Failed Step: Page title should be "News Feed"
+11:46:29.070 Specification: specs\FirstTest.spec:8
+11:46:29.070 Error Message: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 13 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir1984_13895}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 7ba5a3c8faf9fe26cb31849adc466fb0
+11:46:29.070 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:368)
+FirstTest.pageTitleShouldBe(FirstTest.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:46:29.969 Plugin [Html Report] with pid [16144] has exited
+11:46:30.171 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:46:30.171 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:46:30.171 
+Total time taken: 6.196s
+11:46:30.171 Updates are available. Run gauge --check-updates for more info.
+11:48:00.577 Checking updates...
+11:48:03.883 # The Bookery Web App
+11:48:03.887 ## Let's simply load the page on our first test
+11:48:06.354 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+11:48:11.618 * Page title should be "News Feed"
+11:48:11.984 
+Failed Step: Page title should be "News Feed"
+11:48:11.984 Specification: specs\FirstTest.spec:8
+11:48:11.984 Error Message: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 13 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir17716_5592}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: bf6629c636bdccae7aa78ee3287a2ace
+11:48:11.985 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:368)
+FirstTest.pageTitleShouldBe(FirstTest.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+11:48:12.818 Plugin [Html Report] with pid [11024] has exited
+11:48:13.019 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:48:13.019 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:48:13.019 
+Total time taken: 8.884s
+11:48:13.019 Updates are available. Run gauge --check-updates for more info.
+11:48:37.553 Checking updates...
+11:48:41.439 # The Bookery Web App
+11:48:41.441 ## Let's simply load the page on our first test
+11:48:43.981 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+11:48:51.746 * Page title should be "News Feed"
+11:48:52.689 Plugin [Html Report] with pid [10200] has exited
+11:48:52.789 Specifications:	1 executed	1 passed	0 failed	0 skipped
+11:48:52.789 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+11:48:52.789 
+Total time taken: 11.195s
+11:48:52.789 Updates are available. Run gauge --check-updates for more info.
+11:57:18.254 Checking updates...
+11:57:21.760 # The Bookery Web App
+11:57:21.762 ## Let's simply load the page on our first test
+11:57:24.599 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+11:58:24.381 * Page title should be "News Feed"
+11:58:25.269 Plugin [Html Report] with pid [7276] has exited
+11:58:25.369 Specifications:	1 executed	1 passed	0 failed	0 skipped
+11:58:25.369 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+11:58:25.369 
+Total time taken: 1m3.455s
+11:58:25.369 Updates are available. Run gauge --check-updates for more info.
+12:56:40.762 Checking updates...
+12:56:44.843 [ValidationError] C:\Users\Onu\IdeaProjects\first\specs\FirstTest.spec:7 Duplicate step implementation => 'Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"'
+12:56:45.008 Plugin [Html Report] with pid [5592] has exited
+12:56:45.109 Specifications:	0 executed	0 passed	0 failed	1 skipped
+12:56:45.109 Scenarios:	0 executed	0 passed	0 failed	1 skipped
+12:56:45.109 
+Total time taken: 61ms
+12:56:45.109 Updates are available. Run gauge --check-updates for more info.
+12:59:26.341 Got a kill message. Killing runner.
+12:59:30.351 Killing runner with PID:12484 forcefully
+12:59:55.761 Checking updates...
+12:59:56.119 [ValidationError] C:\Users\Onu\IdeaProjects\first\specs\FirstTest.spec:7 Duplicate step implementation => 'Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"'
+12:59:56.119 [ValidationError] C:\Users\Onu\IdeaProjects\first\specs\FirstTest.spec:8 Duplicate step implementation => 'Click on button "Register"'
+12:59:56.308 Plugin [Html Report] with pid [8948] has exited
+12:59:56.408 Specifications:	0 executed	0 passed	0 failed	1 skipped
+12:59:56.408 Scenarios:	0 executed	0 passed	0 failed	1 skipped
+12:59:56.408 
+Total time taken: 85ms
+12:59:56.408 Updates are available. Run gauge --check-updates for more info.
+13:01:29.706 Checking updates...
+13:01:33.885 # The Bookery Web App
+13:01:33.887 ## Let's simply load the page on our first test
+13:01:37.668 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+13:02:37.738 * Click on button "Register"
+13:02:38.236 
+Failed Step: Click on button "Register"
+13:02:38.236 Specification: specs\FirstTest.spec:8
+13:02:38.236 Error Message: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Register"}
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 37 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir7776_3805}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 565ae89397f9328bf8b8c462aff26afc
+*** Element info: {Using=link text, value=Register}
+13:02:38.237 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:461)
+org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+FirstTest.clickOnButton(FirstTest.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+13:02:39.245 Plugin [Html Report] with pid [15216] has exited
+13:02:39.447 Specifications:	1 executed	0 passed	1 failed	0 skipped
+13:02:39.447 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+13:02:39.447 
+Total time taken: 1m5.345s
+13:02:39.448 Updates are available. Run gauge --check-updates for more info.
+13:09:17.321 Checking updates...
+13:09:21.785 # The Bookery Web App
+13:09:21.787 ## Let's simply load the page on our first test
+13:09:24.689 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+13:10:21.879 * Click on button "Register"
+13:10:22.409 
+Failed Step: Click on button "Register"
+13:10:22.409 Specification: specs\FirstTest.spec:8
+13:10:22.409 Error Message: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"Register"}
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 54 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.20.10.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir4884_32110}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: c51981bc3d0b0d4fbd60a39fc8591084
+*** Element info: {Using=name, value=Register}
+13:10:22.409 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:485)
+org.openqa.selenium.By$ByName.findElement(By.java:303)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+FirstTest.clickOnButton(FirstTest.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+13:11:10.871 Checking updates...
+13:11:14.948 # The Bookery Web App
+13:11:14.950 ## Let's simply load the page on our first test
+13:11:17.543 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+13:12:14.573 * Click on button "register"
+13:12:15.576 Plugin [Html Report] with pid [7432] has exited
+13:12:15.676 Specifications:	1 executed	1 passed	0 failed	0 skipped
+13:12:15.676 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+13:12:15.676 
+Total time taken: 1m0.577s
+13:12:15.677 Updates are available. Run gauge --check-updates for more info.
+13:13:07.402 Got a kill message. Killing runner.
+13:13:11.504 Killing runner with PID:15204 forcefully
+13:13:33.100 Checking updates...
+13:13:37.184 # The Bookery Web App
+13:13:37.185 ## Let's simply load the page on our first test
+13:13:40.764 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+13:14:34.496 * Click on button "register"
+13:14:36.119 Plugin [Html Report] with pid [14192] has exited
+13:14:36.219 Specifications:	1 executed	1 passed	0 failed	0 skipped
+13:14:36.219 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+13:14:36.219 
+Total time taken: 58.894s
+13:14:36.221 Updates are available. Run gauge --check-updates for more info.
+13:21:20.482 Checking updates...
+13:21:24.042 # The Bookery Web App
+13:21:24.044 ## Let's simply load the page on our first test
+13:21:26.635 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+13:22:23.820 * Click on button "register"
+13:22:23.931 * Close pop`up
+13:22:24.077 * Click on button "login"
+13:22:25.120 Plugin [Html Report] with pid [5904] has exited
+13:22:25.220 Specifications:	1 executed	1 passed	0 failed	0 skipped
+13:22:25.220 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+13:22:25.220 
+Total time taken: 1m1.038s
+13:22:25.221 Updates are available. Run gauge --check-updates for more info.
+12:09:42.900 Got a kill message. Killing runner.
+12:09:46.941 Killing runner with PID:2692 forcefully
+12:10:41.688 Checking updates...
+12:10:46.380 # The Bookery Web App
+12:10:46.382 ## Let's simply load the page on our first test
+12:10:50.049 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+12:10:50.438 * Click on button "register"
+12:10:50.754 
+Failed Step: Click on button "register"
+12:10:50.754 Specification: specs\FirstTest.spec:8
+12:10:50.754 Error Message: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"register"}
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 37 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.17.254.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir17976_21865}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: ca2d5ce065c0c569892918d1ef825d42
+*** Element info: {Using=name, value=register}
+12:10:50.754 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:485)
+org.openqa.selenium.By$ByName.findElement(By.java:303)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+FirstTest.clickOnButton(FirstTest.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+12:10:52.755 Plugin [Html Report] with pid [9784] has exited
+12:10:53.058 Specifications:	1 executed	0 passed	1 failed	0 skipped
+12:10:53.058 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+12:10:53.059 
+Total time taken: 6.376s
+12:10:53.059 Updates are available. Run gauge --check-updates for more info.
+12:12:04.710 Checking updates...
+12:12:09.372 # The Bookery Web App
+12:12:09.374 ## Let's simply load the page on our first test
+12:12:11.983 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+12:12:12.391 * Click on button "register"
+12:12:12.688 
+Failed Step: Click on button "register"
+12:12:12.688 Specification: specs\FirstTest.spec:8
+12:12:12.688 Error Message: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"register"}
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 33 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.17.254.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir8552_27459}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: f63a02ca26f04f5fba7e449bdbd6c2bc
+*** Element info: {Using=name, value=register}
+12:12:12.688 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:485)
+org.openqa.selenium.By$ByName.findElement(By.java:303)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+FirstTest.clickOnButton(FirstTest.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+12:12:13.660 Plugin [Html Report] with pid [15340] has exited
+12:12:13.860 Specifications:	1 executed	0 passed	1 failed	0 skipped
+12:12:13.860 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+12:12:13.860 
+Total time taken: 4.242s
+12:12:13.860 Updates are available. Run gauge --check-updates for more info.
+12:14:08.957 Checking updates...
+12:14:13.267 # The Bookery Web App
+12:14:13.269 ## Let's simply load the page on our first test
+12:14:16.057 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+12:14:16.297 * Click on button "register"
+12:14:16.559 
+Failed Step: Click on button "register"
+12:14:16.559 Specification: specs\FirstTest.spec:8
+12:14:16.559 Error Message: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"register"}
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 32 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.17.254.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir4076_6354}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 7c35d148f52be71c7d2e8f25d435f4ce
+*** Element info: {Using=name, value=register}
+12:14:16.559 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:485)
+org.openqa.selenium.By$ByName.findElement(By.java:303)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+FirstTest.clickOnButton(FirstTest.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+12:14:17.528 Plugin [Html Report] with pid [17716] has exited
+12:14:17.729 Specifications:	1 executed	0 passed	1 failed	0 skipped
+12:14:17.729 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+12:14:17.729 
+Total time taken: 4.22s
+12:14:17.729 Updates are available. Run gauge --check-updates for more info.
+12:15:32.662 Got a kill message. Killing runner.
+12:15:37.036 Killing runner with PID:6156 forcefully
+12:16:09.528 Checking updates...
+12:16:11.326 # The Bookery Web App
+12:16:11.329 ## Let's simply load the page on our first test
+12:16:14.818 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+12:16:15.211 * Click on button "register"
+12:16:15.524 
+Failed Step: Click on button "register"
+12:16:15.524 Specification: specs\FirstTest.spec:8
+12:16:15.524 Error Message: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"register"}
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 44 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.17.254.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir13900_18650}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: ee626e80d2f3ecc91e608b048df164be
+*** Element info: {Using=name, value=register}
+12:16:15.524 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:485)
+org.openqa.selenium.By$ByName.findElement(By.java:303)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+FirstTest.clickOnButton(FirstTest.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+12:16:17.363 Plugin [Html Report] with pid [8848] has exited
+12:16:17.564 Specifications:	1 executed	0 passed	1 failed	0 skipped
+12:16:17.564 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+12:16:17.564 
+Total time taken: 5.997s
+12:16:17.565 Updates are available. Run gauge --check-updates for more info.
+12:16:56.587 Checking updates...
+12:16:59.675 # The Bookery Web App
+12:16:59.695 ## Let's simply load the page on our first test
+12:17:02.344 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+12:17:03.665 Plugin [Html Report] with pid [10136] has exited
+12:17:03.766 Specifications:	1 executed	1 passed	0 failed	0 skipped
+12:17:03.766 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+12:17:03.766 
+Total time taken: 3.958s
+12:17:03.766 Updates are available. Run gauge --check-updates for more info.
+12:17:20.212 Checking updates...
+12:17:24.874 # The Bookery Web App
+12:17:24.876 ## Let's simply load the page on our first test
+12:17:27.472 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+12:17:27.839 * Click on button "register"
+12:17:28.115 
+Failed Step: Click on button "register"
+12:17:28.115 Specification: specs\FirstTest.spec:8
+12:17:28.115 Error Message: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"register"}
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.17.254.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir2172_15992}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 75756ed77fb3a2bcdce268bece81bd50
+*** Element info: {Using=name, value=register}
+12:17:28.115 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:485)
+org.openqa.selenium.By$ByName.findElement(By.java:303)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+FirstTest.clickOnButton(FirstTest.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+12:17:29.161 Plugin [Html Report] with pid [8376] has exited
+12:17:29.362 Specifications:	1 executed	0 passed	1 failed	0 skipped
+12:17:29.362 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+12:17:29.362 
+Total time taken: 4.238s
+12:17:29.362 Updates are available. Run gauge --check-updates for more info.
+12:18:42.019 Checking updates...
+12:18:46.660 # The Bookery Web App
+12:18:46.662 ## Let's simply load the page on our first test
+12:18:49.396 * Navigate to "http://students.info.uaic.ro/~stefan.onu/proiect.html"
+12:18:49.739 * Click on button "register"
+12:18:49.993 
+Failed Step: Click on button "register"
+12:18:49.993 Specification: specs\FirstTest.spec:8
+12:18:49.993 Error Message: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"register"}
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 31 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.17.254.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir10636_8449}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: c86e97c4225f05e581e93cad71392243
+*** Element info: {Using=name, value=register}
+12:18:49.993 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:485)
+org.openqa.selenium.By$ByName.findElement(By.java:303)
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+FirstTest.clickOnButton(FirstTest.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:127)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+12:18:50.923 Plugin [Html Report] with pid [4764] has exited
+12:18:51.124 Specifications:	1 executed	0 passed	1 failed	0 skipped
+12:18:51.124 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+12:18:51.124 
+Total time taken: 4.204s
+12:18:51.124 Updates are available. Run gauge --check-updates for more info.
+12:21:49.112 Checking updates...
+12:21:53.242 # The Bookery Web App
+12:21:53.244 ## Let's simply load the page on our first test
+12:21:56.126 * Navigate to "http://students.info.uaic.ro/~stefan.onu/customnews/src/main/resources/static/proiect.html"
+12:22:00.213 * Click on button "register"
+12:22:00.342 * Close pop`up
+12:22:00.505 * Click on button "login"
+12:22:01.600 Plugin [Html Report] with pid [12376] has exited
+12:22:01.700 Specifications:	1 executed	1 passed	0 failed	0 skipped
+12:22:01.700 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+12:22:01.700 
+Total time taken: 8.306s
+12:22:01.700 Updates are available. Run gauge --check-updates for more info.
+12:22:21.376 Checking updates...
+12:22:25.806 # The Bookery Web App
+12:22:25.808 ## Let's simply load the page on our first test
+12:22:28.425 * Navigate to "http://students.info.uaic.ro/~stefan.onu/customnews/src/main/resources/static/proiect.html"
+12:22:32.171 * Click on button "register"
+12:22:32.316 * Close pop`up
+12:22:33.003 
+Failed Step: Close pop`up
+12:22:33.003 Specification: specs\FirstTest.spec:9
+12:22:33.003 Error Message: org.openqa.selenium.WebDriverException: unknown error: Element <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">...</span> is not clickable at point (599, 320). Other element would receive the click: <input type="text" placeholder="Enter Username" name="username" required="">
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 96 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.17.254.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir3656_20104}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: beafc7e892481276ac8ad7d18c76ea32
+12:22:33.003 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+FirstTest.closeButton(FirstTest.java:33)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:129)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+12:22:33.920 Plugin [Html Report] with pid [11652] has exited
+12:22:34.121 Specifications:	1 executed	0 passed	1 failed	0 skipped
+12:22:34.121 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+12:22:34.121 
+Total time taken: 8.066s
+12:22:34.121 Updates are available. Run gauge --check-updates for more info.
+12:22:46.056 Checking updates...
+12:22:50.575 # The Bookery Web App
+12:22:50.577 ## Let's simply load the page on our first test
+12:22:53.166 * Navigate to "http://students.info.uaic.ro/~stefan.onu/customnews/src/main/resources/static/proiect.html"
+12:22:56.914 * Click on button "register"
+12:22:57.024 * Close pop`up
+12:22:57.601 
+Failed Step: Close pop`up
+12:22:57.601 Specification: specs\FirstTest.spec:9
+12:22:57.601 Error Message: org.openqa.selenium.WebDriverException: unknown error: Element <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">...</span> is not clickable at point (622, 303). Other element would receive the click: <div class="user-modal-container">...</div>
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 105 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.17.254.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir4396_28944}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: e6014f1de798a0fe2fb4333ef1ac768e
+12:22:57.601 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+FirstTest.closeButton(FirstTest.java:33)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:129)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+12:22:58.587 Plugin [Html Report] with pid [9528] has exited
+12:22:58.789 Specifications:	1 executed	0 passed	1 failed	0 skipped
+12:22:58.789 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+12:22:58.789 
+Total time taken: 7.96s
+12:22:58.789 Updates are available. Run gauge --check-updates for more info.
+12:23:16.371 Checking updates...
+12:23:20.965 # The Bookery Web App
+12:23:20.967 ## Let's simply load the page on our first test
+12:23:23.635 * Navigate to "http://students.info.uaic.ro/~stefan.onu/customnews/src/main/resources/static/proiect.html"
+12:23:28.733 * Click on button "register"
+12:23:28.877 * Close pop`up
+12:23:29.731 
+Failed Step: Close pop`up
+12:23:29.731 Specification: specs\FirstTest.spec:9
+12:23:29.731 Error Message: org.openqa.selenium.WebDriverException: unknown error: Element <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">...</span> is not clickable at point (623, 304). Other element would receive the click: <input type="text" placeholder="Enter Username" name="username" required="">
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 96 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-6FJM2LQ', ip: '172.17.254.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\Onu\AppData\Local\Temp\scoped_dir12140_31360}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 0921a7fffcd5a3a0fda0012c0e8d22b8
+12:23:29.731 Stacktrace: 
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+FirstTest.closeButton(FirstTest.java:33)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:32)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:129)
+com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:83)
+com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:64)
+com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
+com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:40)
+com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
+com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:34)
+com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:86)
+com.thoughtworks.gauge.GaugeRuntime.main(GaugeRuntime.java:37)
+12:23:30.913 Plugin [Html Report] with pid [15612] has exited
+12:23:31.115 Specifications:	1 executed	0 passed	1 failed	0 skipped
+12:23:31.115 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+12:23:31.115 
+Total time taken: 9.894s
+12:23:31.115 Updates are available. Run gauge --check-updates for more info.
+14:46:33.351 Got a kill message. Killing runner.
+14:46:37.399 Killing runner with PID:9220 forcefully
