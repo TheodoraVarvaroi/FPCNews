@@ -187,6 +187,8 @@
 	</a>
 	</div>
 	</div>
+    <div id="overlay"> </div>
+	<img id="felinar" onclick="changeImage()" src="https://image.ibb.co/d3o40k/off.png"  >
 	<div id="coloana">
 	<!-- busola-->
 	<div id="busola">
