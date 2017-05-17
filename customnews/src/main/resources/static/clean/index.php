@@ -20,7 +20,7 @@
 			<button name="logout" class="util" onclick="document.getElementById('id03').style.display='block'" >Logout</button>
 		</div>
 		<div class="preferinte">
-			<form action="/teste/preferinte.php" class="user-form" data-method="article-preferences" method="post" id="pref">
+			<form action="/teste/preferinte.php" class="user-form" data-action="article-preferences" method="post" id="pref">
 				<p id="text">Stiri:</p>
 			  <input type="checkbox" name="preferinte" value="tehnologie" checked class="box" id="tehnologie" >
 				<label for="tehnologie" class="lb"> Tehnologie </label> <br>
