@@ -43,7 +43,7 @@
 		</div>
 	</div>
 	<div id="id01" class="register">
-		<form class="popup" id="user-register-submit" action="index.php?action=register" method="POST">
+		<form class="popup user-form" name="user-register-form" data-action="register" id="user-register-submit" action="index.php?action=register" method="POST">
 			<div class="data">
 				<span name="close" onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">
 				&times;</span>
@@ -52,7 +52,7 @@
 
 				<input type="password" placeholder="Enter Password" name="password" required>
 
-				<input type="password" placeholder=" Enter Password" name="confirmPassword" required>
+				<input type="password" placeholder="Confirm Your Password" name="confirmPassword" required>
 
 				<input type="text" placeholder="Enter Email" name="email" required>
 				<input name="submit" type="submit" value="Submit" class="buton">
@@ -60,7 +60,7 @@
 		</form>
 	</div>
 	<div id="id02" class="login">
-		<form class="popup" action="index.php?action=login" method="POST">
+		<form class="popup user-form" name="user-login-form" data-action="login" action="index.php?action=login" method="POST">
 			<div class="data">
 				<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
 
