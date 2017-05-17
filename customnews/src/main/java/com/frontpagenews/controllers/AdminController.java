@@ -14,6 +14,7 @@ import java.util.List;
 @RequestMapping("/api/admin")
 public class AdminController {
     @Autowired
+    private
     AdminRepository adminRepository;
 
     @RequestMapping(method= RequestMethod.GET)
