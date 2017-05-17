@@ -75,4 +75,4 @@ $.fn.serializeObject = function () {
 					$('#overlay').css("opacity", 0)
 				
 		}
-		}
+		};
