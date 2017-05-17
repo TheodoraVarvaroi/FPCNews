@@ -32,17 +32,23 @@ $(function () {
       formAction = jThis.data('action'),
      formData = $(jThis).serializeObject();
 
+
     switch (formAction) {
       case 'register': {
-        urlMehod = 'POST';
-        urlAjax = '';
-      }
-      break;
-      case 'login': {
         urlMehod = 'PUT';
         urlAjax = '';
       }
       break;
+      case 'login': {
+        urlMehod = 'POST';
+        urlAjax = '';
+      }
+      break;
+      case 'article-preferences': {
+        urlMehod = 'POST';
+        urlAjax = '/teste/preferinte.php';
+      }
+        break;
       default: return;
     }
 
