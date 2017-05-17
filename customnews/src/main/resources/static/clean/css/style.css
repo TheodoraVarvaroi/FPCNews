@@ -331,3 +331,22 @@ h5 {
 	display: table-cell;
 	transform: translateY(-47px);
 }
+#overlay
+{
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+    top: 0;
+    opacity: 2;
+}
+#felinar {
+position: fixed;
+z-index: 30;
+width: 200px;
+height: auto;
+left: 82%;
+
+}
