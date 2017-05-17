@@ -7,52 +7,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css\style.css" type="text/css" media="all"/>
   <link rel="icon" href="images/logoziarmic.png">
-  
+
 </head>
 
 <body background="images\lemn.jpg" >
 	<div class="body">
 	<div id="left">
 		<div id="st">
-			
+
 			<button name="register" class="util" onclick="document.getElementById('id01').style.display='block'" >Register</button>
 			<button name="login" class="util" onclick="document.getElementById('id02').style.display='block'" >Login</button>
 			<button name="logout" class="util" onclick="document.getElementById('id03').style.display='block'" >Logout</button>
 		</div>
 		<div class="preferinte">
-			<form action="/teste/preferinte.php" method="post" id="pref"> 
+			<form action="/teste/preferinte.php" class="user-form" data-method="article-preferences" method="post" id="pref">
 				<p id="text">Stiri:</p>
 			  <input type="checkbox" name="preferinte" value="tehnologie" checked class="box" id="tehnologie" >
 				<label for="tehnologie" class="lb"> Tehnologie </label> <br>
-			  <input type="checkbox" name="preferinte" value="stiinta" checked class="box" id="stiinta"> 
+			  <input type="checkbox" name="preferinte" value="stiinta" checked class="box" id="stiinta">
 				<label for="stiinta" class="lb"> Stiinta </label><br>
-			  <input type="checkbox" name="preferinte" value="sanatate" checked class="box" id="sanatate"> 
+			  <input type="checkbox" name="preferinte" value="sanatate" checked class="box" id="sanatate">
 				<label for="sanatate" class="lb"> Sanatate </label><br>
-			  <input type="checkbox" name="preferinte" value="afaceri" checked class="box" id="afaceri"> 
+			  <input type="checkbox" name="preferinte" value="afaceri" checked class="box" id="afaceri">
 				<label for="afaceri" class="lb"> Afaceri </label><br>
-			  <input type="checkbox" name="preferinte" value="divertisment" checked class="box" id="divertisment"> 
+			  <input type="checkbox" name="preferinte" value="divertisment" checked class="box" id="divertisment">
 				<label for="divertisment" class="lb"> Divertisment </label><br>
-			  <input type="checkbox" name="preferinte" value="sport" checked class="box" id="sport"> 
+			  <input type="checkbox" name="preferinte" value="sport" checked class="box" id="sport">
 				<label for="sport" class="lb"> Sport </label><br>
 			  <input type="checkbox" name="preferinte" value="gastronomie" checked class="box" id="gastronomie">
 				<label for="gastronomie" class="lb"> Gastronomie </label><br>
-			  <input type="checkbox" name="preferinte" value="politica" checked class="box" id="politica"> 
+			  <input type="checkbox" name="preferinte" value="politica" checked class="box" id="politica">
 			  <label for="politica" class="lb"> Politica </label><br>
 			  <input type="submit" name="salveaza" class="butons" value="Salveaza">
 			</form>
 		</div>
 	</div>
 	<div id="id01" class="register">
-		<form class="popup" action="index.php?action=register" method="POST">
+		<form class="popup user-form" name="user-register-form" data-action="register" id="user-register-submit" action="index.php?action=register" method="POST">
 			<div class="data">
 				<span name="close" onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">
 				&times;</span>
-			
+
 				<input type="text" placeholder="Enter Username" name="username" required>
 
 				<input type="password" placeholder="Enter Password" name="password" required>
 
-				<input type="password" placeholder=" Enter Password" name="password" required>
+				<input type="password" placeholder="Confirm Your Password" name="confirmPassword" required>
 
 				<input type="text" placeholder="Enter Email" name="email" required>
 				<input name="submit" type="submit" value="Submit" class="buton">
@@ -60,14 +60,14 @@
 		</form>
 	</div>
 	<div id="id02" class="login">
-		<form class="popup" action="index.php?action=login" method="POST">
+		<form class="popup user-form" name="user-login-form" data-action="login" action="index.php?action=login" method="POST">
 			<div class="data">
 				<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-			
+
 				<input type="text" placeholder="Enter Username" name="username" required>
 
 				<input type="password" placeholder="Enter Password" name="password" required>
-				
+
 				<input name="submit" type="submit" value="Login" class="buton">
 			</div>
 		</form>
