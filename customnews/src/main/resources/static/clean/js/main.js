@@ -61,3 +61,18 @@ $.fn.serializeObject = function () {
   });
   return o;
 };
+  
+  function changeImage() {
+			var image = document.getElementById('felinar');
+			if (image.src.match("on")) {
+				image.src = "https://image.ibb.co/d3o40k/off.png";
+				$('#overlay').css("opacity", 0.4)
+				
+			} else 
+				{
+				image.src = "https://image.ibb.co/k6L6D5/on.png";
+				
+					$('#overlay').css("opacity", 0)
+				
+		}
+		}
