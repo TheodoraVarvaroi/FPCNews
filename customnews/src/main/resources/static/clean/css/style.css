@@ -301,6 +301,21 @@ h5 {
   padding-right: 2%;
 }	
 
+#overlay
+{
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+    top: 0;
+    opacity: 2;
+}
+
+
+
+
 /*busola*/
 
 #tot{
