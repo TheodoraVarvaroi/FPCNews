@@ -1,8 +1,10 @@
 package com.frontpagenews.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Document(collection="articles")
@@ -10,79 +12,91 @@ public class ArticleModel {
     @Id
     private String id;
 
-    private String titlu;
+    @Indexed(unique = true)
+    private String title;
 
-    private String continut;
+    private String content;
 
-    private byte[] imagine;
+    private String imageUrl;
 
     private List<String> tags;
 
-    private SourceModel sursa;
+    private SourceModel source;
 
-    private byte[] audio;
+    private String videoUrl;
 
-    public ArticleModel() {}
+    public ArticleModel() {
+        this.title = " ";
+        this.content = " ";
+        this.imageUrl = " ";
+        this.tags = new ArrayList<String>();
+        this.source = new SourceModel();
+        this.videoUrl = " ";
+    }
 
-    public ArticleModel(String id, String titlu, String continut, byte[] imagine, List<String> tags, SourceModel sursa, byte[] audio) {
-        this.id = id;
-        this.titlu = titlu;
-        this.continut = continut;
-        this.imagine = imagine;
+    public ArticleModel(String title, String content, String imageUrl, List<String> tags, SourceModel source, String videoUrl) {
+        this.title = title;
+        this.content = content;
+        this.imageUrl = imageUrl;
         this.tags = tags;
-        this.sursa = sursa;
-        this.audio = audio;
+        this.source = source;
+        this.videoUrl = videoUrl;
     }
 
-    public String getId() {
-        return id;
+    public String getTitle() {
+        return title;
     }
 
-    public String getTitlu() {
-        return titlu;
+    public String getContent() {
+        return content;
     }
 
-    public String getContinut() {
-        return continut;
-    }
-
-    public byte[] getImagine() {
-        return imagine;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
     public List<String> getTags() {
         return tags;
     }
 
-    public SourceModel getSursa() {
-        return sursa;
+    public SourceModel getSource() {
+        return source;
     }
 
-    public byte[] getAudio() {
-        return audio;
+    public String getVideoUrl() {
+        return videoUrl;
     }
 
-    public void setTitlu(String titlu) {
-        this.titlu = titlu;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public void setContinut(String continut) {
-        this.continut = continut;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public void setImagine(byte[] imagine) {
-        this.imagine = imagine;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public void setTags(List<String> tags) {
         this.tags = tags;
     }
 
-    public void setSursa(SourceModel sursa) {
-        this.sursa = sursa;
+    public void setSource(SourceModel source) {
+        this.source = source;
     }
 
-    public void setAudio(byte[] audio) {
-        this.audio = audio;
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
+    }
+
+    public String toString(){
+        String ret =  "Title: " + title + "\nContent: " + content + "\nImageUrl: " + imageUrl + "\nTags: ";
+        for(int i = 0; i < tags.size(); i ++) {
+            ret += tags.get(i)+ " ";
+        }
+        ret += "\nSource: " + source + "\nVideoUrl: " + videoUrl;
+        return ret;
     }
 }

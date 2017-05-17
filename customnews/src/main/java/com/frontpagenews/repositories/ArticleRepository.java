@@ -11,6 +11,7 @@ public interface ArticleRepository extends MongoRepository<ArticleModel, String>
     public List<ArticleModel> findAll();
     public ArticleModel findOne(String id);
     public ArticleModel findByTitle(String title);
+    public ArticleModel findByTags(List<String> tags);
     public ArticleModel save(ArticleModel article);
     public void delete(String id);
     public long count();
