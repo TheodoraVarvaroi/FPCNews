@@ -12,11 +12,35 @@
 
 <body background="images\lemn.jpg" >
 	<div class="body">
-	<div id="st">
-		
-		<button name="register" class="util" onclick="document.getElementById('id01').style.display='block'" >Register</button>
-		<button name="login" class="util" onclick="document.getElementById('id02').style.display='block'" >Login</button>
-		<button name="logout" class="util" onclick="document.getElementById('id03').style.display='block'" >Logout</button>
+	<div id="left">
+		<div id="st">
+			
+			<button name="register" class="util" onclick="document.getElementById('id01').style.display='block'" >Register</button>
+			<button name="login" class="util" onclick="document.getElementById('id02').style.display='block'" >Login</button>
+			<button name="logout" class="util" onclick="document.getElementById('id03').style.display='block'" >Logout</button>
+		</div>
+		<div class="preferinte">
+			<form action="/teste/preferinte.php" method="post" id="pref"> 
+				<p id="text">Stiri:</p>
+			  <input type="checkbox" name="preferinte" value="tehnologie" checked class="box" id="tehnologie" >
+				<label for="tehnologie" class="lb"> Tehnologie </label> <br>
+			  <input type="checkbox" name="preferinte" value="stiinta" checked class="box" id="stiinta"> 
+				<label for="stiinta" class="lb"> Stiinta </label><br>
+			  <input type="checkbox" name="preferinte" value="sanatate" checked class="box" id="sanatate"> 
+				<label for="sanatate" class="lb"> Sanatate </label><br>
+			  <input type="checkbox" name="preferinte" value="afaceri" checked class="box" id="afaceri"> 
+				<label for="afaceri" class="lb"> Afaceri </label><br>
+			  <input type="checkbox" name="preferinte" value="divertisment" checked class="box" id="divertisment"> 
+				<label for="divertisment" class="lb"> Divertisment </label><br>
+			  <input type="checkbox" name="preferinte" value="sport" checked class="box" id="sport"> 
+				<label for="sport" class="lb"> Sport </label><br>
+			  <input type="checkbox" name="preferinte" value="gastronomie" checked class="box" id="gastronomie">
+				<label for="gastronomie" class="lb"> Gastronomie </label><br>
+			  <input type="checkbox" name="preferinte" value="politica" checked class="box" id="politica"> 
+			  <label for="politica" class="lb"> Politica </label><br>
+			  <input type="submit" name="salveaza" class="butons" value="Salveaza">
+			</form>
+		</div>
 	</div>
 	<div id="id01" class="register">
 		<form class="popup" action="index.php?action=register" method="POST">
@@ -31,7 +55,7 @@
 				<input type="password" placeholder=" Enter Password" name="password" required>
 
 				<input type="text" placeholder="Enter Email" name="email" required>
-				<input name="submit" type="submit" value="Submit">
+				<input name="submit" type="submit" value="Submit" class="buton">
 			</div>
 		</form>
 	</div>
@@ -44,7 +68,7 @@
 
 				<input type="password" placeholder="Enter Password" name="password" required>
 				
-				<input name="submit" type="submit" value="Login">
+				<input name="submit" type="submit" value="Login" class="buton">
 			</div>
 		</form>
 	</div>
