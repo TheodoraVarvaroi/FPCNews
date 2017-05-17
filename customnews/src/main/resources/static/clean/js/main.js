@@ -91,17 +91,20 @@ $(function () {
 
 
 		function changeImage() {
-			var image = document.getElementById('felinar');
+			var image = document.getElementById('felinar'),
+      overlay = $('#overlay');
 			if (image.src.match("on")) {
 				image.src = "https://image.ibb.co/d3o40k/off.png";
-				$('#overlay').css("opacity", 0.4)
-				
-			} else 
+				overlay.css("opacity", 0.4);
+				overlay.css("z-index", 1);
+
+			} else
 				{
 				image.src = "https://image.ibb.co/k6L6D5/on.png";
-				
-					$('#overlay').css("opacity", 0)
-				
+
+					overlay.css("opacity", 0);
+					overlay.css("z-index", -1);
+
 		}
 		}
 
