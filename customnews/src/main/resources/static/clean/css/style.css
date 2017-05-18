@@ -311,7 +311,7 @@ h5 {
 	bottom:1px;
 	display: table;
 	width: 166;
-    z-index: 30;
+    z-index: 25;
 }
 #linie {
 	display: table-row;
