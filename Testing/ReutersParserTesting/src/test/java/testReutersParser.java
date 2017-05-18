@@ -15,7 +15,7 @@ public class testReutersParser {
     }
 
     @Test
-    public void testAdd2() throws Exception{
+    public void testContainsDollar() throws Exception{
         ReutersParser p = new ReutersParser();
         List<ArticleModel> articles =  p.parseAll();
         for(ArticleModel art:articles){
