@@ -15,7 +15,7 @@ public class testTheGuardianTravelParser {
     }
 
     @Test
-    public void testAdd2() throws Exception{
+    public void testContainsDollar() throws Exception{
         TheGuardianTravelParser p = new TheGuardianTravelParser();
         List<ArticleModel> articles =  p.parseAllArticles();
 
