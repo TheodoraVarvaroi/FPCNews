@@ -1,0 +1,20 @@
+19:09:38.487 Api Request Received: messageType:GetStepValueRequest messageId:4 stepValueRequest:<stepText:"Click on button <register> " > 
+19:09:38.488 Sending API response: messageType:GetStepValueResponse messageId:4 stepValueResponse:<stepValue:<stepValue:"Click on button {}" parameterizedStepValue:"Click on button <register>" parameters:"register" > > 
+19:09:38.501 Api Request Received: messageType:GetStepValueRequest messageId:4 stepValueRequest:<stepText:"Navigate to <url>" > 
+19:09:38.501 Sending API response: messageType:GetStepValueResponse messageId:4 stepValueResponse:<stepValue:<stepValue:"Navigate to {}" parameterizedStepValue:"Navigate to <url>" parameters:"url" > > 
+19:29:59.831 Api Request Received: messageType:GetStepValueRequest messageId:4 stepValueRequest:<stepText:"Check if register open <modal-content animate>" > 
+19:29:59.832 Sending API response: messageType:GetStepValueResponse messageId:4 stepValueResponse:<stepValue:<stepValue:"Check if register open {}" parameterizedStepValue:"Check if register open <modal-content animate>" parameters:"modal-content animate" > > 
+19:29:59.847 Api Request Received: messageType:GetStepValueRequest messageId:4 stepValueRequest:<stepText:"Navigate to <url>" > 
+19:29:59.847 Sending API response: messageType:GetStepValueResponse messageId:4 stepValueResponse:<stepValue:<stepValue:"Navigate to {}" parameterizedStepValue:"Navigate to <url>" parameters:"url" > > 
+19:33:51.731 Api Request Received: messageType:GetStepValueRequest messageId:4 stepValueRequest:<stepText:"Check if register open <modal-content animate>" > 
+19:33:51.731 Sending API response: messageType:GetStepValueResponse messageId:4 stepValueResponse:<stepValue:<stepValue:"Check if register open {}" parameterizedStepValue:"Check if register open <modal-content animate>" parameters:"modal-content animate" > > 
+19:33:51.745 Api Request Received: messageType:GetStepValueRequest messageId:4 stepValueRequest:<stepText:"Navigate to <url>" > 
+19:33:51.756 Sending API response: messageType:GetStepValueResponse messageId:4 stepValueResponse:<stepValue:<stepValue:"Navigate to {}" parameterizedStepValue:"Navigate to <url>" parameters:"url" > > 
+19:37:42.067 Api Request Received: messageType:GetStepValueRequest messageId:4 stepValueRequest:<stepText:"Check if register open <form>" > 
+19:37:42.067 Sending API response: messageType:GetStepValueResponse messageId:4 stepValueResponse:<stepValue:<stepValue:"Check if register open {}" parameterizedStepValue:"Check if register open <form>" parameters:"form" > > 
+19:37:42.082 Api Request Received: messageType:GetStepValueRequest messageId:4 stepValueRequest:<stepText:"Navigate to <url>" > 
+19:37:42.082 Sending API response: messageType:GetStepValueResponse messageId:4 stepValueResponse:<stepValue:<stepValue:"Navigate to {}" parameterizedStepValue:"Navigate to <url>" parameters:"url" > > 
+19:49:45.237 Api Request Received: messageType:GetStepValueRequest messageId:4 stepValueRequest:<stepText:"Navigate to <url>" > 
+19:49:45.238 Sending API response: messageType:GetStepValueResponse messageId:4 stepValueResponse:<stepValue:<stepValue:"Navigate to {}" parameterizedStepValue:"Navigate to <url>" parameters:"url" > > 
+19:49:45.252 Api Request Received: messageType:GetStepValueRequest messageId:4 stepValueRequest:<stepText:"Click on button <logout> " > 
+19:49:45.252 Sending API response: messageType:GetStepValueResponse messageId:4 stepValueResponse:<stepValue:<stepValue:"Click on button {}" parameterizedStepValue:"Click on button <logout>" parameters:"logout" > > 
