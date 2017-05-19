@@ -76,10 +76,8 @@
 		<div class="container">
 			<div class="flipbook">
 				<div style="background-image:url(pages/a.jpg)">
-					<div class="content">
-						<h1>Lately News </h1>
-						<div class="image1"></div>​
-						<div class="image2"></div>​
+				<div class="content">
+						<img src="images/titlu.png" class="centerImage" alt="description" height="240" width="440">
 						<div class="image3"></div>​
 						<div class="image4"></div>​
 						<h5>-1-</h5>
