@@ -1,5 +1,7 @@
 package com.frontpagenews.parsers;
 
+import com.frontpagenews.APIs.TranslatorAPI;
+import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
@@ -43,19 +45,21 @@ public class ReutersParser {
     {
         Document doc = Jsoup.connect(adresa).get();
         String html=doc.html();
+
         ArticleModel articleModel=new ArticleModel();
         articleModel.setTitle(getTitle(html));
-       // System.out.println("Titlu:"+getTitle(html));
 
         articleModel.setSource(getSource(html));
         articleModel.setImageUrl(getImageUrl(html));
-    //    System.out.println("ImageUrl:"+getImageUrl(html));
         articleModel.setTags(getTags(html));
-      //  System.out.println(getTags(html).toString());
-        articleModel.setContent(getContent(html));
-      //  System.out.println("Content:"+getContent(html));
-      //  System.out.println("Site:"+articleModel.getSource().getSite());
-      //  System.out.println("Author:"+articleModel.getSource().getAuthor());
+        String content = getContent(html);
+        articleModel.setContent(content);
+
+        //detect article language
+        Language language = TranslatorAPI.detectLanguage(content);
+        articleModel.setLanguage(language);
+
+        System.out.println(articleModel);
         try{
            articleService.save(articleModel);
         }

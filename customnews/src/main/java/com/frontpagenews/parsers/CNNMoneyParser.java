@@ -1,11 +1,5 @@
-package com.frontpagenews.parsers;
-import java.io.IOException;
-import java.text.DateFormat;
-import java.text.ParseException;
+/*package com.frontpagenews.parsers;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -55,7 +49,8 @@ public class CNNMoneyParser {
 
             String mediaLink = rawArticle.html().substring(rawArticles.get(0).html().indexOf("url=")+5,rawArticles.get(0).html().indexOf(".jpg")+4);
 
-
+            //detect article language
+            Language language = TranslatorAPI.detectLanguage(content);
 
             SourceModel source = new SourceModel();
             source.setSite(link);
@@ -68,7 +63,7 @@ public class CNNMoneyParser {
             article.setImageUrl(mediaLink);
             article.setTags(null);
             article.setSource(source);
-
+            article.setLanguage(language);
             articleService.save(article);
 
         }catch (Exception e){
@@ -80,4 +75,4 @@ public class CNNMoneyParser {
         CNNMoneyParser p = new CNNMoneyParser();
         p.parseAll();
     }
-}
+*/

@@ -1,8 +1,13 @@
 package com.frontpagenews.parsers;
 
+import com.frontpagenews.APIs.TranslatorAPI;
+import com.frontpagenews.APIs.YandexTranslatorAPI.ApiKeys;
+import com.frontpagenews.APIs.YandexTranslatorAPI.detect.Detect;
+import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.services.ArticleService;
+import com.mongodb.MongoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.jsoup.Jsoup;
@@ -17,7 +22,6 @@ import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.List;
-import java.util.ArrayList;
 import java.io.IOException;
 
 @Component
@@ -101,6 +105,9 @@ public class TheGuardianTravelParser {
                     //do nothing, I already initialised the date with the current date
                 }
 
+                //detect article language
+                Language language = TranslatorAPI.detectLanguage(formattedArticle.toString());
+
                 SourceModel source = new SourceModel();
                 source.setSite(url);
                 source.setDate(articleDate);
@@ -112,8 +119,14 @@ public class TheGuardianTravelParser {
                 article.setImageUrl(imageUrl);
                 article.setTags(tagsList);
                 article.setSource(source);
+                article.setLanguage(language);
 
-                articleService.save(article);
+                System.out.println(article);
+                try {
+                    articleService.save(article);
+                } catch ( MongoException e){
+                    System.out.println (e.toString());
+                }
             }
         }
       }

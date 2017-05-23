@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.frontpagenews.APIs.TranslatorAPI;
+import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
+import com.mongodb.MongoException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -88,8 +91,9 @@ public class TheVergeParser {
             } catch  (ParseException e) {
                 e.printStackTrace();
             }
-            
- 
+
+            //detect article language
+            Language language = TranslatorAPI.detectLanguage(f_content);
 
             SourceModel source = new SourceModel();
             source.setSite(f_site);
@@ -102,9 +106,13 @@ public class TheVergeParser {
             article.setImageUrl(f_image);
             article.setTags(f_tags);
             article.setSource(source);
-
-//            System.out.println (article);
-            articleService.save(article);
+            article.setLanguage(language);
+            System.out.println (article);
+            try {
+                articleService.save(article);
+            } catch ( MongoException e) {
+                System.out.println(e.toString());
+            }
 
         }catch (IOException e){
             System.out.println (e.toString());

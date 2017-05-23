@@ -1,6 +1,8 @@
 
 package com.frontpagenews.parsers;
 
+import com.frontpagenews.APIs.TranslatorAPI;
+import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
@@ -12,6 +14,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import com.mongodb.MongoException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -94,8 +98,10 @@ public class ParserMovieWeb {
           {
             currentTags.add(tags.get(i).attr("content"));
         //    System.out.println(tags.get(i).attr("content"));
-           } 
-        
+           }
+
+            //detect article language
+            Language language = TranslatorAPI.detectLanguage(currentArticle);
          
             SourceModel source = new SourceModel();
             source.setSite(currentSite);
@@ -108,8 +114,13 @@ public class ParserMovieWeb {
             articol.setContent(currentArticle);
             articol.setTags(currentTags);
             articol.setSource(source);
-            
-            articleService.save(articol);
+            articol.setLanguage(language);
+            System.out.println(articol);
+            try {
+                articleService.save(articol);
+            } catch ( MongoException e){
+                System.out.println (e.toString());
+            }
             
         } catch (IOException ex) {
             Logger.getLogger(ParserMovieWeb.class.getName()).log(Level.SEVERE, null, ex);

@@ -3,6 +3,8 @@
  */
 package com.frontpagenews.parsers;
 
+import com.frontpagenews.APIs.TranslatorAPI;
+import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
@@ -14,6 +16,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+
+import com.mongodb.MongoException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -100,7 +104,8 @@ public class TechCrunchParser {
             e.printStackTrace();
         }
 
-
+            //detect article language
+            Language language = TranslatorAPI.detectLanguage(f_content);
 
             SourceModel source = new SourceModel();
             source.setSite(f_site);
@@ -113,9 +118,13 @@ public class TechCrunchParser {
             article.setImageUrl(f_image);
             article.setTags(f_tags);
             article.setSource(source);
-
-//            System.out.println (article);
-            articleService.save(article);
+            article.setLanguage(language);
+            System.out.println (article);
+            try {
+                articleService.save(article);
+            } catch ( MongoException e){
+                System.out.println (e.toString());
+            }
 
         }catch (IOException e){
             System.out.println (e.toString());

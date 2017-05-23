@@ -1,5 +1,7 @@
 package com.frontpagenews.parsers;
 
+import com.frontpagenews.APIs.TranslatorAPI;
+import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
@@ -127,6 +129,8 @@ public class BBCHealthParser {
                 }
                 System.out.println("date: "+articleDate);
 
+                //detect article language
+                Language language = TranslatorAPI.detectLanguage(content);
 
                 SourceModel source = new SourceModel();
                 source.setSite(i);
@@ -139,6 +143,7 @@ public class BBCHealthParser {
                 article2.setImageUrl(urlImg);
                 article2.setTags(tags);
                 article2.setSource(source);
+                article2.setLanguage(language);
 
                 System.out.println (article2);
                 try {
