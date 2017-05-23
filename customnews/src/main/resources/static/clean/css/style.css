@@ -1,176 +1,182 @@
 /* preferinte*/
-body
-{
-	margin:0 0 0 0;
+body {
+  margin: 0 0 0 0;
 }
-#left
-{
-	float:left;
+
+#left {
+  float: left;
 }
-#text{
-	font-family: 'Book Antiqua','Lucida Grande', 'Times New Roman', Georgia;
-	font-size: 1.2em;
-	margin:0 0 20px 0;
-	padding-top:5px;
-	padding-left:40px;
+
+#text {
+  font-family: 'Book Antiqua', 'Lucida Grande', 'Times New Roman', Georgia;
+  font-size: 1.2em;
+  margin: 0 0 20px 0;
+  padding-top: 5px;
+  padding-left: 40px;
 }
-#pref
-{
-	margin-left:20px;
+
+#pref {
+  margin-left: 20px;
 }
+
 .preferinte {
 
-	width:175px;
-	height:310px;
-	border-radius:9px;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-image: url("../images/ziar.png");
+  width: 175px;
+  height: 310px;
+  border-radius: 9px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../images/ziar.png");
 }
-.box  {
-	opacity: 0;
-    position: absolute;
+
+.box {
+  opacity: 0;
+  position: absolute;
 }
+
 .box, .lb {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 2px;
-    cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 2px;
+  cursor: pointer;
 }
+
 .lb {
-    position: relative;
-	font-family: 'Book Antiqua','Lucida Grande', 'Times New Roman', Georgia;
+  position: relative;
+  font-family: 'Book Antiqua', 'Lucida Grande', 'Times New Roman', Georgia;
 }
-.box + .lb:before{
-    content: '';
-    background: #fff;
-    border: 2px solid #ddd;
-    display: inline-block;
-    vertical-align: middle;
-    width: 7px;
-    height: 7px;
-    padding: 5px;
-    margin-right: 2px;
-    text-align: center;
+
+.box + .lb:before {
+  content: '';
+  background: #fff;
+  border: 2px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  width: 7px;
+  height: 7px;
+  padding: 5px;
+  margin-right: 2px;
+  text-align: center;
 }
+
 .box:checked + .lb:before {
-    background: #e67300;
-    box-shadow: inset 0px 0px 0px 4px #fff;
+  background: #e67300;
+  box-shadow: inset 0px 0px 0px 4px #fff;
 }
+
 .butons {
-	font-family:'Book Antiqua','Lucida Grande', 'Times New Roman', Georgia;
-	padding: 5px 10px;
-	border: 1px;
-	cursor: pointer;
-	margin: 8px 30px;
-	color:white;
-	border-radius: 6px;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-image: url("../images/buton.png");
+  font-family: 'Book Antiqua', 'Lucida Grande', 'Times New Roman', Georgia;
+  padding: 5px 10px;
+  border: 1px;
+  cursor: pointer;
+  margin: 8px 30px;
+  color: white;
+  border-radius: 6px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../images/buton.png");
 }
- /*zona log*/
- #st
- {
-	 width:180px;
-	 height: 150px;
-	 background-size: auto 100%;
-	 background-repeat: no-repeat;
-	 background-image: url("../images/login.png");
- }
 
- .util
- {
-	 position:relative;
-	 left: 20px;
-	 top: 20px;
-	 width:100px;
-	 margin-bottom:5px;
-	 display: block;
-	 border-radius: 6px;
-     cursor: pointer;
-	 background-size: 100% 100%;
-	 background-repeat: no-repeat;
-	 background-image: url("../images/buton.png");
-	 color:white;
- }
+/*zona log*/
+#st {
+  width: 180px;
+  height: 150px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-image: url("../images/login.png");
+}
 
+.util {
+  position: relative;
+  left: 20px;
+  top: 20px;
+  width: 100px;
+  margin-bottom: 5px;
+  display: block;
+  border-radius: 6px;
+  cursor: pointer;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../images/buton.png");
+  color: white;
+}
 
-.register{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.4);
+.register {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 
 }
-.login{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.4);
+
+.login {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 
 }
+
 .popup {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto;
-	border-radius: 6px;
-    width: 400px;
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border-radius: 6px;
+  width: 400px;
 
 }
 
-.close
-{
+.close {
 
-    margin-left: 345px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
+  margin-left: 345px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
 }
 
-.close:hover
-{
-    color: red;
-    cursor: pointer;
+.close:hover {
+  color: red;
+  cursor: pointer;
 }
-.imgcontainer
- {
-    margin: 0 0 17px 0;
+
+.imgcontainer {
+  margin: 0 0 17px 0;
 }
+
 .data {
-	margin-top:24px;
-    padding: 16px;
+  margin-top: 24px;
+  padding: 16px;
 }
+
 input[type=text], input[type=password], input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-.buton{
-    background-color: #8c6e4a;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
+.buton {
+  background-color: #8c6e4a;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
 
-  /*partea ziar*/
-div.image1
-{
+/*partea ziar*/
+div.image1 {
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-image: url("../pages/1.jpg");
@@ -179,8 +185,7 @@ div.image1
   margin: 0 auto;
 }
 
-div.image2
-{
+div.image2 {
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-image: url("../pages/2.jpg");
@@ -189,11 +194,12 @@ div.image2
   margin: 0 auto;
 
 }
+
 .flipbook-viewport {
   overflow: hidden;
   width: 1100px;
   height: 100%;
-  float:left;
+  float: left;
 }
 
 .flipbook-viewport .container {
@@ -248,6 +254,7 @@ div.image2
   -ms-box-shadow: 0 0 20px #ccc;
   box-shadow: 0 0 20px #ccc;
 }
+
 div.image1 {
   content: url(pages/1.jpg);
   width: 200px;
@@ -301,52 +308,139 @@ h5 {
   padding-right: 2%;
 }
 
-
-
 /*busola*/
 
-#tot{
-	position:absolute;
-	right:1px;
-	bottom:1px;
-	display: table;
-	width: 166;
-    z-index: 25;
+#tot {
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  display: table;
+  width: 166px;
+  z-index: 25;
 }
-#linie {
-	display: table-row;
-}
-#coloana {
-	display: table-cell;
-}
-#tabel {
-	display: table-row-group;
-}
-#facebook , #reddit
-{
-	margin-left:45px;
-}
-#twitter , #google
-{
-	display: table-cell;
-	transform: translateY(-47px);
-}
-#overlay
-{
-	position: fixed;
-    width: 100%;
-    height: 100%;
-    background: black;
-    left: 0;
-    top: 0;
-    opacity: 2;
-    transition: opacity .3s ease;
-}
-#felinar {
-position: fixed;
-z-index: 30;
-width: 200px;
-height: auto;
-left: 82%;
 
+#linie {
+  display: table-row;
+}
+
+#coloana {
+  display: table-cell;
+}
+
+#tabel {
+  display: table-row-group;
+}
+
+#facebook, #reddit {
+  margin-left: 45px;
+}
+
+#twitter, #google {
+  display: table-cell;
+  transform: translateY(-47px);
+}
+
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  left: 0;
+  top: 0;
+  opacity: 2;
+  transition: opacity .3s ease;
+}
+
+#felinar {
+  position: fixed;
+  z-index: 30;
+  width: 200px;
+  height: auto;
+  left: 82%;
+
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.btn-tertiary {
+  color: #555;
+  padding: 0;
+  line-height: 40px;
+  width: 300px;
+  margin: auto;
+  display: block;
+  border: 2px solid #555;
+}
+
+.btn-tertiary:hover, .btn-tertiary:focus {
+  color: #888888;
+  border-color: #888888;
+}
+
+.input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.input-file + .js-labelFile {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.input-file + .js-labelFile .icon:before {
+  content: "\f093";
+}
+
+.input-file + .js-labelFile.has-file .icon:before {
+  content: "\f00c";
+  color: #5AAC7B;
 }

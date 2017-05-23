@@ -25,31 +25,32 @@ $(function () {
 
   $('.user-form').on('submit', function (event) {
 
+
     //default action specified in the html will be ignored
     event.preventDefault();
     var jThis = $(this),
       urlMehod, urlAjax,
       formAction = jThis.data('action'),
-     formData = $(jThis).serializeObject();
-
+      formData = $(jThis).serializeObject();
 
     switch (formAction) {
       case 'register': {
         urlMehod = 'PUT';
         urlAjax = '';
       }
-      break;
+        break;
       case 'login': {
         urlMehod = 'POST';
         urlAjax = '';
       }
-      break;
+        break;
       case 'article-preferences': {
         urlMehod = 'POST';
         urlAjax = '/teste/preferinte.php';
       }
         break;
-      default: return;
+      default:
+        return;
     }
 
     //TODO insert ajaxurl
@@ -70,42 +71,41 @@ $(function () {
 
   });
 
-
-//transform form data into an object
-  $.fn.serializeObject = function () {
-    var o = {};
-    var a = this.serializeArray();
-    $.each(a, function () {
-      if (o[this.name] !== undefined) {
-        if (!o[this.name].push) {
-          o[this.name] = [o[this.name]];
-        }
-        o[this.name].push(this.value || '');
-      } else {
-        o[this.name] = this.value || '';
-      }
-    });
-    return o;
-  };
 });
 
 
-		function changeImage() {
-			var image = document.getElementById('felinar'),
-      overlay = $('#overlay');
-			if (image.src.match("on")) {
-				image.src = "https://image.ibb.co/d3o40k/off.png";
-				overlay.css("opacity", 0.4);
-				overlay.css("z-index", 1);
+//transform form data into an object
+$.fn.serializeObject = function () {
+  var o = {};
+  var a = this.serializeArray();
+  $.each(a, function () {
+    if (o[this.name] !== undefined) {
+      if (!o[this.name].push) {
+        o[this.name] = [o[this.name]];
+      }
+      o[this.name].push(this.value || '');
+    } else {
+      o[this.name] = this.value || '';
+    }
+  });
+  return o;
+};
 
-			} else
-				{
-				image.src = "https://image.ibb.co/k6L6D5/on.png";
+function changeImage() {
+  var image = document.getElementById('felinar'),
+    overlay = $('#overlay');
+  if (image.src.match("on")) {
+    image.src = "https://image.ibb.co/d3o40k/off.png";
+    overlay.css("opacity", 0.4);
+    overlay.css("z-index", 1);
 
-					overlay.css("opacity", 0);
-					overlay.css("z-index", -1);
+  } else {
+    image.src = "https://image.ibb.co/k6L6D5/on.png";
 
-		}
-		}
+    overlay.css("opacity", 0);
+    overlay.css("z-index", -1);
+
+  }
+}
 
 
