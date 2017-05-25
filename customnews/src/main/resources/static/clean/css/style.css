@@ -444,3 +444,12 @@ h5 {
   content: "\f00c";
   color: #5AAC7B;
 }
+
+
+
+.paper-button_container .preferences-button {
+  margin: 20px auto 0;
+  position: static;
+  padding: 10px;
+  width: auto;
+}
