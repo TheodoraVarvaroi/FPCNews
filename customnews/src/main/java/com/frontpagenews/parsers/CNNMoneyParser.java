@@ -64,6 +64,31 @@ public class CNNMoneyParser {
             article.setTags(null);
             article.setSource(source);
             article.setLanguage(language);
+            Language to1=FRENCH,to2=GERMAN,to3=ITALIAN,to4=SPANISH;
+            articleService.save(article);
+            String f_title2, f_content2;
+            f_title2=TranslatorAPI.translate(f_title,language,to1);
+            f_content2=TranslatorAPI.translate(f_content,language,to1);
+            article.setTitle(f_title2);
+            article.setContent(f_content2);
+            articleService.save(article);
+
+            f_title2=TranslatorAPI.translate(f_title,language,to2);
+            f_content2=TranslatorAPI.translate(f_content,language,to2);
+            article.setTitle(f_title2);
+            article.setContent(f_content2);
+            articleService.save(article);
+
+            f_title2=TranslatorAPI.translate(f_title,language,to3);
+            f_content2=TranslatorAPI.translate(f_content,language,to3);
+            article.setTitle(f_title2);
+            article.setContent(f_content2);
+            articleService.save(article);
+
+            f_title2=TranslatorAPI.translate(f_title,language,to4);
+            f_content2=TranslatorAPI.translate(f_content,language,to4);
+            article.setTitle(f_title2);
+            article.setContent(f_content2);
             articleService.save(article);
 
         }catch (Exception e){

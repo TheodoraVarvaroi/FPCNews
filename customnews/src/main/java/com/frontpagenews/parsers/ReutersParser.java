@@ -19,6 +19,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static com.frontpagenews.APIs.YandexTranslatorAPI.language.Language.*;
+
 @Component
 public class ReutersParser {
     @Autowired
@@ -73,13 +75,40 @@ public class ReutersParser {
         articleModel.setContentLength(content.length());
 
         //detect article language
-        String language = "ENGLISH";
+        Language language = Language.ENGLISH;
         //language = TranslatorAPI.detectLanguage(content.substring(0, 500)).toString();
-        articleModel.setLanguage(language);
+        articleModel.setLanguage(language.toString());
 
         //System.out.println(articleModel);
         try{
-           articleService.save(articleModel);
+            Language to1=FRENCH,to2=GERMAN,to3=ITALIAN,to4=SPANISH;
+            articleService.save(articleModel);
+            String f_title=articleModel.getTitle();
+            String f_content=articleModel.getContent();
+            String f_title2, f_content2;
+            f_title2=TranslatorAPI.translate(f_title,language,to1);
+            f_content2=TranslatorAPI.translate(f_content,language,to1);
+            articleModel.setTitle(f_title2);
+            articleModel.setContent(f_content2);
+            articleService.save(articleModel);
+
+            f_title2=TranslatorAPI.translate(f_title,language,to2);
+            f_content2=TranslatorAPI.translate(f_content,language,to2);
+            articleModel.setTitle(f_title2);
+            articleModel.setContent(f_content2);
+            articleService.save(articleModel);
+
+            f_title2=TranslatorAPI.translate(f_title,language,to3);
+            f_content2=TranslatorAPI.translate(f_content,language,to3);
+            articleModel.setTitle(f_title2);
+            articleModel.setContent(f_content2);
+            articleService.save(articleModel);
+
+            f_title2=TranslatorAPI.translate(f_title,language,to4);
+            f_content2=TranslatorAPI.translate(f_content,language,to4);
+            articleModel.setTitle(f_title2);
+            articleModel.setContent(f_content2);
+            articleService.save(articleModel);
         }
         catch (Exception e)
         {

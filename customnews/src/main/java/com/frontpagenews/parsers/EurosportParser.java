@@ -21,6 +21,8 @@ import org.springframework.stereotype.Component;
 
 import javax.swing.*;
 
+import static com.frontpagenews.APIs.YandexTranslatorAPI.language.Language.*;
+
 @Component
 public class EurosportParser {
     @Autowired
@@ -45,8 +47,7 @@ public class EurosportParser {
             Document doc= Jsoup.connect(links.get(i)).get();
             String content = getArticleContent(doc.html());
             //detect article language
-            String language = "ENGLISH";
-            //language = TranslatorAPI.detectLanguage(content.substring(0, 500)).toString();
+            Language language = Language.ENGLISH;
             articol.setContent(getArticleContent(content));
             articol.setContentLength(content.length());
             String imageUrl = getImage(doc.html());
@@ -71,7 +72,25 @@ public class EurosportParser {
             articol.setSource(sourceModel);
             articol.setTag("sport");
             articol.setSourceTags(getTags(doc.html()));
-            articol.setLanguage(language);
+            articol.setLanguage(language.toString());
+            articles.add(articol);
+
+            Language to1=FRENCH,to2=GERMAN,to3=ITALIAN,to4=SPANISH;
+
+            articol.setTitle(TranslatorAPI.translate(articol.getTitle(),language,to1));
+            articol.setContent(TranslatorAPI.translate(articol.getContent(),language,to1));
+            articles.add(articol);
+
+            articol.setTitle(TranslatorAPI.translate(articol.getTitle(),language,to2));
+            articol.setContent(TranslatorAPI.translate(articol.getContent(),language,to2));
+            articles.add(articol);
+
+            articol.setTitle(TranslatorAPI.translate(articol.getTitle(),language,to3));
+            articol.setContent(TranslatorAPI.translate(articol.getContent(),language,to3));
+            articles.add(articol);
+
+            articol.setTitle(TranslatorAPI.translate(articol.getTitle(),language,to4));
+            articol.setContent(TranslatorAPI.translate(articol.getContent(),language,to4));
             articles.add(articol);
         }
     }
@@ -117,6 +136,7 @@ public class EurosportParser {
     {
         for(int i=0;i<articles.size();i++)
         {
+
             try{
                 articleService.save(articles.get(i));
             }

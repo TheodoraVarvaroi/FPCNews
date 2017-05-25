@@ -27,6 +27,8 @@ import sun.awt.image.ImageFormatException;
 
 import javax.swing.*;
 
+import static com.frontpagenews.APIs.YandexTranslatorAPI.language.Language.*;
+
 @Component
 public class BBCHealthParser {
     String title;
@@ -135,8 +137,7 @@ public class BBCHealthParser {
                 //System.out.println("date: "+articleDate);
 
                 //detect article
-                String language = "ENGLISH";
-                //language = TranslatorAPI.detectLanguage(content.substring(0, 500)).toString();
+                Language language = Language.ENGLISH;
 
                 SourceModel source = new SourceModel();
                 source.setSite(i);
@@ -165,10 +166,38 @@ public class BBCHealthParser {
                 article2.setTag("health");
                 article2.setSourceTags(sourceTags);
                 article2.setSource(source);
-                article2.setLanguage(language);
+                article2.setLanguage(language.toString());
 
                 //System.out.println (article2);
                 try {
+                    Language to1=FRENCH,to2=GERMAN,to3=ITALIAN,to4=SPANISH;
+                    articleService.save(article2);
+
+                    String f_title=article2.getTitle();
+                    String f_content= article2.getContent();
+                    String f_title2, f_content2;
+                    f_title2=TranslatorAPI.translate(f_title,language,to1);
+                    f_content2=TranslatorAPI.translate(f_content,language,to1);
+                    article2.setTitle(f_title2);
+                    article2.setContent(f_content2);
+                    articleService.save(article2);
+
+                    f_title2=TranslatorAPI.translate(f_title,language,to2);
+                    f_content2=TranslatorAPI.translate(f_content,language,to2);
+                    article2.setTitle(f_title2);
+                    article2.setContent(f_content2);
+                    articleService.save(article2);
+
+                    f_title2=TranslatorAPI.translate(f_title,language,to3);
+                    f_content2=TranslatorAPI.translate(f_content,language,to3);
+                    article2.setTitle(f_title2);
+                    article2.setContent(f_content2);
+                    articleService.save(article2);
+
+                    f_title2=TranslatorAPI.translate(f_title,language,to4);
+                    f_content2=TranslatorAPI.translate(f_content,language,to4);
+                    article2.setTitle(f_title2);
+                    article2.setContent(f_content2);
                     articleService.save(article2);
                 }catch(Exception e)
                 {
