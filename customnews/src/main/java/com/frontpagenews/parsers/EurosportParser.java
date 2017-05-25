@@ -29,7 +29,7 @@ public class EurosportParser {
     ArticleService articleService;
     ArrayList<ArticleModel> articles=new ArrayList<ArticleModel>();
 
-    @Scheduled(initialDelay = 5000, fixedDelay=3600000)
+    @Scheduled(initialDelay = 5000000, fixedDelay=3600000)
     public void parseAll() throws IOException {
         get_all_articles();
         insertAllArticles();

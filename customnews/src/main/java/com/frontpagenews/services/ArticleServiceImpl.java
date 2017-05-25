@@ -42,4 +42,8 @@ public class ArticleServiceImpl implements ArticleService {
     public List<String> getDistinctTags() {
         return mongoTemplate.getCollection("articles").distinct("tag");
     }
+
+    public List<ArticleModel> getByTagIn(List<String> tags) {
+        return this.repository.findByTagIn(tags);
+    }
 };

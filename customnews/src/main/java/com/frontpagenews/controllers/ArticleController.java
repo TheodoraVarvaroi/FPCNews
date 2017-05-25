@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -39,6 +40,20 @@ public class ArticleController {
             return null;
         int pagestart = (Integer.parseInt(page) - 1) * 10;
         List<ArticleModel> list = articleService.getAll().subList(pagestart, pagestart+10);
+        return list;
+    }
+
+    @RequestMapping(value="/page/{page}/{tags}", method=RequestMethod.GET)
+    public List<ArticleModel> getArticlePage(@PathVariable("page") String page, @PathVariable("tags") String tags) {
+        System.out.println("\n\n\n" + tags + "\n\n\n");
+        List<String> tagsList = Arrays.asList(tags.split("&"));
+        for (int i = 0; i < tagsList.size(); i ++) {
+            System.out.println(tagsList.get(i));
+        }
+        if(page.equals("0"))
+            return null;
+        int pagestart = (Integer.parseInt(page) - 1) * 10;
+        List<ArticleModel> list = articleService.getByTagIn(tagsList).subList(pagestart, pagestart+10);
         return list;
     }
 

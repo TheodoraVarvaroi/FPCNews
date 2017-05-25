@@ -7,4 +7,5 @@ import java.util.List;
 public interface ArticleService extends CrudService<ArticleModel>{
     public ArticleModel getOneByTag(String tag);
     public List<String> getDistinctTags();
+    public List<ArticleModel> getByTagIn(List<String> tags);
 }

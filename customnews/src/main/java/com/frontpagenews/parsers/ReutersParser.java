@@ -26,7 +26,7 @@ public class ReutersParser {
     @Autowired
     ArticleService articleService;
 
-    @Scheduled(initialDelay = 5000, fixedDelay=3600000)
+    @Scheduled(initialDelay = 5000000, fixedDelay=3600000)
     public void parseAll() throws IOException {
        ArrayList<String> adrese=new ArrayList<String>();
         Document doc = Jsoup.connect("http://www.reuters.com/politics").get();

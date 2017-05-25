@@ -34,7 +34,7 @@ public class TheGuardianTravelParser {
   @Autowired
   private ArticleService articleService;
 
-  @Scheduled(initialDelay = 5000, fixedDelay=3600000)
+  @Scheduled(initialDelay = 5000000, fixedDelay=3600000)
   public void parseAllArticles(){
     try {
       Document doc = Jsoup.connect("https://www.theguardian.com/us/travel").get();

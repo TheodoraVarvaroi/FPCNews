@@ -33,7 +33,7 @@ public class TheVergeParser {
     @Autowired
     ArticleService articleService;
 
-    @Scheduled(initialDelay = 5000, fixedDelay=3600000)
+    @Scheduled(initialDelay = 5000000, fixedDelay=3600000)
     public void parseAll() {
         try {
             Document doc = Jsoup.connect("https://www.theverge.com/").get();
