@@ -85,7 +85,7 @@ public class ParserMovieWeb {
                 
             } catch (ParseException ex) 
                 {
-                    Logger.getLogger(ParserMovieWeb.class.getName()).log(Level.SEVERE, null, ex);
+                    //Logger.getLogger(ParserMovieWeb.class.getName()).log(Level.SEVERE, null, ex);
                 }
          
     Elements img = article.select("meta[property=\"og:image\"]");
@@ -145,7 +145,7 @@ public class ParserMovieWeb {
             }
             
         } catch (IOException ex) {
-            Logger.getLogger(ParserMovieWeb.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(ParserMovieWeb.class.getName()).log(Level.SEVERE, null, ex);
         }
     
            // System.out.println();

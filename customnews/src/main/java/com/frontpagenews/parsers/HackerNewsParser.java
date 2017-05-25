@@ -90,7 +90,7 @@ public class HackerNewsParser {
 //                System.out.println(f_date);
 
             } catch  (ParseException e) {
-                e.printStackTrace();
+                //e.printStackTrace();
             }
 
             //detect article language

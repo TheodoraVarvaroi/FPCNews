@@ -3,6 +3,7 @@ package com.frontpagenews.services;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.repositories.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +12,8 @@ import java.util.List;
 public class ArticleServiceImpl implements ArticleService {
     @Autowired
     private ArticleRepository repository;
+    @Autowired
+    MongoTemplate mongoTemplate;
 
     @Override
     public ArticleModel save(ArticleModel entity) {
@@ -32,7 +35,11 @@ public class ArticleServiceImpl implements ArticleService {
         this.repository.delete(id);
     }
 
-    public ArticleModel getOneByTag (String tag) {
+    public ArticleModel getOneByTag(String tag) {
         return this.repository.findByTag(tag);
+    }
+
+    public List<String> getDistinctTags() {
+        return mongoTemplate.getCollection("articles").distinct("tag");
     }
 };

@@ -39,7 +39,6 @@ public class ArticleController {
             return null;
         int pagestart = (Integer.parseInt(page) - 1) * 10;
         List<ArticleModel> list = articleService.getAll().subList(pagestart, pagestart+10);
-
         return list;
     }
 
@@ -51,6 +50,11 @@ public class ArticleController {
         } else {
             return new ResponseEntity<ArticleModel>(article, HttpStatus.OK);
         }
+    }
+
+    @RequestMapping(value="/tags", method=RequestMethod.GET)
+    public List<String> getDistinctByTag() {
+        return articleService.getDistinctTags();
     }
 
     @RequestMapping(value="{id}", method=RequestMethod.PUT)

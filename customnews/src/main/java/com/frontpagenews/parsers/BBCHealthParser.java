@@ -130,7 +130,7 @@ public class BBCHealthParser {
                     DateFormat df = new SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH);
                     articleDate = df.parse(date);
                 } catch  (ParseException e) {
-                    e.printStackTrace();
+                    //e.printStackTrace();
                 }
                 //System.out.println("date: "+articleDate);
 
