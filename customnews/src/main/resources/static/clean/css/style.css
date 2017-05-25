@@ -444,3 +444,19 @@ h5 {
   content: "\f00c";
   color: #5AAC7B;
 }
+
+.paper-button_container .preferences-button {
+  margin: 20px auto 0;
+  position: static;
+  padding: 10px;
+  width: auto;
+}
+
+.color-input-label {
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.paper-button_container .submit-button {
+  margin: 0 auto;
+}

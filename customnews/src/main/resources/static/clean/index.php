@@ -18,7 +18,7 @@
 
 <?php include 'templates/preferences-menu.php' ?>
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
 
 <div class="body">
   <div id="left">
@@ -50,6 +50,10 @@
         <label for="politica" class="lb"> Politica </label><br>
         <input type="submit" name="salveaza" class="butons" value="Salveaza">
       </form>
+    </div>
+
+    <div class="paper-button_container">
+      <button class="util preferences-button" onclick="openNav()">Preferences</button>
     </div>
   </div>
   <div id="id01" class="register">
@@ -86,6 +90,9 @@
       </div>
     </form>
   </div>
+
+
+
   <div class="flipbook-viewport">
     <div class="container">
       <div class="flipbook">
