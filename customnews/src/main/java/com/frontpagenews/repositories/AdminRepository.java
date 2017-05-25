@@ -10,7 +10,7 @@ import java.util.List;
 public interface AdminRepository extends MongoRepository<AdminModel, String> {
     public List<AdminModel> findAll();
     public AdminModel findOne(String id);
-    public AdminModel findByIdAndPassword(String username, String password);
+    public AdminModel findByUsernameAndPassword(String username, String password);
     public AdminModel findByUsername(String username);
     public AdminModel save(AdminModel admin);
     public void delete(String id);

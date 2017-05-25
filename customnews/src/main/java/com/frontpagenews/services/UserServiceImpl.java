@@ -31,14 +31,14 @@ public class UserServiceImpl implements UserService {
     }
 
     public UserModel getByUsernameAndPassword(String username, String password) {
-        return this.repository.findByIdAndPassword(username, password);
+        return this.repository.findByUsernameAndPassword(username, password);
     }
 
     public boolean verifyUser (String username, String password) {
         UserModel admin = getByUsernameAndPassword(username, password);
         if (admin.getUsername().length() > 0) {
             return true;
-        };
+        }
         return false;
-    };
+    }
 }

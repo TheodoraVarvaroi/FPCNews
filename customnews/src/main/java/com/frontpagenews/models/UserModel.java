@@ -1,6 +1,7 @@
 package com.frontpagenews.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
@@ -9,7 +10,10 @@ import java.util.List;
 @Document(collection="users")
 public class UserModel {
     @Id
-    private String id; // username
+    private String id;
+
+    @Indexed(unique = true)
+    private String username;
 
     private String password;
 
@@ -19,10 +23,14 @@ public class UserModel {
 
     private List<String> preferred_sources;
 
-    public UserModel() {}
+    public UserModel() {
+        this.username = " ";
+        this.password = " ";
+        this.email = " ";
+    }
 
     public UserModel(String username, String password, String email) {
-        this.id = username;
+        this.username = username;
         this.password = password;
         this.email = email;
         this.preferred_tags = new ArrayList<String>();
@@ -30,7 +38,7 @@ public class UserModel {
     }
 
     public String getUsername() {
-        return id;
+        return username;
     }
 
     public String getPassword() {
@@ -50,7 +58,7 @@ public class UserModel {
     }
 
     public void setUsername(String username) {
-        this.id = username;
+        this.username = username;
     }
 
     public void setPassword(String password) {

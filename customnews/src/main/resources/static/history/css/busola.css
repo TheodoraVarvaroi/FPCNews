@@ -1,0 +1,23 @@
+#tot{
+	display: table;
+	width: 191;
+}
+#linie {
+	display: table-row;
+}
+#coloana {
+	display: table-cell;
+}
+#tabel {
+	display: table-row-group;
+}
+#facebook , #reddit
+{
+	margin-left:50px;
+	margin-right:50px;
+}
+#twitter , #google
+{
+	display: table-cell;
+	transform: translateY(-50px);
+}

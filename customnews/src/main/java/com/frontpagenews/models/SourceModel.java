@@ -11,7 +11,11 @@ public class SourceModel {
 
     private Date date;
 
-    public SourceModel() {}
+    public SourceModel() {
+        this.site = " ";
+        this.author = " ";
+        this.date = new Date();
+    }
 
     public SourceModel(String site, String author, Date date) {
         this.site = site;
@@ -41,5 +45,9 @@ public class SourceModel {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String toString() {
+        return "Site: " + site + "  Author: " + author + "  Date: " + date;
     }
 }

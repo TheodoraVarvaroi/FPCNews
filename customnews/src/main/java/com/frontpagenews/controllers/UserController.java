@@ -3,7 +3,9 @@ package com.frontpagenews.controllers;
 import com.frontpagenews.models.UserModel;
 import com.frontpagenews.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,16 +16,20 @@ import java.util.List;
 @RequestMapping("/api/user")
 public class UserController {
     @Autowired
-    UserService userService;
+    private UserService userService;
 
-    @RequestMapping(method= RequestMethod.GET)
+    @RequestMapping(method=RequestMethod.GET)
     public List<UserModel> getAllUsers() {
         return userService.getAll();
     }
 
-    @RequestMapping(method=RequestMethod.POST)
-    public UserModel createUser(@Valid @RequestBody UserModel user) {
-        return userService.save(user);
+    @RequestMapping(method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> createUser(@Valid @RequestBody UserModel user) {
+        UserModel usr = userService.getByUsernameAndPassword(user.getUsername(), user.getPassword());
+
+        if(usr != null)
+            return new ResponseEntity<String>("{\"OK\":1}", HttpStatus.OK);
+        return new ResponseEntity<String>("{\"OK\":0}", HttpStatus.OK);
     }
 
     @RequestMapping(value="{id}", method=RequestMethod.GET)
