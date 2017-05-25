@@ -5,9 +5,6 @@ import com.frontpagenews.APIs.YandexTranslatorAPI.detect.Detect;
 import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.APIs.YandexTranslatorAPI.translate.Translate;
 
-/**
- * Created by Paula Carp on 22.05.2017.
- */
 public class TranslatorAPI {
 
     private TranslatorAPI(){ }

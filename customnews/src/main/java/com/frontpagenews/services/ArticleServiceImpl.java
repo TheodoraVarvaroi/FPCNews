@@ -32,7 +32,7 @@ public class ArticleServiceImpl implements ArticleService {
         this.repository.delete(id);
     }
 
-    public ArticleModel getOneByTags (List<String> tags) {
-        return this.repository.findByTags(tags);
+    public ArticleModel getOneByTag (String tag) {
+        return this.repository.findByTag(tag);
     }
 };

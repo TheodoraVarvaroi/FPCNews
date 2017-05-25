@@ -8,7 +8,10 @@ import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
+
+import java.awt.*;
 import java.io.IOException;
+import java.net.URL;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -25,6 +28,8 @@ import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+
+import javax.swing.*;
 
 @Component
 public class TechCrunchParser {
@@ -43,7 +48,7 @@ public class TechCrunchParser {
                 parse(url);
             }
         } catch (IOException e){
-            System.out.println (e.toString());
+            //System.out.println (e.toString());
         }
     }
 
@@ -55,8 +60,6 @@ public class TechCrunchParser {
         Elements title = doc.select("h1");
         String f_title = title.text();
         //System.out.println(f_title);
-
-
 
         Elements content = doc.getElementsByClass("article-entry text");
         String f_content = content.text();
@@ -105,8 +108,8 @@ public class TechCrunchParser {
         }
 
             //detect article language
-            Language language = TranslatorAPI.detectLanguage(f_content);
-
+            String language = "ENGLISH";
+            //language = TranslatorAPI.detectLanguage(f_content.substring(0, 500)).toString();
             SourceModel source = new SourceModel();
             source.setSite(f_site);
             source.setDate(f_date);
@@ -115,21 +118,37 @@ public class TechCrunchParser {
             ArticleModel article = new ArticleModel();
             article.setTitle(f_title);
             article.setContent(f_content);
+            article.setContentLength(f_content.length());
             article.setImageUrl(f_image);
-            article.setTags(f_tags);
+            if (f_image.length() != 0) {
+                try {
+                    URL url_ = new URL(f_image);
+                    Image image_ = new ImageIcon(url_).getImage();
+                    int imgWidth = image_.getWidth(null);
+                    int imgHeight = image_.getHeight(null);
+                    article.setImageHeight(imgHeight);
+                    article.setImageWidth(imgWidth);
+                }
+                catch (Exception ex) {
+                    article.setImageHeight(0);
+                    article.setImageWidth(0);
+                }
+            };
+            article.setTag("technology");
+            article.setSourceTags(f_tags);
             article.setSource(source);
             article.setLanguage(language);
-            System.out.println (article);
+            //System.out.println (article);
             try {
                 articleService.save(article);
             } catch ( MongoException e){
-                System.out.println (e.toString());
+                //System.out.println (e.toString());
             }
 
         }catch (IOException e){
-            System.out.println (e.toString());
+            //System.out.println (e.toString());
         }
-        System.out.println("\n");
+        //System.out.println("\n");
     }
 
     public static void main(String[] args){

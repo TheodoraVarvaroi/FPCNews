@@ -1,9 +1,8 @@
 package com.frontpagenews.parsers;
 
-/**
- * Created by Gabriel on 5/11/2017.
- */
+import java.awt.*;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -19,6 +18,8 @@ import com.frontpagenews.services.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+
+import javax.swing.*;
 
 @Component
 public class EurosportParser {
@@ -44,14 +45,32 @@ public class EurosportParser {
             Document doc= Jsoup.connect(links.get(i)).get();
             String content = getArticleContent(doc.html());
             //detect article language
-            Language language = TranslatorAPI.detectLanguage(content);
+            String language = "ENGLISH";
+            //language = TranslatorAPI.detectLanguage(content.substring(0, 500)).toString();
             articol.setContent(getArticleContent(content));
-            articol.setImageUrl(getImage(doc.html()));
+            articol.setContentLength(content.length());
+            String imageUrl = getImage(doc.html());
+            articol.setImageUrl(imageUrl);
+            if (imageUrl.length() != 0) {
+                try {
+                    URL url = new URL(imageUrl);
+                    Image image = new ImageIcon(url).getImage();
+                    int imgWidth = image.getWidth(null);
+                    int imgHeight = image.getHeight(null);
+                    articol.setImageHeight(imgHeight);
+                    articol.setImageWidth(imgWidth);
+                }
+                catch (Exception ex) {
+                    articol.setImageHeight(0);
+                    articol.setImageWidth(0);
+                }
+            };
             articol.setTitle(getTitle(doc.html()));
             sourceModel.setSite(links.get(i));
             sourceModel.setDate(date);
             articol.setSource(sourceModel);
-            articol.setTags(getTags(doc.html()));
+            articol.setTag("sport");
+            articol.setSourceTags(getTags(doc.html()));
             articol.setLanguage(language);
             articles.add(articol);
         }
@@ -103,7 +122,7 @@ public class EurosportParser {
             }
             catch(Exception e)
             {
-                System.out.println(e.getMessage());
+                //System.out.println(e.getMessage());
             }
         }
     }

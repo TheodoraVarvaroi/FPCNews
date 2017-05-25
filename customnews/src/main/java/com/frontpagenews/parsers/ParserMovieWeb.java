@@ -8,7 +8,10 @@ import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
+
+import java.awt.*;
 import java.io.IOException;
+import java.net.URL;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -26,6 +29,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+
+import javax.swing.*;
 
 @Component
 public class ParserMovieWeb {
@@ -45,7 +50,7 @@ public class ParserMovieWeb {
                   parse(links.get(i));
             }
         } catch (IOException e){
-            System.out.println (e.toString());
+            //System.out.println (e.toString());
         }
     }
     
@@ -101,8 +106,9 @@ public class ParserMovieWeb {
            }
 
             //detect article language
-            Language language = TranslatorAPI.detectLanguage(currentArticle);
-         
+            String language = "ENGLISH";
+            //language = TranslatorAPI.detectLanguage(currentArticle.substring(0, 500)).toString();
+
             SourceModel source = new SourceModel();
             source.setSite(currentSite);
             source.setDate(dateOfPublishing);
@@ -111,15 +117,31 @@ public class ParserMovieWeb {
             ArticleModel articol = new ArticleModel();
             articol.setTitle(currentTitle);
             articol.setImageUrl(currentImg);
+            if (currentImg.length() != 0) {
+                try {
+                    URL url_ = new URL(currentImg);
+                    Image image_ = new ImageIcon(url_).getImage();
+                    int imgWidth = image_.getWidth(null);
+                    int imgHeight = image_.getHeight(null);
+                    articol.setImageHeight(imgHeight);
+                    articol.setImageWidth(imgWidth);
+                }
+                catch (Exception ex) {
+                    articol.setImageHeight(0);
+                    articol.setImageWidth(0);
+                }
+            };
             articol.setContent(currentArticle);
-            articol.setTags(currentTags);
+            articol.setContentLength(currentArticle.length());
+            articol.setTag("movie");
+            articol.setSourceTags(currentTags);
             articol.setSource(source);
             articol.setLanguage(language);
-            System.out.println(articol);
+            //System.out.println(articol);
             try {
                 articleService.save(articol);
             } catch ( MongoException e){
-                System.out.println (e.toString());
+                //System.out.println (e.toString());
             }
             
         } catch (IOException ex) {

@@ -5,7 +5,10 @@ import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
+
+import java.awt.*;
 import java.io.IOException;
+import java.net.URL;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -20,8 +23,9 @@ import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import sun.awt.image.ImageFormatException;
 
-// @author AnaMaria
+import javax.swing.*;
 
 @Component
 public class BBCHealthParser {
@@ -37,7 +41,8 @@ public class BBCHealthParser {
     String date;
     String contentDescriptionTags; //site-ul meu nu are tag-uri(sau nu le gasesc eu) asa ca iau cuvintele mai lungi de 5 din descrierea siteului drept tag-uri. 
     List<String> listUrlArticle=new ArrayList();
-    List<String> tags = new ArrayList<String>();
+    String tag;
+    List<String> sourceTags = new ArrayList<String>();
 
     @Autowired
     ArticleService articleService;
@@ -70,10 +75,10 @@ public class BBCHealthParser {
             listUrlArticle.add(urlArticle);
             //System.out.println("tttitlu:"+urlArticle);                
         } 
-        for(String i :listUrlArticle)
+        /*for(String i :listUrlArticle)
         {
             System.out.println(i);
-        }
+        }*/
         
         // iau fiecare url de articol din lista si extrag datele necesare
         for(String i :listUrlArticle)
@@ -86,37 +91,37 @@ public class BBCHealthParser {
             for(Element x: list_tags)
             {
                 contentDescriptionTags=x.attr("content");
-                System.out.println("description: "+ contentDescriptionTags);
+                //System.out.println("description: "+ contentDescriptionTags);
                 String[] str=contentDescriptionTags.split("\\s+");
                 for (String str1 : str) {
                     if ((str1.length()) > 5) {
-                        tags.add(str1);
+                        sourceTags.add(str1);
                     }
                 }
-                for(String s: tags)
-                    System.out.print(s+ ' ');
+                //for(String s: sourceTags)
+                    //System.out.print(s+ ' ');
                     
             }
-            System.out.println();
+            //System.out.println();
             for(Element t: divBody){
                 //title
                 title=t.select("h1.story-body__h1").text();
-                System.out.println("title: "+title);
+                //System.out.println("title: "+title);
 
                 //url image
                 urlImg=t.select("img.js-image-replace").attr("src");
-                System.out.println("img: "+urlImg);
+                //System.out.println("img: "+urlImg);
 
                 //content
                 content=t.select("div.story-body__inner p:nth-child(n+3):not(:last-child)").text();
-                System.out.println("content: "+content);
+                //System.out.println("content: "+content);
 
                 //author
                 //sunt unele articole care nu au un autor specificat asa ca pun autorul anonim
                 author=t.select("div.byline :first-child").text();
                 if(author.isEmpty())
                     author="Unknown";
-                System.out.println("author: "+ author);
+                //System.out.println("author: "+ author);
 
                 //date
                 date=t.select("div.date.date--v2").text();
@@ -127,10 +132,11 @@ public class BBCHealthParser {
                 } catch  (ParseException e) {
                     e.printStackTrace();
                 }
-                System.out.println("date: "+articleDate);
+                //System.out.println("date: "+articleDate);
 
-                //detect article language
-                Language language = TranslatorAPI.detectLanguage(content);
+                //detect article
+                String language = "ENGLISH";
+                //language = TranslatorAPI.detectLanguage(content.substring(0, 500)).toString();
 
                 SourceModel source = new SourceModel();
                 source.setSite(i);
@@ -140,17 +146,33 @@ public class BBCHealthParser {
                 ArticleModel article2 = new ArticleModel();
                 article2.setTitle(title);
                 article2.setContent(content);
+                article2.setContentLength(content.length());
                 article2.setImageUrl(urlImg);
-                article2.setTags(tags);
+                if (urlImg.length() != 0) {
+                    try {
+                        URL url = new URL(urlImg);
+                        Image image = new ImageIcon(url).getImage();
+                        int imgWidth = image.getWidth(null);
+                        int imgHeight = image.getHeight(null);
+                        article2.setImageHeight(imgHeight);
+                        article2.setImageWidth(imgWidth);
+                    }
+                    catch (Exception ex) {
+                        article2.setImageHeight(0);
+                        article2.setImageWidth(0);
+                    }
+                };
+                article2.setTag("health");
+                article2.setSourceTags(sourceTags);
                 article2.setSource(source);
                 article2.setLanguage(language);
 
-                System.out.println (article2);
+                //System.out.println (article2);
                 try {
                     articleService.save(article2);
                 }catch(Exception e)
                 {
-                    System.out.println(e.getMessage());
+                    //System.out.println(e.getMessage());
                 }
 
             }

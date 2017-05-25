@@ -62,9 +62,11 @@ public class ArticleController {
         articleData.setTitle(article.getTitle());
         articleData.setContent(article.getContent());
         articleData.setImageUrl(article.getImageUrl());
-        articleData.setTags(article.getTags());
+        articleData.setTag(article.getTag());
+        articleData.setSourceTags(article.getSourceTags());
         articleData.setSource(article.getSource());
         articleData.setVideoUrl(article.getVideoUrl());
+        articleData.setLanguage(article.getLanguage());
         ArticleModel updatedArticle = articleService.save(articleData);
         return new ResponseEntity<ArticleModel>(updatedArticle, HttpStatus.OK);
     }

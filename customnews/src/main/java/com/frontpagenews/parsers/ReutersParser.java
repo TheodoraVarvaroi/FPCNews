@@ -11,14 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by Ervin on 5/11/2017.
- */
 @Component
 public class ReutersParser {
     @Autowired
@@ -50,22 +50,40 @@ public class ReutersParser {
         articleModel.setTitle(getTitle(html));
 
         articleModel.setSource(getSource(html));
-        articleModel.setImageUrl(getImageUrl(html));
-        articleModel.setTags(getTags(html));
+        String f_image = getImageUrl(html);
+        articleModel.setImageUrl(f_image);
+        if (f_image.length() != 0) {
+            try {
+                URL url = new URL(f_image);
+                Image image_ = new ImageIcon(url).getImage();
+                int imgWidth = image_.getWidth(null);
+                int imgHeight = image_.getHeight(null);
+                articleModel.setImageHeight(imgHeight);
+                articleModel.setImageWidth(imgWidth);
+            }
+            catch (Exception ex) {
+                articleModel.setImageHeight(0);
+                articleModel.setImageWidth(0);
+            }
+        };
+        articleModel.setTag("politics");
+        articleModel.setSourceTags(getTags(html));
         String content = getContent(html);
         articleModel.setContent(content);
+        articleModel.setContentLength(content.length());
 
         //detect article language
-        Language language = TranslatorAPI.detectLanguage(content);
+        String language = "ENGLISH";
+        //language = TranslatorAPI.detectLanguage(content.substring(0, 500)).toString();
         articleModel.setLanguage(language);
 
-        System.out.println(articleModel);
+        //System.out.println(articleModel);
         try{
            articleService.save(articleModel);
         }
         catch (Exception e)
         {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
         }
     }
     public SourceModel getSource(String html)

@@ -16,6 +16,9 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Component;
 
+import javax.swing.*;
+import java.awt.*;
+import java.net.URL;
 import java.text.ParseException;
 import java.util.Arrays;
 import java.util.Date;
@@ -40,7 +43,7 @@ public class TheGuardianTravelParser {
       }
     }
     catch(IOException excp){
-      System.out.println("Exception caught when trying to connect to https://www.theguardian.com/us/travel");
+      //System.out.println("Exception caught when trying to connect to https://www.theguardian.com/us/travel");
     }
   }
   private void parseArticle(String url){
@@ -106,7 +109,8 @@ public class TheGuardianTravelParser {
                 }
 
                 //detect article language
-                Language language = TranslatorAPI.detectLanguage(formattedArticle.toString());
+                String language = "ENGLISH";
+                //language = TranslatorAPI.detectLanguage(formattedArticle.substring(0, 500)).toString();
 
                 SourceModel source = new SourceModel();
                 source.setSite(url);
@@ -116,23 +120,39 @@ public class TheGuardianTravelParser {
                 ArticleModel article = new ArticleModel();
                 article.setTitle(title);
                 article.setContent(formattedArticle.toString());
+                article.setContentLength(formattedArticle.length());
                 article.setImageUrl(imageUrl);
-                article.setTags(tagsList);
+                if (imageUrl.length() != 0) {
+                    try {
+                        URL url_ = new URL(imageUrl);
+                        Image image_ = new ImageIcon(url_).getImage();
+                        int imgWidth = image_.getWidth(null);
+                        int imgHeight = image_.getHeight(null);
+                        article.setImageHeight(imgHeight);
+                        article.setImageWidth(imgWidth);
+                    }
+                    catch (Exception ex) {
+                        article.setImageHeight(0);
+                        article.setImageWidth(0);
+                    }
+                };
+                article.setTag("travel");
+                article.setSourceTags(tagsList);
                 article.setSource(source);
                 article.setLanguage(language);
 
-                System.out.println(article);
+                //System.out.println(article);
                 try {
                     articleService.save(article);
                 } catch ( MongoException e){
-                    System.out.println (e.toString());
+                    //System.out.println (e.toString());
                 }
             }
         }
       }
     }
     catch(IOException excp){
-      System.out.println("Exception caught when trying to connect to "+" "+url);
+      //System.out.println("Exception caught when trying to connect to "+" "+url);
     }
   }
 

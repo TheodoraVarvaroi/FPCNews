@@ -1,5 +1,7 @@
 package com.frontpagenews.parsers;
+import java.awt.*;
 import java.io.IOException;
+import java.net.URL;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -22,6 +24,8 @@ import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
 
+import javax.swing.*;
+
 @Component
 public class HackerNewsParser {
     @Autowired
@@ -38,7 +42,7 @@ public class HackerNewsParser {
                 parse(link);
             }
         } catch (IOException e){
-            System.out.println (e.toString());
+            //System.out.println (e.toString());
         }
     }
     
@@ -90,7 +94,8 @@ public class HackerNewsParser {
             }
 
             //detect article language
-            Language language = TranslatorAPI.detectLanguage(f_content);
+            String language = "ENGLISH";
+            //language = TranslatorAPI.detectLanguage(f_content.substring(0, 500)).toString();
 
             SourceModel source = new SourceModel();
             source.setSite(f_site);
@@ -100,19 +105,35 @@ public class HackerNewsParser {
             ArticleModel article = new ArticleModel();
             article.setTitle(f_title);
             article.setContent(f_content);
+            article.setContentLength(f_content.length());
             article.setImageUrl(f_image);
-            article.setTags(f_tags);
+            if (f_image.length() != 0) {
+                try {
+                    URL url = new URL(f_image);
+                    Image image_ = new ImageIcon(url).getImage();
+                    int imgWidth = image_.getWidth(null);
+                    int imgHeight = image_.getHeight(null);
+                    article.setImageHeight(imgHeight);
+                    article.setImageWidth(imgWidth);
+                }
+                catch (Exception ex) {
+                    article.setImageHeight(0);
+                    article.setImageWidth(0);
+                }
+            };
+            article.setTag("computer security");
+            article.setSourceTags(f_tags);
             article.setSource(source);
             article.setLanguage(language);
 //            System.out.println (article);
             try {
                 articleService.save(article);
             } catch ( MongoException e){
-                System.out.println (e.toString());
+                //System.out.println (e.toString());
             }
 
         }catch (IOException e){
-            System.out.println (e.toString());
+            //System.out.println (e.toString());
         }
     }
 

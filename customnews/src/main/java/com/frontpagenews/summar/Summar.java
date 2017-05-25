@@ -5,10 +5,6 @@ import com.frontpagenews.summar.summarizer.KeywordExtractor;
 import com.frontpagenews.summar.summarizer.SentencePreprocessor;
 import com.frontpagenews.summar.summarizer.SentenceSegmenter;
 
-/**
- * Created by Gabriel on 5/24/2017.
- */
-
 public class Summar {
     private String summary;
     private String keywords;
