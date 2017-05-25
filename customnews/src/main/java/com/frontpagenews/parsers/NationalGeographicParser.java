@@ -26,6 +26,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static com.frontpagenews.APIs.YandexTranslatorAPI.language.Language.*;
+
 @Component
 public class NationalGeographicParser  {
     @Autowired
@@ -90,8 +92,7 @@ public class NationalGeographicParser  {
             }
 
             //detect article language
-            String language = "ENGLISH";
-            //language = TranslatorAPI.detectLanguage(f_content.substring(0, 500)).toString();
+            Language language = Language.ENGLISH;
 
             SourceModel source = new SourceModel();
             source.setSite(f_site);
@@ -120,10 +121,34 @@ public class NationalGeographicParser  {
             article.setTag("science");
             article.setSourceTags(f_tags);
             article.setSource(source);
-            article.setLanguage(language);
-
-            //System.out.println (article);
+            article.setLanguage(language.toString());
+            Language to1=FRENCH,to2=GERMAN,to3=ITALIAN,to4=SPANISH;
+//            System.out.println (article);
             try {
+                articleService.save(article);
+                String f_title2,f_content2;
+                f_title2=TranslatorAPI.translate(f_title,language,to1);
+                f_content2=TranslatorAPI.translate(f_content,language,to1);
+                article.setTitle(f_title2);
+                article.setContent(f_content2);
+                articleService.save(article);
+
+                f_title2=TranslatorAPI.translate(f_title,language,to2);
+                f_content2=TranslatorAPI.translate(f_content,language,to2);
+                article.setTitle(f_title2);
+                article.setContent(f_content2);
+                articleService.save(article);
+
+                f_title2=TranslatorAPI.translate(f_title,language,to3);
+                f_content2=TranslatorAPI.translate(f_content,language,to3);
+                article.setTitle(f_title2);
+                article.setContent(f_content2);
+                articleService.save(article);
+
+                f_title2=TranslatorAPI.translate(f_title,language,to4);
+                f_content2=TranslatorAPI.translate(f_content,language,to4);
+                article.setTitle(f_title2);
+                article.setContent(f_content2);
                 articleService.save(article);
             } catch ( MongoException e){
                 //System.out.println (e.toString());
