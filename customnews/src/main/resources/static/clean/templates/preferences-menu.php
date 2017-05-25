@@ -4,8 +4,8 @@
 
   <form name="upload" method="post" action="#" enctype="multipart/form-data" accept-charset="utf-8">
     <div class="form-group">
-      <input type="file" name="file" id="file" class="input-file">
-      <label for="file" class="btn btn-tertiary js-labelFile">
+      <input type="file" accept="image/*" name="file" id="file" class="input-file">
+      <label for="file"  class="btn btn-tertiary js-labelFile">
         <i class="icon fa fa-check"></i>
         <span class="js-fileName">Choose a file</span>
       </label>
