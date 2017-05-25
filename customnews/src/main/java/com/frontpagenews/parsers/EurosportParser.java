@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.net.MalformedURLException;
+
+import com.frontpagenews.APIs.TranslatorAPI;
+import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import org.jsoup.Jsoup;
@@ -39,13 +42,17 @@ public class EurosportParser {
             ArticleModel articol=new ArticleModel();
             sourceModel=new SourceModel();
             Document doc= Jsoup.connect(links.get(i)).get();
-            articol.setContent(getArticleContent(doc.html()));
+            String content = getArticleContent(doc.html());
+            //detect article language
+            Language language = TranslatorAPI.detectLanguage(content);
+            articol.setContent(getArticleContent(content));
             articol.setImageUrl(getImage(doc.html()));
             articol.setTitle(getTitle(doc.html()));
             sourceModel.setSite(links.get(i));
             sourceModel.setDate(date);
             articol.setSource(sourceModel);
             articol.setTags(getTags(doc.html()));
+            articol.setLanguage(language);
             articles.add(articol);
         }
     }

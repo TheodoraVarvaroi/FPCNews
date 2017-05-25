@@ -1,5 +1,6 @@
 package com.frontpagenews.models;
 
+import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -25,6 +26,8 @@ public class ArticleModel {
 
     private String videoUrl;
 
+    private Language language;
+
     public ArticleModel() {
         this.title = " ";
         this.content = " ";
@@ -32,15 +35,17 @@ public class ArticleModel {
         this.tags = new ArrayList<String>();
         this.source = new SourceModel();
         this.videoUrl = " ";
+        this.language = Language.ENGLISH;
     }
 
-    public ArticleModel(String title, String content, String imageUrl, List<String> tags, SourceModel source, String videoUrl) {
+    public ArticleModel(String title, String content, String imageUrl, List<String> tags, SourceModel source, String videoUrl, Language language) {
         this.title = title;
         this.content = content;
         this.imageUrl = imageUrl;
         this.tags = tags;
         this.source = source;
         this.videoUrl = videoUrl;
+        this.language = language;
     }
 
     public String getTitle() {
@@ -67,6 +72,8 @@ public class ArticleModel {
         return videoUrl;
     }
 
+    public Language getLanguage() { return language; }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -91,12 +98,14 @@ public class ArticleModel {
         this.videoUrl = videoUrl;
     }
 
+    public void setLanguage(Language language) { this.language = language; }
+
     public String toString(){
         String ret =  "Title: " + title + "\nContent: " + content + "\nImageUrl: " + imageUrl + "\nTags: ";
         for(int i = 0; i < tags.size(); i ++) {
             ret += tags.get(i)+ " ";
         }
-        ret += "\nSource: " + source + "\nVideoUrl: " + videoUrl;
+        ret += "\nSource: " + source + "\nVideoUrl: " + videoUrl + "\nLanguage: " + language.toString();
         return ret;
     }
 }

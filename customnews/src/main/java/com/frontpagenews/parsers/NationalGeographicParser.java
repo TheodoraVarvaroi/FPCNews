@@ -1,4 +1,6 @@
 package com.frontpagenews.parsers;
+import com.frontpagenews.APIs.TranslatorAPI;
+import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
@@ -84,6 +86,9 @@ public class NationalGeographicParser  {
                 e.printStackTrace();
             }
 
+            //detect article language
+            Language language = TranslatorAPI.detectLanguage(f_content);
+
             SourceModel source = new SourceModel();
             source.setSite(f_site);
             source.setDate(f_date);
@@ -95,6 +100,7 @@ public class NationalGeographicParser  {
             article.setImageUrl(f_image);
             article.setTags(f_tags);
             article.setSource(source);
+            article.setLanguage(language);
 
             System.out.println (article);
             try {
