@@ -7,14 +7,24 @@
       <input type="file" accept="image/*" name="file" id="file" class="input-file">
       <label for="file"  class="btn btn-tertiary js-labelFile">
         <i class="icon fa fa-check"></i>
-        <span class="js-fileName">Choose a file</span>
+        <span class="js-fileName">Choose a file for the backgrond</span>
       </label>
     </div>
+
+    <label class="btn btn-tertiary color-input-label ">
+      <input name="color-button-background" type="color">
+      <span>Choose a background color for buttons</span>
+    </label>
+
+    <label class="btn btn-tertiary color-input-label">
+      <input name="color-button-text" type="color">
+      <span>Choose a color for buttons</span>
+    </label>
+
     <!--additional fields-->
-    <div class="col-md-12 text-center">
+    <div class="paper-button_container">
       <!--the defauld disabled btn and the actual one shown only if the three fields are valid-->
-      <button type="button" class="btn btn-default util" disabled="disabled" id="fakebtn">Submit! <i
-          class="fa fa-minus-circle"></i></button>
+      <button type="button" class="btn btn-default util submit-button">Submit!</button>
     </div>
   </form>
 </div>

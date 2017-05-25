@@ -1,8 +1,12 @@
 var mySideNav = $('#mySidenav');
 $(function () {
+
   var fileInput = $('input[name="file"]'),
     filename,
-    fileNameSpan = $('.js-fileName');
+    fileNameSpan = $('.js-fileName'),
+    buttonBackground = $('input[name="color-button-background"]'),
+    buttoncolor = $('input[name="color-button-text"]'),
+    buttons = $('button');
 
   fileInput.on('change', function (e) {
     if (!this.value) {
@@ -13,6 +17,15 @@ $(function () {
     fileNameSpan.text(filename);
     changeBackground(this);
   });
+
+  buttonBackground.on('change', function () {
+    buttons.css('background', this.value);
+  });
+
+  buttoncolor.on('change', function () {
+    buttons.css('color', this.value);
+  });
+
 
 });
 
