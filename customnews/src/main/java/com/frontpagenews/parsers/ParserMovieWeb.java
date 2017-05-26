@@ -6,8 +6,6 @@ import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
 
 import java.awt.*;
 import java.io.IOException;

@@ -1,8 +1,6 @@
 package com.frontpagenews.parsers;
 
 import com.frontpagenews.APIs.TranslatorAPI;
-import com.frontpagenews.APIs.YandexTranslatorAPI.ApiKeys;
-import com.frontpagenews.APIs.YandexTranslatorAPI.detect.Detect;
 import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.models.ArticleModel;

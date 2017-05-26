@@ -1,6 +1,5 @@
 package com.frontpagenews.models;
 
-import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -19,6 +18,8 @@ public class ArticleModel {
     private String content;
 
     private int contentLength;
+
+    private String summary;
 
     private String imageUrl;
 
@@ -40,6 +41,7 @@ public class ArticleModel {
         this.title = " ";
         this.content = " ";
         this.contentLength = 1;
+        this.summary = "";
         this.imageUrl = " ";
         this.imageWidth = 0;
         this.imageHeight = 0;
@@ -54,6 +56,7 @@ public class ArticleModel {
         this.title = title;
         this.content = content;
         this.contentLength = contentLength;
+        this.summary = "";
         this.imageUrl = imageUrl;
         this.imageHeight = imageHeight;
         this.imageWidth = imageWidth;
@@ -62,6 +65,10 @@ public class ArticleModel {
         this.source = source;
         this.videoUrl = videoUrl;
         this.language = language;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getTitle() {
@@ -74,6 +81,10 @@ public class ArticleModel {
 
     public int getContentLength() {
         return contentLength;
+    }
+
+    public String getSummary() {
+        return summary;
     }
 
     public String getImageUrl() {
@@ -118,6 +129,10 @@ public class ArticleModel {
         this.contentLength = contentLength;
     }
 
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
@@ -149,7 +164,7 @@ public class ArticleModel {
     public void setLanguage(String language) { this.language = language; }
 
     public String toString(){
-        String ret =  "Title: " + title + "\nContent: " + content + "\nImageUrl: " + imageUrl + "\nTag: " + tag + "\nSource tags: ";
+        String ret =  "Title: " + title + "\nContent: " + content + "\nContent length: " +  contentLength + "\nImageUrl: " + imageUrl + "\nImage heaight: " + imageHeight + "\nImage width: " + imageWidth + "\nTag: " + tag + "\nSource tags: ";
         for(int i = 0; i < sourceTags.size(); i ++) {
             ret += sourceTags.get(i)+ " ";
         }

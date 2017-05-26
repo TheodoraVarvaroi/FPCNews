@@ -1,20 +1,14 @@
 package com.frontpagenews.controllers;
 
 import com.frontpagenews.models.ArticleModel;
-import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

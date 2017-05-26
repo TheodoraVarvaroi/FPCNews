@@ -28,6 +28,10 @@ public class AdminModel {
         this.email = email;
     }
 
+    public String getId() {
+        return id;
+    }
+
     public String getUsername() {
         return username;
     }
