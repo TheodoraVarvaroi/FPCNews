@@ -39,11 +39,7 @@ public class ArticleController {
 
     @RequestMapping(value="/page/{page}/{tags}", method=RequestMethod.GET)
     public List<ArticleModel> getArticlePage(@PathVariable("page") String page, @PathVariable("tags") String tags) {
-        System.out.println("\n\n\n" + tags + "\n\n\n");
         List<String> tagsList = Arrays.asList(tags.split("&"));
-        for (int i = 0; i < tagsList.size(); i ++) {
-            System.out.println(tagsList.get(i));
-        }
         if(page.equals("0"))
             return null;
         int pagestart = (Integer.parseInt(page) - 1) * 10;
