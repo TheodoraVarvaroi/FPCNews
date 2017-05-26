@@ -3,7 +3,9 @@ package com.frontpagenews.services;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.repositories.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -46,4 +48,12 @@ public class ArticleServiceImpl implements ArticleService {
     public List<ArticleModel> getByTagIn(List<String> tags) {
         return this.repository.findByTagIn(tags);
     }
+
+    public List<ArticleModel> getAllSorted() {
+        return this.repository.findAll(new Sort(Sort.Direction.DESC, "source.date"));
+    }
+
+    public List<ArticleModel> getByTagInSorted(List<String> tags) {
+        return this.repository.findByTagIn(tags, new Sort(Sort.Direction.DESC, "source.date"));
+    };
 };

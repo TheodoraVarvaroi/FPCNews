@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/articles")
+@RequestMapping("/articles")
 public class ArticleController {
     @Autowired
     ArticleService articleService;
@@ -29,21 +29,27 @@ public class ArticleController {
     }
 
     @RequestMapping(value="/page/{page}", method=RequestMethod.GET)
-    public List<ArticleModel> getArticlePage(@PathVariable("page") String page) {
+    public List<ArticleModel> getArticlesOnPage(@PathVariable("page") String page) {
         if(page.equals("0"))
             return null;
         int pagestart = (Integer.parseInt(page) - 1) * 10;
-        List<ArticleModel> list = articleService.getAll().subList(pagestart, pagestart+10);
+        List<ArticleModel> list = articleService.getAllSorted().subList(pagestart, pagestart+10);
         return list;
     }
 
-    @RequestMapping(value="/page/{page}/{tags}", method=RequestMethod.GET)
-    public List<ArticleModel> getArticlePage(@PathVariable("page") String page, @PathVariable("tags") String tags) {
+    @RequestMapping(value="/tags/{tags}", method=RequestMethod.GET)
+    public List<ArticleModel> getArticlesWithTags(@PathVariable("tags") String tags) {
+        List<String> tagsList = Arrays.asList(tags.split("&"));
+        return articleService.getByTagInSorted(tagsList);
+    }
+
+    @RequestMapping(value="/tags/{tags}/page/{page}", method=RequestMethod.GET)
+    public List<ArticleModel> getArticlesWithTagsOnPage(@PathVariable("page") String page, @PathVariable("tags") String tags) {
         List<String> tagsList = Arrays.asList(tags.split("&"));
         if(page.equals("0"))
             return null;
         int pagestart = (Integer.parseInt(page) - 1) * 10;
-        List<ArticleModel> list = articleService.getByTagIn(tagsList).subList(pagestart, pagestart+10);
+        List<ArticleModel> list = articleService.getByTagInSorted(tagsList).subList(pagestart, pagestart+10);
         return list;
     }
 
