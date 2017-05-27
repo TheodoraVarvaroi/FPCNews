@@ -6,6 +6,7 @@ import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
+import com.frontpagenews.summar.Summar;
 
 import java.awt.*;
 import java.io.IOException;
@@ -105,9 +106,10 @@ public class ParserMovieWeb {
         //    System.out.println(tags.get(i).attr("content"));
            }
 
+            Summar summar=new Summar();
             //detect article language
             Language language = Language.ENGLISH;
-
+            
             SourceModel source = new SourceModel();
             source.setSite(currentSite);
             source.setDate(dateOfPublishing);
@@ -131,6 +133,8 @@ public class ParserMovieWeb {
                 }
             };
             articol.setContent(currentArticle);
+            summar=new Summar(currentArticle);
+            articol.setSummary(summar.getSummary());
             articol.setContentLength(currentArticle.length());
             articol.setTag("movie");
             articol.setSourceTags(currentTags);
