@@ -105,8 +105,10 @@ public class NationalGeographicParser  {
             ArticleModel article = new ArticleModel();
             article.setTitle(f_title);
             article.setContent(f_content);
-            summar=new Summar(content);
+            
+            summar=new Summar(f_content);
             article.setSummary(summar.getSummary());
+            
             article.setContentLength(f_content.length());
             article.setImageUrl(f_image);
             if (f_image.length() != 0) {
