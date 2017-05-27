@@ -72,7 +72,7 @@ public class ReutersParser {
         articleModel.setSourceTags(getTags(html));
         String content = getContent(html);
         Summar summar=new Summar(content);
-        article.setSummary(summar.getSummary());
+        articleModel.setSummary(summar.getSummary());
         articleModel.setContent(content);
         articleModel.setContentLength(content.length());
 
