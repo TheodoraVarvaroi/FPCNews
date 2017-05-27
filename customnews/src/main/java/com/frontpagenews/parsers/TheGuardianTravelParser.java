@@ -120,7 +120,7 @@ public class TheGuardianTravelParser {
                 ArticleModel article = new ArticleModel();
                 article.setTitle(title);
                 article.setContent(formattedArticle.toString());
-                Summar summar=new Summar(formmattedArticle.toString());
+                Summar summar=new Summar(formattedArticle.toString());
                 article.setSummary(summar.getSummary());
                 article.setContentLength(formattedArticle.length());
                 article.setImageUrl(imageUrl);
