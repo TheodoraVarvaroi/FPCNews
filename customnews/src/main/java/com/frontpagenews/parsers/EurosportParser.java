@@ -39,6 +39,7 @@ public class EurosportParser {
     public void get_all_articles() throws IOException {
         String adress="http://www.eurosport.com/football/";
         ArrayList<String>links=new ArrayList<String>();
+        Summar summar=new Summar();
         links=getAllLinks(adress);
         SourceModel sourceModel;
         Date date=new Date();
