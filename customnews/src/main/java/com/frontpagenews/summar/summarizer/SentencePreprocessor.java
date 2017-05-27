@@ -130,7 +130,7 @@ public class SentencePreprocessor {
         String stopword = null;
         List<String> stopwords = new ArrayList<String>();
 
-        String fileName = "stoplist.txt"// introdu calea completa catre fisierul stoplist.txt pentru a nu avea eroare la FileReader
+        String fileName = "stoplist.txt";// introdu calea completa catre fisierul stoplist.txt pentru a nu avea eroare la FileReader
         InputStream inputStream = getClass().getResourceAsStream(fileName);
 
         try {
