@@ -130,12 +130,12 @@ public class SentencePreprocessor {
         String stopword = null;
         List<String> stopwords = new ArrayList<String>();
 
-        String fileName = "stoplist.txt";
+        String fileName = "stoplist.txt"// introdu calea completa catre fisierul stoplist.txt pentru a nu avea eroare la FileReader
         InputStream inputStream = getClass().getResourceAsStream(fileName);
 
         try {
 
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("stoplist.txt"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
 
             while ((stopword = bufferedReader.readLine()) != null) {
                 stopwords.add(stopword);
