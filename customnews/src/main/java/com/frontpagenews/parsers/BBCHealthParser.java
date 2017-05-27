@@ -5,6 +5,7 @@ import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
+import com.frontpagenews.summar.Summar;
 
 import java.awt.*;
 import java.io.IOException;
@@ -88,7 +89,7 @@ public class BBCHealthParser {
             Document article=Jsoup.connect(i).get();
             Elements divBody=article.select("div.story-body");
             Elements list_tags= article.select("meta[property=\"og:description\"]");
-
+            Summar summar=new Summar();
             //tags
             for(Element x: list_tags)
             {
@@ -147,6 +148,10 @@ public class BBCHealthParser {
                 ArticleModel article2 = new ArticleModel();
                 article2.setTitle(title);
                 article2.setContent(content);
+                
+                summar=new Summar(content);
+                article2.setSummary(summar.getSummary());
+                    
                 article2.setContentLength(content.length());
                 article2.setImageUrl(urlImg);
                 if (urlImg.length() != 0) {
