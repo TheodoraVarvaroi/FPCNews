@@ -8,6 +8,7 @@ import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import com.frontpagenews.summar.Summar;
 
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
@@ -36,6 +37,7 @@ public class CNNMoneyParser {
     private void parse(Element rawArticle){
 
         try {
+            Summar summar=new Summar();
             String title = rawArticle.select("title").first().text();
 
             String link = rawArticle.select("link").first().text();
@@ -60,7 +62,11 @@ public class CNNMoneyParser {
             ArticleModel article = new ArticleModel();
             article.setTitle(title);
             article.setContent(content);
+            summar=new Summar(content);
+            
+            article.setSummary(summar.getSummary());
             article.setImageUrl(mediaLink);
+            
             article.setTags(null);
             article.setSource(source);
             article.setLanguage(language);
