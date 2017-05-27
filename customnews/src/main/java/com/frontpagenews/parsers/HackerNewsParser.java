@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.frontpagenews.summar.Summar;
+
 import com.frontpagenews.APIs.TranslatorAPI;
 import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.mongodb.MongoException;
@@ -53,6 +55,7 @@ public class HackerNewsParser {
     	
 //    	System.out.println(link);
     	
+        Summar summar=new Summar();
         try {
             String article_url = link.attr("abs:href"); //site
             String f_site = article_url;
@@ -106,6 +109,8 @@ public class HackerNewsParser {
             ArticleModel article = new ArticleModel();
             article.setTitle(f_title);
             article.setContent(f_content);
+            summar=new Summar(f_content);
+            article.setSummary(summar.getSummary());
             article.setContentLength(f_content.length());
             article.setImageUrl(f_image);
             if (f_image.length() != 0) {
