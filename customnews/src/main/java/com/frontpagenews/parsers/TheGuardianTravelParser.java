@@ -13,6 +13,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Component;
+import com.frontpagenews.summar.Summar;
 
 import javax.swing.*;
 import java.awt.*;
@@ -119,6 +120,8 @@ public class TheGuardianTravelParser {
                 ArticleModel article = new ArticleModel();
                 article.setTitle(title);
                 article.setContent(formattedArticle.toString());
+                Summar summar=new Summar(formmattedArticle.toString());
+                article.setSummary(summar.getSummary());
                 article.setContentLength(formattedArticle.length());
                 article.setImageUrl(imageUrl);
                 if (imageUrl.length() != 0) {
