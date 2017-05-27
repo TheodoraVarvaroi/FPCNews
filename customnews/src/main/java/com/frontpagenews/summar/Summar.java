@@ -17,13 +17,17 @@ public class Summar {
         summarizer = new DocumentSummarizer(seg, prep);
         extractor = new KeywordExtractor(seg, prep);
     }
-    public Summar(String content ,int percentage)
+    public Summar(String content)
     {
         SentenceSegmenter seg = new SentenceSegmenter();
         SentencePreprocessor prep = new SentencePreprocessor();
         summarizer = new DocumentSummarizer(seg, prep);
         extractor = new KeywordExtractor(seg, prep);
+        int percentage=99;
+        do{
         summary = summarizer.summarize(content, percentage);
+            percentage=percentage-3;
+        }while(summary.length()>400&&percentage>10);
         keywords = extractor.extract(summary);
     }
     public String getSummary()
