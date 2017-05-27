@@ -10,6 +10,7 @@ import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import com.frontpagenews.summar.Summar;
 
 import javax.swing.*;
 import java.awt.*;
@@ -47,7 +48,6 @@ public class ReutersParser {
     {
         Document doc = Jsoup.connect(adresa).get();
         String html=doc.html();
-
         ArticleModel articleModel=new ArticleModel();
         articleModel.setTitle(getTitle(html));
 
@@ -71,6 +71,8 @@ public class ReutersParser {
         articleModel.setTag("politics");
         articleModel.setSourceTags(getTags(html));
         String content = getContent(html);
+        Summar summar=new Summar(content);
+        article.setSummary(summar.getSummary());
         articleModel.setContent(content);
         articleModel.setContentLength(content.length());
 
