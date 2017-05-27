@@ -27,7 +27,7 @@ import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-
+import com.frontpagenews.summar.Summar;
 import javax.swing.*;
 
 import static com.frontpagenews.APIs.YandexTranslatorAPI.language.Language.*;
@@ -119,6 +119,8 @@ public class TechCrunchParser {
             ArticleModel article = new ArticleModel();
             article.setTitle(f_title);
             article.setContent(f_content);
+            Summar summar=new Summar(f_content);
+             article.setSummary(summar.getSummary());
             article.setContentLength(f_content.length());
             article.setImageUrl(f_image);
             if (f_image.length() != 0) {
