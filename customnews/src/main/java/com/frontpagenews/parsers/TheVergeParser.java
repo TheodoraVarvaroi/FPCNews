@@ -110,7 +110,7 @@ public class TheVergeParser {
             ArticleModel article = new ArticleModel();
             article.setTitle(f_title);
             article.setContent(f_content);
-            Summar summar=new Summar(content);
+            Summar summar=new Summar(f_content);
             article.setSummary(summar.getSummary());
             article.setContentLength(f_content.length());
             article.setImageUrl(f_image);
