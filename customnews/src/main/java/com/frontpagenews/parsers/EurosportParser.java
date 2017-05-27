@@ -19,6 +19,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import com.frontpagenews.summar.Summar;
+
 import javax.swing.*;
 
 import static com.frontpagenews.APIs.YandexTranslatorAPI.language.Language.*;
@@ -46,9 +48,11 @@ public class EurosportParser {
             sourceModel=new SourceModel();
             Document doc= Jsoup.connect(links.get(i)).get();
             String content = getArticleContent(doc.html());
+            summar=new Summar(content);
+            articol.setSummary(summar.getSummary());
             //detect article language
             Language language = Language.ENGLISH;
-            articol.setContent(getArticleContent(content));
+            articol.setContent(content);
             articol.setContentLength(content.length());
             String imageUrl = getImage(doc.html());
             articol.setImageUrl(imageUrl);
