@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import com.frontpagenews.summar.Summar;
 
 import com.frontpagenews.APIs.TranslatorAPI;
 import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
@@ -109,6 +110,8 @@ public class TheVergeParser {
             ArticleModel article = new ArticleModel();
             article.setTitle(f_title);
             article.setContent(f_content);
+            Summar summar=new Summar(content);
+            article.setSummary(summar.getSummary());
             article.setContentLength(f_content.length());
             article.setImageUrl(f_image);
             if (f_image.length() != 0) {
