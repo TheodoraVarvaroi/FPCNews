@@ -14,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import com.frontpagenews.summar.Summar;
 
 import javax.swing.*;
 import java.awt.*;
@@ -52,6 +53,7 @@ public class NationalGeographicParser  {
         try {
             String article_url = link.attr("abs:href"); //site
             String f_site = article_url;
+        
 
             Document doc = Jsoup.connect(article_url).get();
             Elements title = doc.select("meta[property=\"og:title\"]");
@@ -91,9 +93,10 @@ public class NationalGeographicParser  {
                 //e.printStackTrace();
             }
 
+            Summar summar=new Summar();
             //detect article language
             Language language = Language.ENGLISH;
-
+            
             SourceModel source = new SourceModel();
             source.setSite(f_site);
             source.setDate(f_date);
@@ -102,6 +105,8 @@ public class NationalGeographicParser  {
             ArticleModel article = new ArticleModel();
             article.setTitle(f_title);
             article.setContent(f_content);
+            summar=new Summar(content);
+            article.setSummary(summar.getSummary());
             article.setContentLength(f_content.length());
             article.setImageUrl(f_image);
             if (f_image.length() != 0) {
