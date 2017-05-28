@@ -210,7 +210,7 @@ public class TheVergeParser {
                 spanishArticle.setTag(article.getTag());
                 spanishArticle.setVideoUrl(article.getVideoUrl());
                 articleService.save(spanishArticle);
-            } catch ( MongoException e) {
+            } catch ( Exception e) {
                 //System.out.println(e.toString());
             }
 

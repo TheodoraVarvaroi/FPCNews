@@ -255,7 +255,7 @@ public class BBCHealthParser {
                     articleService.save(spanishArticle);
                 }catch(Exception e)
                 {
-                    System.out.println(e.getMessage());
+                    //System.out.println(e.getMessage());
                 }
 
             }

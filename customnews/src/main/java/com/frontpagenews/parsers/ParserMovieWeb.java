@@ -219,7 +219,7 @@ public class ParserMovieWeb {
                 spanishArticle.setTag(articol.getTag());
                 spanishArticle.setVideoUrl(articol.getVideoUrl());
                 articleService.save(spanishArticle);
-            } catch ( MongoException e){
+            } catch ( Exception e){
                 //System.out.println (e.toString());
             }
             

@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:8181")
 @RestController
 @RequestMapping("/articles")
 public class ArticleController {
