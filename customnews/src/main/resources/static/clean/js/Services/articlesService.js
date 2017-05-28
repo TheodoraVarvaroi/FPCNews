@@ -11,10 +11,7 @@
       var deferred = $q.defer();
       $http({
         method : "GET",
-        url : "http://localhost:8181/articles/tags",
-        headers: {
-          'Access-Control-Allow-Origin' : '*'
-        }
+        url : "http://localhost:8181/articles/tags"
       }).then(function(response) {
         deferred.resolve(response.data);
       }, function(error) {
@@ -27,7 +24,7 @@
       var deferred = $q.defer();
       $http({
         method : "GET",
-        url : "http://localhost:8181/articles/" + _.join(tags, '&') + "/" + lang,
+        url : "http://localhost:8181/articles/tags/" + _.join(tags, '&') + "/" + lang,
         headers: {
             'Access-Control-Allow-Origin' : '*'
         }

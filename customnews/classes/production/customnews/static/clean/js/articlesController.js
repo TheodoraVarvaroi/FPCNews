@@ -10,7 +10,7 @@
     $scope.nr_of_article_lists = 0;
     $scope.current_global_id = -1;
     $(function () {
-      $scope.getArticles(5);
+      getArticleTags();
     });
 
     $scope.getArticles = function(index_of_clicked_article) {
@@ -20,21 +20,13 @@
         console.log('not this index');
         return;
       }
-      ArticlesService.getAllArticles($scope.nr_of_article_lists)
+      ArticlesService.getPreferedArticles($scope.nr_of_article_lists)
         .then(function (response) {
           console.log('success');
           if (_.isEmpty($scope.list_of_articles)) {
             mapIdForArticles(response);
             $scope.list_of_articles = response;
             $scope.cloned_list_of_all_articles = _.cloneDeep($scope.list_of_articles);
-          } else {
-            mapIdForArticles(response);
-            _.each(response, function (new_article) {
-              addNewPagesToNewsPaper(new_article);
-              // $scope.cloned_list_of_all_articles.push(new_article);
-            });
-            $scope.number_of_total_pages = $(".flipbook").turn("pages");
-            $scope.cloned_list_of_all_articles = _.uniq($scope.cloned_list_of_all_articles);
           }
         }, function (error) {
           console.log(error);
@@ -55,6 +47,15 @@
         closeByDocument: true
       });
     };
+
+    function getArticleTags(){
+      ArticlesService.getAllTags()
+        .then(function(response){
+          $scope.all_tags = response;
+        }, function(err){
+          console.log(err);
+        });
+    }
 
     function mapIdForArticles(array) {
       _.each(array, function (item) {

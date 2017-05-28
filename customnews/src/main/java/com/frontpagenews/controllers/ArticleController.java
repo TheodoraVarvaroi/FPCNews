@@ -26,16 +26,16 @@ public class ArticleController {
     @Autowired
     ArticleService articleService;
 
-    @Configuration
-    @EnableWebMvc
-    public class WebConfig extends WebMvcConfigurerAdapter {
-
-        @Override
-        public void addCorsMappings(CorsRegistry registry) {
-            registry.addMapping("/api/**")
-                    .allowedOrigins("*");
-        }
-    }
+//    @Configuration
+//    @EnableWebMvc
+//    public class WebConfig extends WebMvcConfigurerAdapter {
+//
+//        @Override
+//        public void addCorsMappings(CorsRegistry registry) {
+//            registry.addMapping("/api/**")
+//                    .allowedOrigins("*");
+//        }
+//    }
 
     @RequestMapping(method= RequestMethod.GET)
     public List<ArticleModel> getAllArticles() {

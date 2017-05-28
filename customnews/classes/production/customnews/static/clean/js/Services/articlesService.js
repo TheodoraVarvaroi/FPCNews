@@ -7,11 +7,27 @@
   function articlesService($http, $q){
     var service = {};
 
-    service.getAllArticles = function(page_number){
+    service.getAllTags = function(){
       var deferred = $q.defer();
       $http({
         method : "GET",
-        url : "http://localhost:8181/api/articles/page/" + (page_number || 1),
+        url : "http://localhost:8181/articles/tags",
+        headers: {
+          'Access-Control-Allow-Origin' : '*'
+        }
+      }).then(function(response) {
+        deferred.resolve(response.data);
+      }, function(error) {
+        deferred.reject(error);
+      });
+      return deferred.promise;
+    };
+
+    service.getPreferedArticles = function(tags, lang){
+      var deferred = $q.defer();
+      $http({
+        method : "GET",
+        url : "http://localhost:8181/articles/tags/" + _.join(tags, '&') + "/" + lang,
         headers: {
             'Access-Control-Allow-Origin' : '*'
         }

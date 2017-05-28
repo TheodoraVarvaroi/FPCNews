@@ -26,9 +26,7 @@
     <div class="flipbook" ng-class="!toggleBrightness ? 'reduce-brightness' : ''">
       <div>
         <p>Latest News</p>
-        <img src="images/logoziar.png" style="width: 90%; height: 80%; margin-left: auto; margin-right: auto; border-style: none;">
-        <div class="preferinte">
-          <p id="text">Alegetiva stirile preferate:</p>
+          <p id="text">Alegeti stirile preferate:</p>
           <div id="pref" ng-repeat="tag in all_tags track by $index">
             <input type="checkbox" name="preferinte" class="box">
             <label class="lb"></label> <br>

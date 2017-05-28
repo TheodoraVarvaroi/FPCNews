@@ -4,31 +4,32 @@ $(function () {
 
   $('.user-form').on('submit', function (event) {
 
+
     //default action specified in the html will be ignored
     event.preventDefault();
     var jThis = $(this),
       urlMehod, urlAjax,
       formAction = jThis.data('action'),
-     formData = $(jThis).serializeObject();
-
+      formData = $(jThis).serializeObject();
 
     switch (formAction) {
       case 'register': {
         urlMehod = 'PUT';
         urlAjax = '';
       }
-      break;
+        break;
       case 'login': {
         urlMehod = 'POST';
         urlAjax = '';
       }
-      break;
+        break;
       case 'article-preferences': {
         urlMehod = 'POST';
         urlAjax = '/teste/preferinte.php';
       }
         break;
-      default: return;
+      default:
+        return;
     }
 
     //TODO insert ajaxurl
@@ -49,23 +50,22 @@ $(function () {
 
   });
 
-
-//transform form data into an object
-  $.fn.serializeObject = function () {
-    var o = {};
-    var a = this.serializeArray();
-    $.each(a, function () {
-      if (o[this.name] !== undefined) {
-        if (!o[this.name].push) {
-          o[this.name] = [o[this.name]];
-        }
-        o[this.name].push(this.value || '');
-      } else {
-        o[this.name] = this.value || '';
-      }
-    });
-    return o;
-  };
 });
 
 
+//transform form data into an object
+$.fn.serializeObject = function () {
+  var o = {};
+  var a = this.serializeArray();
+  $.each(a, function () {
+    if (o[this.name] !== undefined) {
+      if (!o[this.name].push) {
+        o[this.name] = [o[this.name]];
+      }
+      o[this.name].push(this.value || '');
+    } else {
+      o[this.name] = this.value || '';
+    }
+  });
+  return o;
+};
