@@ -17,30 +17,58 @@ public class ArticleModel {
 
     private String content;
 
+    private int contentLength;
+
+    private String summary;
+
     private String imageUrl;
 
-    private List<String> tags;
+    private int imageWidth;
+
+    private int imageHeight;
+
+    private String tag;
+
+    private List<String> sourceTags;
 
     private SourceModel source;
 
     private String videoUrl;
 
+    private String language;
+
     public ArticleModel() {
         this.title = " ";
         this.content = " ";
+        this.contentLength = 1;
+        this.summary = "";
         this.imageUrl = " ";
-        this.tags = new ArrayList<String>();
+        this.imageWidth = 0;
+        this.imageHeight = 0;
+        this.tag = "";
+        this.sourceTags = new ArrayList<String>();
         this.source = new SourceModel();
         this.videoUrl = " ";
+        this.language = "ENGLISH";
     }
 
-    public ArticleModel(String title, String content, String imageUrl, List<String> tags, SourceModel source, String videoUrl) {
+    public ArticleModel(String title, String content, int contentLength, String imageUrl, int imageHeight, int imageWidth, String tag, List<String> sourceTags, SourceModel source, String videoUrl, String language) {
         this.title = title;
         this.content = content;
+        this.contentLength = contentLength;
+        this.summary = "";
         this.imageUrl = imageUrl;
-        this.tags = tags;
+        this.imageHeight = imageHeight;
+        this.imageWidth = imageWidth;
+        this.tag = tag;
+        this.sourceTags = sourceTags;
         this.source = source;
         this.videoUrl = videoUrl;
+        this.language = language;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getTitle() {
@@ -51,12 +79,32 @@ public class ArticleModel {
         return content;
     }
 
+    public int getContentLength() {
+        return contentLength;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
     public String getImageUrl() {
         return imageUrl;
     }
 
-    public List<String> getTags() {
-        return tags;
+    public int getImageWidth() {
+        return imageWidth;
+    }
+
+    public int getImageHeight() {
+        return imageHeight;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public List<String> getSourceTags() {
+        return sourceTags;
     }
 
     public SourceModel getSource() {
@@ -67,6 +115,8 @@ public class ArticleModel {
         return videoUrl;
     }
 
+    public String getLanguage() { return language; }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -75,12 +125,32 @@ public class ArticleModel {
         this.content = content;
     }
 
+    public void setContentLength(int contentLength) {
+        this.contentLength = contentLength;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
 
-    public void setTags(List<String> tags) {
-        this.tags = tags;
+    public void setImageWidth(int imageWidth) {
+        this.imageWidth = imageWidth;
+    }
+
+    public void setImageHeight(int imageHeight) {
+        this.imageHeight = imageHeight;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public void setSourceTags(List<String> sourceTags) {
+        this.sourceTags = sourceTags;
     }
 
     public void setSource(SourceModel source) {
@@ -91,12 +161,14 @@ public class ArticleModel {
         this.videoUrl = videoUrl;
     }
 
+    public void setLanguage(String language) { this.language = language; }
+
     public String toString(){
-        String ret =  "Title: " + title + "\nContent: " + content + "\nImageUrl: " + imageUrl + "\nTags: ";
-        for(int i = 0; i < tags.size(); i ++) {
-            ret += tags.get(i)+ " ";
+        String ret =  "Title: " + title + "\nContent: " + content + "\nContent length: " +  contentLength + "\nImageUrl: " + imageUrl + "\nImage heaight: " + imageHeight + "\nImage width: " + imageWidth + "\nTag: " + tag + "\nSource tags: ";
+        for(int i = 0; i < sourceTags.size(); i ++) {
+            ret += sourceTags.get(i)+ " ";
         }
-        ret += "\nSource: " + source + "\nVideoUrl: " + videoUrl;
+        ret += "\nSource: " + source + "\nVideoUrl: " + videoUrl + "\nLanguage: " + language.toString();
         return ret;
     }
 }

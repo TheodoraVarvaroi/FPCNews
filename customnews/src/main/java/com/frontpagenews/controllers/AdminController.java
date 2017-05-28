@@ -5,6 +5,7 @@ import com.frontpagenews.services.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -15,7 +16,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/admin")
+@RequestMapping("/admin")
 public class AdminController {
     @Autowired
     AdminService adminService;
@@ -39,6 +40,14 @@ public class AdminController {
     @RequestMapping(method=RequestMethod.POST)
     public AdminModel createAdmin(@Valid @RequestBody AdminModel admin) {
         return adminService.save(admin);
+    }
+
+    @RequestMapping(value="/login", method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> loginAdmin(@Valid @RequestBody AdminModel adminModel) {
+        AdminModel admin = adminService.getByUsernameAndPassword(adminModel.getUsername(), adminModel.getPassword());
+        if(admin != null)
+            return new ResponseEntity<String>("{\"OK\":1}", HttpStatus.OK);
+        return new ResponseEntity<String>("{\"OK\":0}", HttpStatus.OK);
     }
 
     @RequestMapping(value="{id}", method=RequestMethod.GET)
