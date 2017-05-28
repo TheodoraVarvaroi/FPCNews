@@ -17,17 +17,12 @@ public class AdminController {
     @Autowired
     AdminService adminService;
 
-    @RequestMapping(method= RequestMethod.GET)
-    public List<AdminModel> getAllAdmins() {
-         return adminService.getAll();
-    }
-
     @RequestMapping(method=RequestMethod.POST)
     public AdminModel createAdmin(@Valid @RequestBody AdminModel admin) {
         return adminService.save(admin);
     }
 
-    @RequestMapping(method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value="/login", method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> loginAdmin(@Valid @RequestBody AdminModel adminModel) {
         AdminModel admin = adminService.getByUsernameAndPassword(adminModel.getUsername(), adminModel.getPassword());
         if(admin != null)
