@@ -13,6 +13,9 @@ public interface ArticleRepository extends MongoRepository<ArticleModel, String>
     public List<ArticleModel> findAll(Sort sort);
     public ArticleModel findOne(String id);
     public ArticleModel findByTitle(String title);
+    public List<ArticleModel> findByLanguage(String language);
+    public List<ArticleModel> findByLanguage(String language, Sort sort);
+    public List<ArticleModel> findByLanguageAndTagIn(String language,List<String> tags, Sort sort);
     public List<ArticleModel> findByTagIn(List<String> tags);
     public List<ArticleModel> findByTagIn(List<String> tags, Sort sort);
     public ArticleModel findByTag(String tag);

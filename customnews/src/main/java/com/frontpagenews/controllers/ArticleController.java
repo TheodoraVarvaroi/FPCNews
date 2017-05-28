@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -28,29 +29,39 @@ public class ArticleController {
         return articleService.save(admin);
     }
 
-    @RequestMapping(value="/page/{page}", method=RequestMethod.GET)
-    public List<ArticleModel> getArticlesOnPage(@PathVariable("page") String page) {
+    @RequestMapping(value="/page/{page}/{language}", method=RequestMethod.GET)
+    public List<ArticleModel> getArticlesOnPage(@PathVariable("page") String page, @PathVariable("language") String language) {
         if(page.equals("0"))
-            return null;
+            return new ArrayList<>();
+        if (!(language.equals("en") || language.equals("es") || language.equals("de") || language.equals("it")))
+            return new ArrayList<>();
         int pagestart = (Integer.parseInt(page) - 1) * 10;
-        List<ArticleModel> list = articleService.getAllSorted().subList(pagestart, pagestart+10);
-        return list;
+        List<ArticleModel> list = articleService.getAllSorted(language);
+        if (pagestart > list.size())
+            return new ArrayList<>();
+        return list.subList(pagestart, Math.min(pagestart+10, list.size()));
     }
 
-    @RequestMapping(value="/tags/{tags}", method=RequestMethod.GET)
-    public List<ArticleModel> getArticlesWithTags(@PathVariable("tags") String tags) {
+    @RequestMapping(value="/tags/{tags}/{language}", method=RequestMethod.GET)
+    public List<ArticleModel> getArticlesWithTags(@PathVariable("tags") String tags, @PathVariable("language") String language) {
+        if (!(language.equals("en") || language.equals("es") || language.equals("de") || language.equals("it")))
+            return new ArrayList<>();
         List<String> tagsList = Arrays.asList(tags.split("&"));
-        return articleService.getByTagInSorted(tagsList);
+        return articleService.getByTagInSorted(tagsList, language);
     }
 
-    @RequestMapping(value="/tags/{tags}/page/{page}", method=RequestMethod.GET)
-    public List<ArticleModel> getArticlesWithTagsOnPage(@PathVariable("page") String page, @PathVariable("tags") String tags) {
+    @RequestMapping(value="/tags/{tags}/page/{page}/{language}", method=RequestMethod.GET)
+    public List<ArticleModel> getArticlesWithTagsOnPage(@PathVariable("page") String page, @PathVariable("tags") String tags, @PathVariable("language") String language) {
         List<String> tagsList = Arrays.asList(tags.split("&"));
         if(page.equals("0"))
-            return null;
+            return new ArrayList<>();
+        if (!(language.equals("en") || language.equals("es") || language.equals("de") || language.equals("it")))
+            return new ArrayList<>();
         int pagestart = (Integer.parseInt(page) - 1) * 10;
-        List<ArticleModel> list = articleService.getByTagInSorted(tagsList).subList(pagestart, pagestart+10);
-        return list;
+        List<ArticleModel> list = articleService.getByTagInSorted(tagsList, language);
+        if (pagestart > list.size())
+            return new ArrayList<>();
+        return list.subList(pagestart, Math.min(pagestart+10, list.size()));
     }
 
     @RequestMapping(value="{id}", method=RequestMethod.GET)
@@ -68,6 +79,11 @@ public class ArticleController {
         return articleService.getDistinctTags();
     }
 
+    @RequestMapping(value="/languages", method=RequestMethod.GET)
+    public List<String> getDistinctByLanguage() {
+        return articleService.getDistinctLanguages();
+    }
+
     @RequestMapping(value="{id}", method=RequestMethod.PUT)
     public ResponseEntity<ArticleModel> updateArticle(@Valid @RequestBody ArticleModel article, @PathVariable("id") String id) {
         ArticleModel articleData = articleService.getById(id);
@@ -81,6 +97,10 @@ public class ArticleController {
         articleData.setSourceTags(article.getSourceTags());
         articleData.setSource(article.getSource());
         articleData.setVideoUrl(article.getVideoUrl());
+        articleData.setLanguage(article.getLanguage());
+        articleData.setImageHeight(article.getImageHeight());
+        articleData.setImageWidth(article.getImageWidth());
+        articleData.setSummary(article.getSummary());
         articleData.setLanguage(article.getLanguage());
         ArticleModel updatedArticle = articleService.save(articleData);
         return new ResponseEntity<ArticleModel>(updatedArticle, HttpStatus.OK);

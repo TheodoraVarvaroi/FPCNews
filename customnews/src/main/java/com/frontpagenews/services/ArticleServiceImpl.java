@@ -45,15 +45,19 @@ public class ArticleServiceImpl implements ArticleService {
         return mongoTemplate.getCollection("articles").distinct("tag");
     }
 
+    public List<String> getDistinctLanguages() {
+        return mongoTemplate.getCollection("articles").distinct("language");
+    }
+
     public List<ArticleModel> getByTagIn(List<String> tags) {
         return this.repository.findByTagIn(tags);
     }
 
-    public List<ArticleModel> getAllSorted() {
-        return this.repository.findAll(new Sort(Sort.Direction.DESC, "source.date"));
+    public List<ArticleModel> getAllSorted(String language) {
+        return this.repository.findByLanguage(language, new Sort(Sort.Direction.DESC, "source.date"));
     }
 
-    public List<ArticleModel> getByTagInSorted(List<String> tags) {
-        return this.repository.findByTagIn(tags, new Sort(Sort.Direction.DESC, "source.date"));
+    public List<ArticleModel> getByTagInSorted(List<String> tags, String language) {
+        return this.repository.findByLanguageAndTagIn(language, tags, new Sort(Sort.Direction.DESC, "source.date"));
     };
 };
