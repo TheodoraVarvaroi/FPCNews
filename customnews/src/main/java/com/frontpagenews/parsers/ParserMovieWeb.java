@@ -38,7 +38,7 @@ public class ParserMovieWeb {
     @Autowired
     ArticleService articleService;
 
-    @Scheduled(initialDelay = 5000000, fixedDelay=3600000)
+    @Scheduled(initialDelay = 5000, fixedDelay=3600000)
       public void parseAll() {
     
     try {
@@ -134,7 +134,8 @@ public class ParserMovieWeb {
             };
             articol.setContent(currentArticle);
             summar=new Summar(currentArticle);
-            articol.setSummary(summar.getSummary());
+            String summary = summar.getSummary();
+            articol.setSummary(summary);
             articol.setContentLength(currentArticle.length());
             articol.setTag("movie");
             articol.setSourceTags(currentTags);
@@ -144,32 +145,80 @@ public class ParserMovieWeb {
             Language to1=FRENCH,to2=GERMAN,to3=ITALIAN,to4=SPANISH;
             try {
                 articleService.save(articol);
+                ArticleModel frenchArticle = new ArticleModel();
                 String f_title=articol.getTitle();
                 String f_content= articol.getContent();
                 String f_title2,f_content2;
                 f_title2=TranslatorAPI.translate(f_title,language,to1);
                 f_content2=TranslatorAPI.translate(f_content,language,to1);
-                articol.setTitle(f_title2);
-                articol.setContent(f_content2);
-                articleService.save(articol);
+                frenchArticle.setTitle(f_title2);
+                frenchArticle.setContent(f_content2);
+                frenchArticle.setLanguage(to1.toString());
+                String f_sumar2=TranslatorAPI.translate(summary,language,to1);
+                frenchArticle.setSummary(f_sumar2);
+                frenchArticle.setImageWidth(articol.getImageWidth());
+                frenchArticle.setImageHeight(articol.getImageHeight());
+                frenchArticle.setSourceTags(articol.getSourceTags());
+                frenchArticle.setSource(articol.getSource());
+                frenchArticle.setContentLength(f_content.length());
+                frenchArticle.setImageUrl(articol.getImageUrl());
+                frenchArticle.setTag(articol.getTag());
+                frenchArticle.setVideoUrl(articol.getVideoUrl());
+                articleService.save(frenchArticle);
 
+                ArticleModel germanArticle = new ArticleModel();
                 f_title2=TranslatorAPI.translate(f_title,language,to2);
                 f_content2=TranslatorAPI.translate(f_content,language,to2);
-                articol.setTitle(f_title2);
-                articol.setContent(f_content2);
-                articleService.save(articol);
+                germanArticle.setTitle(f_title2);
+                germanArticle.setContent(f_content2);
+                germanArticle.setLanguage(to2.toString());
+                f_sumar2=TranslatorAPI.translate(summary,language,to2);
+                germanArticle.setSummary(f_sumar2);
+                germanArticle.setImageWidth(articol.getImageWidth());
+                germanArticle.setImageHeight(articol.getImageHeight());
+                germanArticle.setSourceTags(articol.getSourceTags());
+                germanArticle.setSource(articol.getSource());
+                germanArticle.setContentLength(f_content.length());
+                germanArticle.setImageUrl(articol.getImageUrl());
+                germanArticle.setTag(articol.getTag());
+                germanArticle.setVideoUrl(articol.getVideoUrl());
+                articleService.save(germanArticle);
 
+                ArticleModel italianArticle = new ArticleModel();
                 f_title2=TranslatorAPI.translate(f_title,language,to3);
                 f_content2=TranslatorAPI.translate(f_content,language,to3);
-                articol.setTitle(f_title2);
-                articol.setContent(f_content2);
-                articleService.save(articol);
+                italianArticle.setTitle(f_title2);
+                italianArticle.setContent(f_content2);
+                italianArticle.setLanguage(to3.toString());
+                f_sumar2=TranslatorAPI.translate(summary,language,to3);
+                italianArticle.setSummary(f_sumar2);
+                italianArticle.setImageWidth(articol.getImageWidth());
+                italianArticle.setImageHeight(articol.getImageHeight());
+                italianArticle.setSourceTags(articol.getSourceTags());
+                italianArticle.setSource(articol.getSource());
+                italianArticle.setContentLength(f_content.length());
+                italianArticle.setImageUrl(articol.getImageUrl());
+                italianArticle.setTag(articol.getTag());
+                italianArticle.setVideoUrl(articol.getVideoUrl());
+                articleService.save(italianArticle);
 
+                ArticleModel spanishArticle = new ArticleModel();
                 f_title2=TranslatorAPI.translate(f_title,language,to4);
                 f_content2=TranslatorAPI.translate(f_content,language,to4);
-                articol.setTitle(f_title2);
-                articol.setContent(f_content2);
-                articleService.save(articol);
+                spanishArticle.setTitle(f_title2);
+                spanishArticle.setContent(f_content2);
+                spanishArticle.setLanguage(to4.toString());
+                f_sumar2=TranslatorAPI.translate(summary,language,to4);
+                spanishArticle.setSummary(f_sumar2);
+                spanishArticle.setImageWidth(articol.getImageWidth());
+                spanishArticle.setImageHeight(articol.getImageHeight());
+                spanishArticle.setSourceTags(articol.getSourceTags());
+                spanishArticle.setSource(articol.getSource());
+                spanishArticle.setContentLength(f_content.length());
+                spanishArticle.setImageUrl(articol.getImageUrl());
+                spanishArticle.setTag(articol.getTag());
+                spanishArticle.setVideoUrl(articol.getVideoUrl());
+                articleService.save(spanishArticle);
             } catch ( MongoException e){
                 //System.out.println (e.toString());
             }
