@@ -1,16 +1,17 @@
 <html>
 <head>
-  <title>The vintage</title>
+  <title>Vintage News</title>
   <meta name="description" content="News Feed IP">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css\style.css" type="text/css" media="all"/>
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+  <link rel="stylesheet" href="css/articlesStyle.scss" type="text/css"/>
   <link rel="icon" href="images/logoziarmic.png">
 
 </head>
 
-<body background="images\lemn.jpg" >
+<body background="images/lemn.jpg" >
 	<div class="body">
 	<div id="left">
 		<div id="st">
@@ -20,7 +21,7 @@
 			<button name="logout" class="util" onclick="document.getElementById('id03').style.display='block'" >Logout</button>
 		</div>
 		<div class="preferinte">
-			<form action="/teste/preferinte.php" class="user-form" data-action="article-preferences" method="post" id="pref">
+			<form action="teste/preferinte.php" class="user-form" data-action="article-preferences" method="post" id="pref">
 				<p id="text">Stiri:</p>
 			  <input type="checkbox" name="preferinte" value="tehnologie" checked class="box" id="tehnologie" >
 				<label for="tehnologie" class="lb"> Tehnologie </label> <br>
@@ -72,98 +73,24 @@
 			</div>
 		</form>
 	</div>
-	<div class="flipbook-viewport">
+	<div class="flipbook-viewport" ng-app="app">
 		<div class="container">
-			<div class="flipbook">
-				<div style="background-image:url(pages/a.jpg)">
-					<div class="content">
-						<h1>Lately News </h1>
-						<div class="image1"></div>​
-						<div class="image2"></div>​
-						<div class="image3"></div>​
-						<div class="image4"></div>​
-						<h5>-1-</h5>
-					</div>
-
-				</div>
-				<div style="background-image:url(pages/2.jpg)">
-					<div class="content">
-						<h5>-2-</h5>
-					</div>
-				</div>
-
-				<div style="background-image:url(pages/3.jpg)">
-					<div class="content">
-						<h5>-3-</h5>
-					</div>
-
-				</div>
-
-
-				<div style="background-image:url(pages/4.jpg)">
-					<div class="content">
-						<h5>-4-</h5>
-					</div>
-
-				</div>
-
-				<div style="background-image:url(pages/5.jpg)">
-					<div class="content">
-						<h5>-5-</h5>
-
-					</div>
-				</div>
-				<div style="background-image:url(pages/6.jpg)">
-					<div class="content">
-						<h5>-6-</h5>
-					</div>
-				</div>
-				<div style="background-image:url(pages/7.jpg)">
-					<div class="content">
-						<h5>-7-</h5>
-					</div>
-				</div>
-				<div style="background-image:url(pages/8.jpg)">
-					<div class="content">
-						<h5>-8-</h5>
-					</div>
-				</div>
-        <div style="background-image:url(pages/9.jpg)">
-					<div class="content">
-						<h5>-9-</h5>
-					</div>
-				</div>
-				<div style="background-image:url(pages/10.jpg)">
-					<div class="content">
-						<h5>-10-</h5>
-					</div>
-				</div>
-        <div style="background-image:url(pages/11.jpg)">
-					<div class="content">
-						<h5>-11-</h5>
-					</div>
-				</div>
-				<div style="background-image:url(pages/12.jpg)">
-					<div class="content">
-						<h5>-12-</h5>
-					</div>
-				<div style="background-image:url(pages/a.jpg)"></div>
-				<div style="background-image:url(pages/a.jpg)"></div>
-				<div style="background-image:url(pages/a.jpg)"></div>
-				<div style="background-image:url(pages/a.jpg)"></div>
-				<div style="background-image:url(pages/a.jpg)"></div>
-				<div style="background-image:url(pages/a.jpg)"></div>
+			<div class="flipbook" ng-controller="ArticlesController">
+        <div class="newspaper-page" ng-repeat="article in list_of_articles track by $index">
+          <h3>{{article.title}}</h3>
+          <p>{{article.content}}</p>
+          <p>{{article.author}}</p> - <p>{{article.date | date : 'MM:dd:yyyy'}}</p>
+        </div>
 			</div>
 		</div>
 	</div>
 	</div>
     <div id="overlay"> </div>
-	<img id="felinar" onclick="changeImage()" src="https://image.ibb.co/d3o40k/off.png"  >
+	<img id="felinar" onclick="changeImage()" src="https://image.ibb.co/d3o40k/off.png">
 	<div id="tot">
 	<div id="tabel">
 	<div id="linie">
 	<div id="coloana"></div>
-	<div id="coloana">
 	<!--facebook -->
 	<div id="facebook">
 	<?php
@@ -171,14 +98,6 @@
 		echo ("<a name=\"facebook\" href=\"https://www.facebook.com/sharer/sharer.php?u=".$url."\" target=\"_blank\">");
 	?>
 	<img src="images/facebook.png" height="25" width="25">
-	</a>
-	</div>
-	</div>
-	<div id="coloana"></div>
-	</div>
-	<div id="linie">
-	<div id="coloana">
-
 	<!--google -->
 	<div id="google">
 	<?php
@@ -186,7 +105,6 @@
 		echo ("<a name=\"google\" href=\"https://plus.google.com/share?url=".$url."\" target=\"_blank\">");
 	?>
 	<img src="images/google.png" height="25" width="25">
-	</a>
 	</div>
 	</div>
 	<div id="coloana">
@@ -227,11 +145,10 @@
 	</div>
 	</div>
 </body>
+<script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js "></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-
 <script type="text/javascript" src="js/turnjs4/lib/turn.js"></script>
-<script src="js/main.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/articlesController.js"></script>
+<script type="text/javascript" src="js/Services/articlesService.js"></script>
 </html>

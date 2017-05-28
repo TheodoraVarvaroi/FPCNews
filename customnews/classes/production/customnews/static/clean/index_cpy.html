@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Vintage News</title>
+  <meta name="description" content="News Feed IP">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/articlesStyle.css" type="text/css"/>
+  <link rel="stylesheet" href="css/loginStyle.css" type="text/css"/>
+  <link rel="stylesheet" href="js/ngDialog-master/css/ngDialog.min.css">
+  <link rel="stylesheet" href="js/ngDialog-master/css/ngDialog-theme-default.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Diplomata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
+</head>
+<body ng-app="app" ng-controller="ArticlesController">
+
+  <div class="main-container">
+    <div class="login-panel">
+      <div ng-click="openLoginPopup()">Login</div>
+      <div ng-click="openRegisterPopup()">Register</div>
+      <div ng-if="showLogoutButton">Logout</div>
+    </div>
+
+    <div class="flipbook" ng-class="!toggleBrightness ? 'reduce-brightness' : ''">
+      <div>
+        <p>Latest News</p>
+        <img src="images/logoziar.png" style="width: 90%; height: 80%; margin-left: auto; margin-right: auto; border-style: none;">
+      </div>
+      <div ng-repeat="article in list_of_articles track by $index"
+           ng-click="getArticles(article.id)">
+        <p>{{article.title}}</p>
+        <img ng-if="article.id % 2 == 0" ng-src="{{article.imageUrl || ''}}">
+        <div>{{article.content}}</div>
+        <img ng-if="article.id % 2 != 0" ng-src="{{article.imageUrl || ''}}">
+        <a style="cursor: pointer;" target="_blank" href="{{article.source.site}}">Click here to read the entire article...</a>
+        <div class="metadata-article-container">
+          <p>{{article.source.author}}</p>
+          <p>{{article.source.date | date : 'MM/dd/yyyy'}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lamp-container">
+      <img ng-click="toggleBrightness = !toggleBrightness"
+           ng-src="{{!toggleBrightness ? 'https://image.ibb.co/d3o40k/off.png' : 'https://image.ibb.co/k6L6D5/on.png'}}">
+    </div>
+  </div>
+
+</body>
+<script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/ngDialog-master/js/ngDialog.js"></script>
+<script type="text/javascript" src="js/turnjs4/lib/turn.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/loginController.js"></script>
+<script type="text/javascript" src="js/registerController.js"></script>
+<script type="text/javascript" src="js/articlesController.js"></script>
+<script type="text/javascript" src="js/Services/articlesService.js"></script>
+<script type="text/javascript" src="js/Services/loginService.js"></script>
+<script type="text/javascript" src="js/Services/registerService.js"></script>
+
+</html>

@@ -1,0 +1,19 @@
+<div class="login-popup" ng-controller="RegisterController">
+  <div class="popup">
+    <div class="data">
+      <div style="display: flex; align-items: center;">
+        <p>Your favorites daily new are here.</br></br>Register</p>
+				<span name="close" ng-click="closeThisDialog();" class="close" title="Close Modal">&times;</span>
+      </div>
+
+      <input type="text" placeholder="Enter Username" name="username" ng-model="newUser.username" required>
+
+      <input type="password" placeholder="Enter Password" name="password" ng-model="newUser.password" required>
+
+      <input type="password" placeholder="Confirm Your Password" name="confirmPassword" ng-model="newUser.conf_password" required>
+
+      <input type="text" placeholder="Enter Email" name="email" ng-model="newUser.email" required>
+      <div class="buton" ng-click="submitRegistration()">Submit Registration</div>
+    </div>
+  </div>
+</div>

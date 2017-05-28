@@ -3,14 +3,101 @@
   height: $h;
   border-radius: $b-radius;
 }
+.reduce-brightness{
+  filter: brightness(50%);
+}
+.login-failed-input{
+  border-color: red !important;
+}
 
-.login-panel{
-  background: url('../images/login.png') no-repeat;
-  & > div{
-    @include button(100px, 30px, 20px);
-    border: 1px solid #cdcdcd;
-    color: #fff;
-    font-size: 18px;
-    background: url('../images/lemn.jpg') no-repeat;
+.main-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+  & .login-panel{
+    background: url('../images/login.png') no-repeat;
+    height: 260px;
+    width: 480px;
+    align-self: flex-start;
+    & > div{
+      @include button(120px, 40px, 20px);
+      border: 1px solid #cdcdcd;
+      margin-bottom: 30px;
+      color: #fff;
+      font-size: 18px;
+      background: url('../images/buton.png') no-repeat;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+    }
+  }
+  & .lamp-container{
+    width: 200px;
+    align-self: baseline;
+    margin-top: 30px;
+    margin-right: 30px;
+    & > img{
+      width: 100%;
+    }
   }
 }
+
+.login-popup{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+.popup {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border-radius: 6px;
+  width: 400px;
+}
+
+.close {
+  margin-left: auto;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover
+{
+  color: red;
+  cursor: pointer;
+}
+.imgcontainer
+{
+  margin: 0 0 17px 0;
+}
+.data {
+  margin-top:24px;
+  padding: 16px;
+}
+input[type=text], input[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.buton{
+  background-color: #8c6e4a;
+  color: white;
+  padding: 14px 20px;
+  text-align: center;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  cursor: pointer;
+}
+

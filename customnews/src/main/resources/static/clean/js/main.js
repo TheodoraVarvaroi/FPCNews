@@ -1,26 +1,5 @@
 $(function () {
-  $('.flipbook').turn({
-    // Width
 
-    width: 1000,
-
-    // Height
-
-    height: 600,
-
-    // Elevation
-
-    elevation: 50,
-
-    // Enable gradients
-
-    gradients: true,
-
-    // Auto center this flipbook
-
-    autoCenter: true
-
-  });
 
 
   $('.user-form').on('submit', function (event) {
@@ -88,24 +67,5 @@ $(function () {
     return o;
   };
 });
-
-
-		function changeImage() {
-			var image = document.getElementById('felinar'),
-      overlay = $('#overlay');
-			if (image.src.match("on")) {
-				image.src = "https://image.ibb.co/d3o40k/off.png";
-				overlay.css("opacity", 0.4);
-				overlay.css("z-index", 1);
-
-			} else
-				{
-				image.src = "https://image.ibb.co/k6L6D5/on.png";
-
-					overlay.css("opacity", 0);
-					overlay.css("z-index", -1);
-
-		}
-		}
 
 

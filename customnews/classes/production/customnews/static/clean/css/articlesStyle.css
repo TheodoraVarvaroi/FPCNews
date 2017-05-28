@@ -1,0 +1,63 @@
+body {
+  overflow: hidden;
+  background: url("../images/lemn.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0; }
+  body p, body a {
+    margin: 0;
+    padding: 0; }
+  body a {
+    color: #000;
+    border-bottom-style: none; }
+    body a:visited {
+      color: #000; }
+
+.flipbook .page {
+  position: absolute;
+  height: 600px;
+  width: 500px;
+  overflow: hidden;
+  color: #000;
+  background: url("../images/background-page.jpg") no-repeat; }
+  .flipbook .page > p, .flipbook .page > a {
+    text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 20px; }
+    .flipbook .page > p:first-child, .flipbook .page > a:first-child {
+      font-size: 22px;
+      line-height: 30px;
+      font-family: 'Diplomata', cursive; }
+  .flipbook .page > a {
+    display: block;
+    text-decoration: none; }
+  .flipbook .page > div {
+    max-height: 30%;
+    text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 20px;
+    margin: 0;
+    overflow: hidden; }
+  .flipbook .page > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid grey; }
+  .flipbook .page .metadata-article-container {
+    display: flex;
+    justify-content: flex-end; }
+
+.flipbook {
+  margin-top: 30px; }
+
+/*# sourceMappingURL=articlesStyle.css.map */

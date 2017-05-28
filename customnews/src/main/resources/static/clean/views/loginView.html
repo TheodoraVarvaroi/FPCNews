@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="login-popup" ng-controller="LoginController">
+  <div class="popup">
+    <div class="data">
+      <div style="display: flex; align-items: center;">
+        <p>See your Daily News in a Vintage Style.</p>
+        <span ng-click="closeThisDialog();" class="close" title="Close Modal">&times;</span>
+      </div>
+      <input type="text" placeholder="Enter Username" ng-model="user.username" ng-class="loginFailed ? 'login-failed-input' : ''" required>
+      <input type="password" placeholder="Enter Password" name="password"  ng-class="loginFailed ? 'login-failed-input' : ''"
+             ng-model="user.password" required>
+      <div class="buton" ng-click="loginIntoAccount()">Login</div>
+    </div>
+  </div>
+</div>

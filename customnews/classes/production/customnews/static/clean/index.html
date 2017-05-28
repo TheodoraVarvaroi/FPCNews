@@ -1,0 +1,154 @@
+<html>
+<head>
+  <title>Vintage News</title>
+  <meta name="description" content="News Feed IP">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+  <link rel="stylesheet" href="css/articlesStyle.scss" type="text/css"/>
+  <link rel="icon" href="images/logoziarmic.png">
+
+</head>
+
+<body background="images/lemn.jpg" >
+	<div class="body">
+	<div id="left">
+		<div id="st">
+
+			<button name="register" class="util" onclick="document.getElementById('id01').style.display='block'" >Register</button>
+			<button name="login" class="util" onclick="document.getElementById('id02').style.display='block'" >Login</button>
+			<button name="logout" class="util" onclick="document.getElementById('id03').style.display='block'" >Logout</button>
+		</div>
+		<div class="preferinte">
+			<form action="teste/preferinte.php" class="user-form" data-action="article-preferences" method="post" id="pref">
+				<p id="text">Stiri:</p>
+			  <input type="checkbox" name="preferinte" value="tehnologie" checked class="box" id="tehnologie" >
+				<label for="tehnologie" class="lb"> Tehnologie </label> <br>
+			  <input type="checkbox" name="preferinte" value="stiinta" checked class="box" id="stiinta">
+				<label for="stiinta" class="lb"> Stiinta </label><br>
+			  <input type="checkbox" name="preferinte" value="sanatate" checked class="box" id="sanatate">
+				<label for="sanatate" class="lb"> Sanatate </label><br>
+			  <input type="checkbox" name="preferinte" value="afaceri" checked class="box" id="afaceri">
+				<label for="afaceri" class="lb"> Afaceri </label><br>
+			  <input type="checkbox" name="preferinte" value="divertisment" checked class="box" id="divertisment">
+				<label for="divertisment" class="lb"> Divertisment </label><br>
+			  <input type="checkbox" name="preferinte" value="sport" checked class="box" id="sport">
+				<label for="sport" class="lb"> Sport </label><br>
+			  <input type="checkbox" name="preferinte" value="gastronomie" checked class="box" id="gastronomie">
+				<label for="gastronomie" class="lb"> Gastronomie </label><br>
+			  <input type="checkbox" name="preferinte" value="politica" checked class="box" id="politica">
+			  <label for="politica" class="lb"> Politica </label><br>
+			  <input type="submit" name="salveaza" class="butons" value="Salveaza">
+			</form>
+		</div>
+	</div>
+	<div id="id01" class="register">
+		<form class="popup user-form" name="user-register-form" data-action="register" id="user-register-submit" action="index.php?action=register" method="POST">
+			<div class="data">
+				<span name="close" onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">
+				&times;</span>
+
+				<input type="text" placeholder="Enter Username" name="username" required>
+
+				<input type="password" placeholder="Enter Password" name="password" required>
+
+				<input type="password" placeholder="Confirm Your Password" name="confirmPassword" required>
+
+				<input type="text" placeholder="Enter Email" name="email" required>
+				<input name="submit" type="submit" value="Submit" class="buton">
+			</div>
+		</form>
+	</div>
+	<div id="id02" class="login">
+		<form class="popup user-form" name="user-login-form" data-action="login" action="index.php?action=login" method="POST">
+			<div class="data">
+				<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+				<input type="text" placeholder="Enter Username" name="username" required>
+
+				<input type="password" placeholder="Enter Password" name="password" required>
+
+				<input name="submit" type="submit" value="Login" class="buton">
+			</div>
+		</form>
+	</div>
+	<div class="flipbook-viewport" ng-app="app">
+		<div class="container">
+			<div class="flipbook" ng-controller="ArticlesController">
+        <div class="newspaper-page" ng-repeat="article in list_of_articles track by $index">
+          <h3>{{article.title}}</h3>
+          <p>{{article.content}}</p>
+          <p>{{article.author}}</p> - <p>{{article.date | date : 'MM:dd:yyyy'}}</p>
+        </div>
+			</div>
+		</div>
+	</div>
+	</div>
+    <div id="overlay"> </div>
+	<img id="felinar" onclick="changeImage()" src="https://image.ibb.co/d3o40k/off.png">
+	<div id="tot">
+	<div id="tabel">
+	<div id="linie">
+	<div id="coloana"></div>
+	<!--facebook -->
+	<div id="facebook">
+	<?php
+		$url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+		echo ("<a name=\"facebook\" href=\"https://www.facebook.com/sharer/sharer.php?u=".$url."\" target=\"_blank\">");
+	?>
+	<img src="images/facebook.png" height="25" width="25">
+	<!--google -->
+	<div id="google">
+	<?php
+		$url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+		echo ("<a name=\"google\" href=\"https://plus.google.com/share?url=".$url."\" target=\"_blank\">");
+	?>
+	<img src="images/google.png" height="25" width="25">
+	</div>
+	</div>
+	<div id="coloana">
+	<!-- busola-->
+	<div id="busola">
+	<img src="images/busola.png" height="116" width="116">
+	</div>
+	</div>
+	<div id="coloana">
+
+	<!--twitter-->
+	<div id="twitter">
+	<?php
+		$url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+		echo ("<a name=\"twitter\" href=\"https://twitter.com/intent/tweet?url=".$url."\" target=\"_blank\">");
+	?>
+	<img src="images/twitter.png" height="25" width="25">
+	</a>
+	</div>
+	</div>
+	</div>
+	<div id="linie">
+	<div id="coloana"></div>
+	<div id="coloana">
+	<!--reddit-->
+	<div id="reddit">
+	<?php
+		$url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+		echo ("<a name=\"reddit\" href=\"https://reddit.com/submit?url=".$url."\" target=\"_blank\">");
+	?>
+	<img src="images/reddit.png" height="25" width="25">
+	</a>
+	</div>
+	</div>
+	<div id="coloana"></div>
+	</div>
+	</div>
+	</div>
+	</div>
+</body>
+<script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js "></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/turnjs4/lib/turn.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/articlesController.js"></script>
+<script type="text/javascript" src="js/Services/articlesService.js"></script>
+</html>

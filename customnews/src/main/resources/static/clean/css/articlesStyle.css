@@ -1,0 +1,104 @@
+body {
+  overflow: hidden;
+  background: url("../images/lemn.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0; }
+  body p, body a {
+    margin: 0;
+    padding: 0; }
+  body a {
+    color: #000;
+    border-bottom-style: none; }
+    body a:visited {
+      color: #000; }
+
+.flipbook .page {
+  position: absolute;
+  height: 600px;
+  width: 500px;
+  overflow: hidden;
+  color: #000;
+  background: url("../images/background-page.jpg") no-repeat; }
+  .flipbook .page > p, .flipbook .page > a {
+    text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 20px; }
+    .flipbook .page > p:first-child, .flipbook .page > a:first-child {
+      font-size: 22px;
+      line-height: 30px;
+      font-family: 'Diplomata', cursive; }
+  .flipbook .page > a {
+    display: block;
+    text-decoration: none; }
+  .flipbook .page > div {
+    max-height: 30%;
+    text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 20px;
+    margin: 0;
+    overflow: hidden; }
+  .flipbook .page > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid grey; }
+  .flipbook .page .metadata-article-container {
+    display: flex;
+    justify-content: flex-end; }
+
+.flipbook {
+  margin-top: 30px; }
+
+#pref {
+  margin-left: 20px; }
+
+.preferinte {
+  width: 175px;
+  height: 310px;
+  border-radius: 9px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../images/ziar.png"); }
+
+.box {
+  opacity: 0;
+  position: absolute; }
+
+.box, .lb {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 2px;
+  cursor: pointer; }
+
+.lb {
+  position: relative;
+  font-family: 'Book Antiqua','Lucida Grande', 'Times New Roman', Georgia; }
+
+.box + .lb:before {
+  content: '';
+  background: #fff;
+  border: 2px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  width: 7px;
+  height: 7px;
+  padding: 5px;
+  margin-right: 2px;
+  text-align: center; }
+
+.box:checked + .lb:before {
+  background: #e67300;
+  box-shadow: inset 0px 0px 0px 4px #fff; }
+
+/*# sourceMappingURL=articlesStyle.css.map */

@@ -1,0 +1,172 @@
+.util {
+
+    position: fixed;
+    background-color: #e0dee0; /* Violet background */
+
+    color: black; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+
+    z-index: 100;
+
+}
+
+img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.main {
+    width: device-width;
+}
+
+#lemn {
+    position: fixed;
+    z-index: 10;
+    width: device-width;
+}
+
+#busola {
+    position: fixed;
+    z-index: 30;
+    height: 230px;
+    margin: 30% 2% 2% 80%;
+}
+
+#login {
+    position: fixed;
+    z-index: 40;
+    height: 230px;
+    margin: 0% 80% 0% 0%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#thumbnails {
+    background-color: white;
+    position: relative;
+    width: 1200px;
+    height: 850px;
+    left: 50%;
+    margin-left: -1200px;
+}
+
+#thumbnails div {
+    width: 600px;
+    height: 850px;
+    background-color: red;;
+}
+
+.flipbook-viewport {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.flipbook-viewport .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+}
+
+.flipbook-viewport .flipbook {
+    width: 922px;
+    height: 600px;
+    left: -461px;
+    top: -300px;
+}
+
+.flipbook-viewport .page {
+    width: 461px;
+    height: 600px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.flipbook .page {
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.flipbook-viewport .page img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0;
+}
+
+.flipbook-viewport .shadow {
+    -webkit-transition: -webkit-box-shadow 0.5s;
+    -moz-transition: -moz-box-shadow 0.5s;
+    -o-transition: -webkit-box-shadow 0.5s;
+    -ms-transition: -ms-box-shadow 0.5s;
+
+    -webkit-box-shadow: 0 0 20px #ccc;
+    -moz-box-shadow: 0 0 20px #ccc;
+    -o-box-shadow: 0 0 20px #ccc;
+    -ms-box-shadow: 0 0 20px #ccc;
+    box-shadow: 0 0 20px #ccc;
+}
+div.image1 {
+    content:url(pages/1.jpg);
+    width: 200px;
+    height: 270px;
+}
+div.image2 {
+    content:url(pages/2.jpg);
+    width: 150px;
+    height:150px;
+    margin-left: 260px;
+
+}
+
+.content {
+    margin: 10px;
+}
+
+ .content h1{
+     width: 100%;
+     text-align: center;
+
+  }
+ h5 {
+     position: absolute;
+     bottom: 0;
+     text-align: center;
+     width: 100%;
+     padding: 0;
+     margin: 0;
+
+ }
+.content > div.left,
+.content > div.right
+{
+    box-sizing: border-box;
+    width: 50%;
+    text-align: justify;
+    margin: 0;
+}
+
+.right
+{
+    float:right;
+    padding-left: 2%;
+}
+.left
+{
+    float:left;
+    padding-right: 2%;
+}
+

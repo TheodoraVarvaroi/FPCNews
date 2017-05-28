@@ -3,9 +3,13 @@ package com.frontpagenews.controllers;
 import com.frontpagenews.models.AdminModel;
 import com.frontpagenews.services.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -15,6 +19,17 @@ import java.util.List;
 public class AdminController {
     @Autowired
     AdminService adminService;
+
+    @Configuration
+    @EnableWebMvc
+    public class WebConfig extends WebMvcConfigurerAdapter {
+
+        @Override
+        public void addCorsMappings(CorsRegistry registry) {
+            registry.addMapping("/api/**")
+                    .allowedOrigins("*");
+        }
+    }
 
     @RequestMapping(method= RequestMethod.GET)
     public List<AdminModel> getAllAdmins() {
