@@ -33,7 +33,7 @@ public class ArticleController {
     public List<ArticleModel> getArticlesOnPage(@PathVariable("page") String page, @PathVariable("language") String language) {
         if(page.equals("0"))
             return new ArrayList<>();
-        if (!(language.equals("en") || language.equals("es") || language.equals("de") || language.equals("it")))
+        if (!(language.equals("en") || language.equals("fr") || language.equals("es") || language.equals("de") || language.equals("it")))
             return new ArrayList<>();
         int pagestart = (Integer.parseInt(page) - 1) * 10;
         List<ArticleModel> list = articleService.getAllSorted(language);
@@ -55,7 +55,7 @@ public class ArticleController {
         List<String> tagsList = Arrays.asList(tags.split("&"));
         if(page.equals("0"))
             return new ArrayList<>();
-        if (!(language.equals("en") || language.equals("es") || language.equals("de") || language.equals("it")))
+        if (!(language.equals("en") || language.equals("fr") || language.equals("es") || language.equals("de") || language.equals("it")))
             return new ArrayList<>();
         int pagestart = (Integer.parseInt(page) - 1) * 10;
         List<ArticleModel> list = articleService.getByTagInSorted(tagsList, language);
