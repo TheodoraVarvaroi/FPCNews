@@ -10,5 +10,6 @@ public interface ArticleService extends CrudService<ArticleModel>{
     public List<String> getDistinctLanguages();
     public List<ArticleModel> getByTagIn(List<String> tags);
     public List<ArticleModel> getAllSorted(String language);
+    public ArticleModel getByTitle(String title);
     public List<ArticleModel> getByTagInSorted(List<String> tags, String language);
 }

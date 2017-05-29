@@ -177,82 +177,96 @@ public class BBCHealthParser {
                 //System.out.println (article2);
                 try {
                     Language to1=FRENCH,to2=GERMAN,to3=ITALIAN,to4=SPANISH;
-                    articleService.save(article2);
+                    ArticleModel articleE = articleService.getByTitle(article2.getTitle());
+                    if (articleE == null)
+                        articleService.save(article2);
 
                     ArticleModel frenchArticle = new ArticleModel();
                     String f_title=article2.getTitle();
                     String f_content= article2.getContent();
                     String f_title2, f_content2, f_sumar2;
                     f_title2=TranslatorAPI.translate(f_title,language,to1);
-                    f_content2=TranslatorAPI.translate(f_content,language,to1);
                     frenchArticle.setTitle(f_title2);
-                    frenchArticle.setContent(f_content2);
-                    frenchArticle.setLanguage(to1.toString());
-                    f_sumar2=TranslatorAPI.translate(summary,language,to1);
-                    frenchArticle.setSummary(f_sumar2);
-                    frenchArticle.setImageWidth(article2.getImageWidth());
-                    frenchArticle.setImageHeight(article2.getImageHeight());
-                    frenchArticle.setSourceTags(article2.getSourceTags());
-                    frenchArticle.setSource(article2.getSource());
-                    frenchArticle.setContentLength(f_content.length());
-                    frenchArticle.setImageUrl(article2.getImageUrl());
-                    frenchArticle.setTag(article2.getTag());
-                    frenchArticle.setVideoUrl(article2.getVideoUrl());
-                    articleService.save(frenchArticle);
+                    articleE = articleService.getByTitle(frenchArticle.getTitle());
+                    if (articleE == null) {
+                        f_content2=TranslatorAPI.translate(f_content,language,to1);
+                        frenchArticle.setContent(f_content2);
+                        frenchArticle.setLanguage(to1.toString());
+                        f_sumar2=TranslatorAPI.translate(summary,language,to1);
+                        frenchArticle.setSummary(f_sumar2);
+                        frenchArticle.setImageWidth(article2.getImageWidth());
+                        frenchArticle.setImageHeight(article2.getImageHeight());
+                        frenchArticle.setSourceTags(article2.getSourceTags());
+                        frenchArticle.setSource(article2.getSource());
+                        frenchArticle.setContentLength(f_content.length());
+                        frenchArticle.setImageUrl(article2.getImageUrl());
+                        frenchArticle.setTag(article2.getTag());
+                        frenchArticle.setVideoUrl(article2.getVideoUrl());
+                        articleService.save(frenchArticle);
+                    }
 
                     ArticleModel germanArticle = new ArticleModel();
                     f_title2=TranslatorAPI.translate(f_title,language,to2);
-                    f_content2=TranslatorAPI.translate(f_content,language,to2);
                     germanArticle.setTitle(f_title2);
-                    germanArticle.setContent(f_content2);
-                    germanArticle.setLanguage(to2.toString());
-                    f_sumar2=TranslatorAPI.translate(summary,language,to2);
-                    germanArticle.setSummary(f_sumar2);
-                    germanArticle.setImageWidth(article2.getImageWidth());
-                    germanArticle.setImageHeight(article2.getImageHeight());
-                    germanArticle.setSourceTags(article2.getSourceTags());
-                    germanArticle.setSource(article2.getSource());
-                    germanArticle.setContentLength(f_content.length());
-                    germanArticle.setImageUrl(article2.getImageUrl());
-                    germanArticle.setTag(article2.getTag());
-                    germanArticle.setVideoUrl(article2.getVideoUrl());
-                    articleService.save(germanArticle);
+                    articleE = articleService.getByTitle(germanArticle.getTitle());
+                    if (articleE == null) {
+                        f_content2=TranslatorAPI.translate(f_content,language,to2);
+                        germanArticle.setContent(f_content2);
+                        germanArticle.setLanguage(to2.toString());
+                        f_sumar2=TranslatorAPI.translate(summary,language,to2);
+                        germanArticle.setSummary(f_sumar2);
+                        germanArticle.setImageWidth(article2.getImageWidth());
+                        germanArticle.setImageHeight(article2.getImageHeight());
+                        germanArticle.setSourceTags(article2.getSourceTags());
+                        germanArticle.setSource(article2.getSource());
+                        germanArticle.setContentLength(f_content.length());
+                        germanArticle.setImageUrl(article2.getImageUrl());
+                        germanArticle.setTag(article2.getTag());
+                        germanArticle.setVideoUrl(article2.getVideoUrl());
+                        articleService.save(germanArticle);
+                    }
 
                     ArticleModel italianArticle = new ArticleModel();
                     f_title2=TranslatorAPI.translate(f_title,language,to3);
-                    f_content2=TranslatorAPI.translate(f_content,language,to3);
                     italianArticle.setTitle(f_title2);
-                    italianArticle.setContent(f_content2);
-                    italianArticle.setLanguage(to3.toString());
-                    f_sumar2=TranslatorAPI.translate(summary,language,to3);
-                    italianArticle.setSummary(f_sumar2);
-                    italianArticle.setImageWidth(article2.getImageWidth());
-                    italianArticle.setImageHeight(article2.getImageHeight());
-                    italianArticle.setSourceTags(article2.getSourceTags());
-                    italianArticle.setSource(article2.getSource());
-                    italianArticle.setContentLength(f_content.length());
-                    italianArticle.setImageUrl(article2.getImageUrl());
-                    italianArticle.setTag(article2.getTag());
-                    italianArticle.setVideoUrl(article2.getVideoUrl());
-                    articleService.save(italianArticle);
+                    articleE = articleService.getByTitle(italianArticle.getTitle());
+                    if (articleE == null) {
+                        f_content2=TranslatorAPI.translate(f_content,language,to3);
+                        italianArticle.setContent(f_content2);
+                        italianArticle.setLanguage(to3.toString());
+                        f_sumar2=TranslatorAPI.translate(summary,language,to3);
+                        italianArticle.setSummary(f_sumar2);
+                        italianArticle.setImageWidth(article2.getImageWidth());
+                        italianArticle.setImageHeight(article2.getImageHeight());
+                        italianArticle.setSourceTags(article2.getSourceTags());
+                        italianArticle.setSource(article2.getSource());
+                        italianArticle.setContentLength(f_content.length());
+                        italianArticle.setImageUrl(article2.getImageUrl());
+                        italianArticle.setTag(article2.getTag());
+                        italianArticle.setVideoUrl(article2.getVideoUrl());
+                        articleService.save(italianArticle);
+                    }
 
                     ArticleModel spanishArticle = new ArticleModel();
                     f_title2=TranslatorAPI.translate(f_title,language,to4);
-                    f_content2=TranslatorAPI.translate(f_content,language,to4);
                     spanishArticle.setTitle(f_title2);
-                    spanishArticle.setContent(f_content2);
-                    spanishArticle.setLanguage(to4.toString());
-                    f_sumar2=TranslatorAPI.translate(summary,language,to4);
-                    spanishArticle.setSummary(f_sumar2);
-                    spanishArticle.setImageWidth(article2.getImageWidth());
-                    spanishArticle.setImageHeight(article2.getImageHeight());
-                    spanishArticle.setSourceTags(article2.getSourceTags());
-                    spanishArticle.setSource(article2.getSource());
-                    spanishArticle.setContentLength(f_content.length());
-                    spanishArticle.setImageUrl(article2.getImageUrl());
-                    spanishArticle.setTag(article2.getTag());
-                    spanishArticle.setVideoUrl(article2.getVideoUrl());
-                    articleService.save(spanishArticle);
+                    articleE = articleService.getByTitle(spanishArticle.getTitle());
+                    if (articleE == null) {
+                        f_content2=TranslatorAPI.translate(f_content,language,to4);
+                        spanishArticle.setContent(f_content2);
+                        spanishArticle.setLanguage(to4.toString());
+                        f_sumar2=TranslatorAPI.translate(summary,language,to4);
+                        spanishArticle.setSummary(f_sumar2);
+                        spanishArticle.setImageWidth(article2.getImageWidth());
+                        spanishArticle.setImageHeight(article2.getImageHeight());
+                        spanishArticle.setSourceTags(article2.getSourceTags());
+                        spanishArticle.setSource(article2.getSource());
+                        spanishArticle.setContentLength(f_content.length());
+                        spanishArticle.setImageUrl(article2.getImageUrl());
+                        spanishArticle.setTag(article2.getTag());
+                        spanishArticle.setVideoUrl(article2.getVideoUrl());
+                        articleService.save(spanishArticle);
+                    }
                 }catch(Exception e)
                 {
                     //System.out.println(e.getMessage());
