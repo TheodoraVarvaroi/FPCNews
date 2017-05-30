@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
   <title>Vintage News</title>
   <meta name="description" content="News Feed IP">
@@ -27,11 +26,15 @@
       <div>
         <p>Latest News</p>
           <p id="text">Alegeti stirile preferate:</p>
-          <div id="pref" ng-repeat="tag in all_tags track by $index">
-            <input type="checkbox" name="preferinte" class="box">
-            <label class="lb"></label> <br>
+          <div id="pref" ng-repeat="tag in list_of_tags track by $index">
+            <input type="checkbox" name="preferinte" class="box" ng-click="tag.checked = !tag.checked;">
+            <label class="lb">{{tag.name}}</label> <br>
           </div>
-          <input type="submit" name="salveaza" class="butons" value="Salveaza">
+        <select>
+          <option></option>
+        </select>
+        <label></label>
+        <div ng-click="getArticlesByTags()" class="butons">Save and Read</div>
         </div>
       </div>
       <div ng-repeat="article in list_of_articles track by $index">
@@ -45,12 +48,10 @@
           <p>{{article.source.date | date : 'MM/dd/yyyy'}}</p>
         </div>
       </div>
-    </div>
-
-    <div class="lamp-container">
-      <img ng-click="toggleBrightness = !toggleBrightness"
-           ng-src="{{!toggleBrightness ? 'https://image.ibb.co/d3o40k/off.png' : 'https://image.ibb.co/k6L6D5/on.png'}}">
-    </div>
+      <div class="lamp-container">
+        <img ng-click="toggleBrightness = !toggleBrightness"
+             ng-src="{{!toggleBrightness ? 'https://image.ibb.co/d3o40k/off.png' : 'https://image.ibb.co/k6L6D5/on.png'}}">
+      </div>
   </div>
 
 </body>
@@ -67,4 +68,4 @@
 <script type="text/javascript" src="js/Services/loginService.js"></script>
 <script type="text/javascript" src="js/Services/registerService.js"></script>
 
-</html>
+</html lang="en">

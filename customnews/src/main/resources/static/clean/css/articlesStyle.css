@@ -15,6 +15,18 @@ body {
     body a:visited {
       color: #000; }
 
+.butons {
+  font-family: 'Book Antiqua','Lucida Grande', 'Times New Roman', Georgia;
+  padding: 5px 10px;
+  border: 1px;
+  cursor: pointer;
+  margin: 8px 30px;
+  color: white;
+  border-radius: 6px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../images/buton.png"); }
+
 .flipbook .page {
   position: absolute;
   height: 600px;
@@ -59,6 +71,12 @@ body {
 
 .flipbook {
   margin-top: 30px; }
+
+.lamp-container {
+  width: 150px;
+  height: 200px; }
+  .lamp-container > img {
+    width: inherit; }
 
 #pref {
   margin-left: 20px; }

@@ -20,13 +20,14 @@
       return deferred.promise;
     };
 
-    service.getPreferedArticles = function(tags, lang){
+    service.getFavoriteArticles = function(tags, lang){
       var deferred = $q.defer();
       $http({
         method : "GET",
         url : "http://localhost:8181/articles/tags/" + _.join(tags, '&') + "/" + lang,
-        headers: {
-            'Access-Control-Allow-Origin' : '*'
+        headers:{
+          'Content-type': 'application/json; charset=utf-8',
+
         }
       }).then(function(response) {
           deferred.resolve(response.data);
@@ -34,6 +35,19 @@
           deferred.reject(error);
         });
         return deferred.promise;
+    };
+
+    service.getAllLanguages = function(){
+      var deferred = $q.defer();
+      $http({
+        method : "GET",
+        url : "http://localhost:8181/articles/languages"
+      }).then(function(response) {
+        deferred.resolve(response.data);
+      }, function(error) {
+        deferred.reject(error);
+      });
+      return deferred.promise;
     };
 
     return service;

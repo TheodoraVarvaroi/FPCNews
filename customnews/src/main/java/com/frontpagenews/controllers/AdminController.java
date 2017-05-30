@@ -21,16 +21,16 @@ public class AdminController {
     @Autowired
     AdminService adminService;
 
-//    @Configuration
-//    @EnableWebMvc
-//    public class WebConfig extends WebMvcConfigurerAdapter {
-//
-//        @Override
-//        public void addCorsMappings(CorsRegistry registry) {
-//            registry.addMapping("/api/**")
-//                    .allowedOrigins("*");
-//        }
-//    }
+    @Configuration
+    @EnableWebMvc
+    public class WebConfig extends WebMvcConfigurerAdapter {
+
+        @Override
+        public void addCorsMappings(CorsRegistry registry) {
+            registry.addMapping("/api/**")
+                    .allowedOrigins("*");
+        }
+    }
 
     @RequestMapping(method= RequestMethod.GET)
     public List<AdminModel> getAllAdmins() {

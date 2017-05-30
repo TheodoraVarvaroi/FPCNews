@@ -11,10 +11,7 @@
       var deferred = $q.defer();
       $http({
         method : "GET",
-        url : "http://localhost:8181/articles/tags",
-        headers: {
-          'Access-Control-Allow-Origin' : '*'
-        }
+        url : "http://localhost:8181/articles/tags"
       }).then(function(response) {
         deferred.resolve(response.data);
       }, function(error) {
@@ -23,20 +20,30 @@
       return deferred.promise;
     };
 
-    service.getPreferedArticles = function(tags, lang){
+    service.getFavoriteArticles = function(tags, lang){
       var deferred = $q.defer();
       $http({
         method : "GET",
-        url : "http://localhost:8181/articles/tags/" + _.join(tags, '&') + "/" + lang,
-        headers: {
-            'Access-Control-Allow-Origin' : '*'
-        }
+        url : "http://localhost:8181/articles/tags/" + _.join(tags, '&') + "/" + lang
       }).then(function(response) {
           deferred.resolve(response.data);
         }, function(error) {
           deferred.reject(error);
         });
         return deferred.promise;
+    };
+
+    service.getAllLanguages = function(){
+      var deferred = $q.defer();
+      $http({
+        method : "GET",
+        url : "http://localhost:8181/articles/languages"
+      }).then(function(response) {
+        deferred.resolve(response.data);
+      }, function(error) {
+        deferred.reject(error);
+      });
+      return deferred.promise;
     };
 
     return service;
