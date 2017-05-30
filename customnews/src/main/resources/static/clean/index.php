@@ -48,7 +48,7 @@
         <label for="gastronomie" class="lb"> Gastronomy </label><br>
         <input type="checkbox" name="preferinte" value="politica" checked class="box" id="politica">
         <label for="politica" class="lb"> Politics </label><br>
-        <input type="submit" name="salveaza" class="butons" value="Save">
+        <button type="submit" name="salveaza" class="butons">Save</button>
       </form>
     </div>
 
