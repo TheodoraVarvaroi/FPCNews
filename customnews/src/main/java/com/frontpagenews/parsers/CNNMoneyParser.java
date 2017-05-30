@@ -1,4 +1,4 @@
-/*package com.frontpagenews.parsers;
+package com.frontpagenews.parsers;
 import com.frontpagenews.APIs.TranslatorAPI;
 import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.ArticleModel;
@@ -26,6 +26,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import static com.frontpagenews.APIs.YandexTranslatorAPI.language.Language.*;
 
@@ -57,18 +58,23 @@ public class CNNMoneyParser {
 
             String f_site = rawArticle.select("link").first().text();
 
-            SimpleDateFormat inputFormat = new SimpleDateFormat("dd-MMM-yyyy");
-            SimpleDateFormat outputDate = new SimpleDateFormat("yyyy-MM-dd");
-            String extractedDate = rawArticle.select("pubDate").first().text().substring(4, 17).trim().replaceAll(" ", "-");
 
-            String f_date = outputDate.format(inputFormat.parse(extractedDate));
+            String extractedDate = rawArticle.select("pubDate").first().text().substring(4, 17).trim().replaceAll(" ", "-");
+            DateFormat format = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
+            Date f_date = format.parse(extractedDate);
+
 
             String f_content = rawArticle.select("description").text().split("<img")[0];
 
             String mediaStardIndex = "<media:thumbnail url=";
             String f_image = rawArticle.html().substring(rawArticle.html().indexOf(mediaStardIndex)+mediaStardIndex.length()+1,rawArticle.html().indexOf("\" height=\"90\" width=\"120\" />"));
 
-            String[] f_tags = f_title.split(" ");
+            String[] tags = f_title.split(" ");
+            List<String> f_tags = new ArrayList<>();
+
+            for (String tag : tags) {
+                f_tags.add(tag);
+            }
 
             String f_author = "not known";
 
@@ -220,4 +226,3 @@ public class CNNMoneyParser {
         p.parseAll();
     }
 }
-*/
