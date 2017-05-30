@@ -213,7 +213,7 @@ public class ReutersParser {
         String tag="<link rel=\"image_src\" href=\"";
         int position=html.indexOf(tag);
         int position2=html.indexOf('"',position+tag.length());
-        return html.substring(position,position2);
+        return html.substring(position +tag.length(),position2).replace("amp;","");
     }
     public String getTitle(String html)
     {

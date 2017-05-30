@@ -1,4 +1,4 @@
-package com.frontpagenews.parsers;
+/*package com.frontpagenews.parsers;
 import com.frontpagenews.APIs.TranslatorAPI;
 import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
 import com.frontpagenews.models.ArticleModel;
@@ -220,3 +220,4 @@ public class CNNMoneyParser {
         p.parseAll();
     }
 }
+*/
