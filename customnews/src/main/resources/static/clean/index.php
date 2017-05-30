@@ -31,24 +31,24 @@
     </div>
     <div class="preferinte">
       <form class="user-form" data-action="article-preferences" id="pref">
-        <p id="text">Stiri:</p>
+        <p id="text">News:</p>
         <input type="checkbox" name="preferinte" value="tehnologie" checked class="box" id="tehnologie">
-        <label for="tehnologie" class="lb"> Tehnologie </label> <br>
+        <label for="tehnologie" class="lb"> Technology </label> <br>
         <input type="checkbox" name="preferinte" value="stiinta" checked class="box" id="stiinta">
-        <label for="stiinta" class="lb"> Stiinta </label><br>
+        <label for="stiinta" class="lb"> Science </label><br>
         <input type="checkbox" name="preferinte" value="sanatate" checked class="box" id="sanatate">
-        <label for="sanatate" class="lb"> Sanatate </label><br>
+        <label for="sanatate" class="lb"> Health </label><br>
         <input type="checkbox" name="preferinte" value="afaceri" checked class="box" id="afaceri">
-        <label for="afaceri" class="lb"> Afaceri </label><br>
+        <label for="afaceri" class="lb"> Business </label><br>
         <input type="checkbox" name="preferinte" value="divertisment" checked class="box" id="divertisment">
-        <label for="divertisment" class="lb"> Divertisment </label><br>
+        <label for="divertisment" class="lb"> Entertainment </label><br>
         <input type="checkbox" name="preferinte" value="sport" checked class="box" id="sport">
-        <label for="sport" class="lb"> Sport </label><br>
+        <label for="sport" class="lb"> Sports </label><br>
         <input type="checkbox" name="preferinte" value="gastronomie" checked class="box" id="gastronomie">
-        <label for="gastronomie" class="lb"> Gastronomie </label><br>
+        <label for="gastronomie" class="lb"> Gastronomy </label><br>
         <input type="checkbox" name="preferinte" value="politica" checked class="box" id="politica">
-        <label for="politica" class="lb"> Politica </label><br>
-        <input type="submit" name="salveaza" class="butons" value="Salveaza">
+        <label for="politica" class="lb"> Politics </label><br>
+        <input type="submit" name="salveaza" class="butons" value="Save">
       </form>
     </div>
 
@@ -98,7 +98,7 @@
       <div class="flipbook">
         <div style="background-image:url(pages/a.jpg)">
           <div class="content">
-            <img src="images/titlu.png" class="centerImage" alt="description" height="240" width="440">
+            <img src="images/titlu.png" class="centerImage" alt="description" height="240" width="440"> Published on : <?php echo(strftime("%m / %d / %Y"));  ?>
             <div class="image3"></div>
             ​
             <div class="image4"></div>
