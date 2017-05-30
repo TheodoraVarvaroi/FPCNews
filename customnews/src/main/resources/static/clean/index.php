@@ -191,7 +191,7 @@
             $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             echo("<a name=\"facebook\" href=\"https://www.facebook.com/sharer/sharer.php?u=" . $url . "\" target=\"_blank\">");
             ?>
-            <img src="images/facebook.png" height="25" width="25">
+            <img src="images/facebook.png" height="25" width="25"></a>
           </div>
         </div>
         <div id="coloana"></div>
@@ -205,7 +205,7 @@
             $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             echo("<a name=\"google\" href=\"https://plus.google.com/share?url=" . $url . "\" target=\"_blank\">");
             ?>
-            <img src="images/google.png" height="25" width="25">
+            <img src="images/google.png" height="25" width="25"></a>
           </div>
         </div>
         <div id="coloana">
@@ -222,7 +222,7 @@
             $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             echo("<a name=\"twitter\" href=\"https://twitter.com/intent/tweet?url=" . $url . "\" target=\"_blank\">");
             ?>
-            <img src="images/twitter.png" height="25" width="25">
+            <img src="images/twitter.png" height="25" width="25"></a>
           </div>
         </div>
       </div>
@@ -235,7 +235,7 @@
             $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             echo("<a name=\"reddit\" href=\"https://reddit.com/submit?url=" . $url . "\" target=\"_blank\">");
             ?>
-            <img src="images/reddit.png" height="25" width="25">
+            <img src="images/reddit.png" height="25" width="25"></a>
           </div>
         </div>
         <div id="coloana"></div>
