@@ -153,7 +153,7 @@ public class BBCHealthParser {
                     
                 article2.setContentLength(content.length());
                 article2.setImageUrl(urlImg);
-                if (urlImg.length() != 0) {
+                if (urlImg.length() > 5) {
                     try {
                         URL url = new URL(urlImg);
                         Image image = new ImageIcon(url).getImage();

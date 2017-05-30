@@ -123,7 +123,7 @@ public class TheGuardianTravelParser {
                 article.setSummary(summary);
                 article.setContentLength(formattedArticle.length());
                 article.setImageUrl(imageUrl);
-                if (imageUrl.length() != 0) {
+                if (imageUrl.length() > 5) {
                     try {
                         URL url_ = new URL(imageUrl);
                         Image image_ = new ImageIcon(url_).getImage();

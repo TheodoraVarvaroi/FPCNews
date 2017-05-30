@@ -112,7 +112,7 @@ public class HackerNewsParser {
             article.setSummary(summary);
             article.setContentLength(f_content.length());
             article.setImageUrl(f_image);
-            if (f_image.length() != 0) {
+            if (f_image.length() > 5) {
                 try {
                     URL url = new URL(f_image);
                     Image image_ = new ImageIcon(url).getImage();
@@ -148,7 +148,7 @@ public class HackerNewsParser {
                     frenchArticle.setContent(f_content2);
                     frenchArticle.setLanguage(to1.toString());
                     f_sumar2=TranslatorAPI.translate(summary,language,to1);
-                    article.setSummary(f_sumar2);
+                    frenchArticle.setSummary(f_sumar2);
                     frenchArticle.setImageWidth(article.getImageWidth());
                     frenchArticle.setImageHeight(article.getImageHeight());
                     frenchArticle.setSourceTags(article.getSourceTags());
@@ -169,7 +169,7 @@ public class HackerNewsParser {
                     germanArticle.setContent(f_content2);
                     germanArticle.setLanguage(to2.toString());
                     f_sumar2=TranslatorAPI.translate(summary,language,to2);
-                    article.setSummary(f_sumar2);
+                    germanArticle.setSummary(f_sumar2);
                     germanArticle.setImageWidth(article.getImageWidth());
                     germanArticle.setImageHeight(article.getImageHeight());
                     germanArticle.setSourceTags(article.getSourceTags());
@@ -190,7 +190,7 @@ public class HackerNewsParser {
                     italianArticle.setContent(f_content2);
                     italianArticle.setLanguage(to3.toString());
                     f_sumar2=TranslatorAPI.translate(summary,language,to3);
-                    article.setSummary(f_sumar2);
+                    italianArticle.setSummary(f_sumar2);
                     italianArticle.setImageWidth(article.getImageWidth());
                     italianArticle.setImageHeight(article.getImageHeight());
                     italianArticle.setSourceTags(article.getSourceTags());
@@ -211,7 +211,7 @@ public class HackerNewsParser {
                     spanishArticle.setContent(f_content2);
                     spanishArticle.setLanguage(to4.toString());
                     f_sumar2=TranslatorAPI.translate(summary,language,to4);
-                    article.setSummary(f_sumar2);
+                    spanishArticle.setSummary(f_sumar2);
                     spanishArticle.setImageWidth(article.getImageWidth());
                     spanishArticle.setImageHeight(article.getImageHeight());
                     spanishArticle.setSourceTags(article.getSourceTags());

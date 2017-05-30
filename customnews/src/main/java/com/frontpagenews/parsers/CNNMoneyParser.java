@@ -97,7 +97,7 @@ public class CNNMoneyParser {
 
             article.setContentLength(f_content.length());
             article.setImageUrl(f_image);
-            if (f_image.length() != 0) {
+            if (f_image.length() > 5) {
                 try {
                     URL url = new URL(f_image);
                     Image image_ = new ImageIcon(url).getImage();

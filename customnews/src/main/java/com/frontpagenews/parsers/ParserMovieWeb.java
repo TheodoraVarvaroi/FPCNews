@@ -114,7 +114,7 @@ public class ParserMovieWeb {
             ArticleModel articol = new ArticleModel();
             articol.setTitle(currentTitle);
             articol.setImageUrl(currentImg);
-            if (currentImg.length() != 0) {
+            if (currentImg.length() > 5) {
                 try {
                     URL url_ = new URL(currentImg);
                     Image image_ = new ImageIcon(url_).getImage();

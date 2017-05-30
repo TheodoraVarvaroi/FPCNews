@@ -56,7 +56,7 @@ public class EurosportParser {
             articol.setContentLength(content.length());
             String imageUrl = getImage(doc.html());
             articol.setImageUrl(imageUrl);
-            if (imageUrl.length() != 0) {
+            if (imageUrl.length() > 5) {
                 try {
                     URL url = new URL(imageUrl);
                     Image image = new ImageIcon(url).getImage();
@@ -207,7 +207,7 @@ public class EurosportParser {
 
             try{
                 ArticleModel articleE = articleService.getByTitle(articles.get(i).getTitle());
-                if (articleE != null)
+                if (articleE == null)
                     articleService.save(articles.get(i));
             }
             catch(Exception e)
