@@ -105,7 +105,7 @@ public class CNNMoneyParser {
                     article.setImageWidth(0);
                 }
             };
-            article.setTag("science");
+            article.setTag("money");
             article.setSourceTags(f_tags);
             article.setSource(source);
             article.setLanguage(language.toString());
