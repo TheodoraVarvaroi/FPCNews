@@ -1,6 +1,6 @@
 package com.frontpagenews.parsers;
-import com.frontpagenews.APIs.TranslatorAPI;
-import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
+import com.frontpagenews.APIs.TranslatorAPI.Language;
+import com.frontpagenews.APIs.TranslatorAPI.TranslatorAPI;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import com.frontpagenews.summar.Summar;
+import com.frontpagenews.APIs.summar.Summar;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,7 +28,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import static com.frontpagenews.APIs.YandexTranslatorAPI.language.Language.*;
+import static com.frontpagenews.APIs.TranslatorAPI.Language.*;
 
 @Component
 public class CNNMoneyParser {
@@ -124,7 +124,7 @@ public class CNNMoneyParser {
                 }
                 ArticleModel frenchArticle = new ArticleModel();
                 String f_title2,f_content2,f_sumar2;
-                f_title2=TranslatorAPI.translate(f_title,language,to1);
+                f_title2= TranslatorAPI.translate(f_title,language,to1);
                 frenchArticle.setTitle(f_title2);
                 articleE = articleService.getByTitle(frenchArticle.getTitle());
                 if (articleE == null) {
@@ -211,14 +211,9 @@ public class CNNMoneyParser {
             } catch ( Exception e){
                 System.out.println (e.toString());
             }
-
-
-
-
         } catch (Exception e) {
             System.out.println(e.toString());
         }
-
     }
 
     public static void main(String[] args) {

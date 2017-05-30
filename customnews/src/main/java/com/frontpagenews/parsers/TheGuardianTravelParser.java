@@ -1,7 +1,7 @@
 package com.frontpagenews.parsers;
 
-import com.frontpagenews.APIs.TranslatorAPI;
-import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
+import com.frontpagenews.APIs.TranslatorAPI.TranslatorAPI;
+import com.frontpagenews.APIs.TranslatorAPI.Language;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.services.ArticleService;
@@ -13,7 +13,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Component;
-import com.frontpagenews.summar.Summar;
+import com.frontpagenews.APIs.summar.Summar;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,8 +25,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.io.IOException;
-
-import static com.frontpagenews.APIs.YandexTranslatorAPI.language.Language.*;
 
 @Component
 public class TheGuardianTravelParser {
@@ -146,7 +144,7 @@ public class TheGuardianTravelParser {
 
                 //System.out.println(article);
                 try {
-                    Language to1=FRENCH,to2=GERMAN,to3=ITALIAN,to4=SPANISH;
+                    Language to1=Language.FRENCH,to2=Language.GERMAN,to3=Language.ITALIAN,to4=Language.SPANISH;
                     ArticleModel articleE = articleService.getByTitle(article.getTitle());
                     if (articleE == null)
                         articleService.save(article);

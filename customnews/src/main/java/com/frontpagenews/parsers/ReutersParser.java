@@ -1,7 +1,7 @@
 package com.frontpagenews.parsers;
 
-import com.frontpagenews.APIs.TranslatorAPI;
-import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
+import com.frontpagenews.APIs.TranslatorAPI.Language;
+import com.frontpagenews.APIs.TranslatorAPI.TranslatorAPI;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
@@ -10,7 +10,7 @@ import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import com.frontpagenews.summar.Summar;
+import com.frontpagenews.APIs.summar.Summar;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,8 +20,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static com.frontpagenews.APIs.YandexTranslatorAPI.language.Language.*;
-
 @Component
 public class ReutersParser {
     @Autowired
@@ -29,7 +27,7 @@ public class ReutersParser {
 
     @Scheduled(initialDelay = 5000, fixedDelay=3600000)
     public void parseAll() throws IOException {
-       ArrayList<String> adrese=new ArrayList<String>();
+        ArrayList<String> adrese=new ArrayList<String>();
         Document doc = Jsoup.connect("http://www.reuters.com/politics").get();
         String html=doc.html();
         String url="http://www.reuters.com";
@@ -84,7 +82,7 @@ public class ReutersParser {
 
         //System.out.println(articleModel);
         try{
-            Language to1=FRENCH,to2=GERMAN,to3=ITALIAN,to4=SPANISH;
+            Language to1=Language.FRENCH,to2=Language.GERMAN,to3=Language.ITALIAN,to4=Language.SPANISH;
             ArticleModel articleE = articleService.getByTitle(articleModel.getTitle());
             if (articleE == null)
                 articleService.save(articleModel);
@@ -93,7 +91,7 @@ public class ReutersParser {
             String f_title=articleModel.getTitle();
             String f_content=articleModel.getContent();
             String f_title2, f_content2, f_sumar2;
-            f_title2=TranslatorAPI.translate(f_title,language,to1);
+            f_title2= TranslatorAPI.translate(f_title,language,to1);
             frenchArticle.setTitle(f_title2);
             articleE = articleService.getByTitle(frenchArticle.getTitle());
             if (articleE == null) {

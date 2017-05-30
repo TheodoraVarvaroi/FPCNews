@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.frontpagenews.summar.Summar;
+import com.frontpagenews.APIs.summar.Summar;
 
-import com.frontpagenews.APIs.TranslatorAPI;
-import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
+import com.frontpagenews.APIs.TranslatorAPI.TranslatorAPI;
+import com.frontpagenews.APIs.TranslatorAPI.Language;
 import com.mongodb.MongoException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -27,8 +27,6 @@ import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
 
 import javax.swing.*;
-
-import static com.frontpagenews.APIs.YandexTranslatorAPI.language.Language.*;
 
 @Component
 public class HackerNewsParser {
@@ -132,7 +130,7 @@ public class HackerNewsParser {
             article.setSourceTags(f_tags);
             article.setSource(source);
             article.setLanguage(language.toString());
-            Language to1=FRENCH,to2=GERMAN,to3=ITALIAN,to4=SPANISH;
+            Language to1=Language.FRENCH,to2=Language.GERMAN,to3=Language.ITALIAN,to4=Language.SPANISH;
 //            System.out.println (article);
             try {
                 ArticleModel articleE = articleService.getByTitle(article.getTitle());

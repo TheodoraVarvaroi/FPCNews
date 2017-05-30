@@ -1,12 +1,12 @@
 
 package com.frontpagenews.parsers;
 
-import com.frontpagenews.APIs.TranslatorAPI;
-import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
+import com.frontpagenews.APIs.TranslatorAPI.TranslatorAPI;
+import com.frontpagenews.APIs.TranslatorAPI.Language;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import com.frontpagenews.services.ArticleService;
-import com.frontpagenews.summar.Summar;
+import com.frontpagenews.APIs.summar.Summar;
 
 import java.awt.*;
 import java.io.IOException;
@@ -14,8 +14,6 @@ import java.net.URL;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import com.mongodb.MongoException;
 import org.jsoup.Jsoup;
@@ -30,8 +28,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
-
-import static com.frontpagenews.APIs.YandexTranslatorAPI.language.Language.*;
 
 @Component
 public class ParserMovieWeb {
@@ -142,7 +138,7 @@ public class ParserMovieWeb {
             articol.setSource(source);
             articol.setLanguage(language.toString());
             //System.out.println(articol);
-            Language to1=FRENCH,to2=GERMAN,to3=ITALIAN,to4=SPANISH;
+            Language to1=Language.FRENCH,to2=Language.GERMAN,to3=Language.ITALIAN,to4=Language.SPANISH;
             try {
                 ArticleModel articleE = articleService.getByTitle(articol.getTitle());
                 if (articleE == null)
@@ -242,9 +238,7 @@ public class ParserMovieWeb {
         } catch (IOException ex) {
             //Logger.getLogger(ParserMovieWeb.class.getName()).log(Level.SEVERE, null, ex);
         }
-    
            // System.out.println();
-            
         }
         
         

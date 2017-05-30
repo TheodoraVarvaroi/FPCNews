@@ -8,8 +8,8 @@ import java.util.Date;
 import java.util.List;
 import java.net.MalformedURLException;
 
-import com.frontpagenews.APIs.TranslatorAPI;
-import com.frontpagenews.APIs.YandexTranslatorAPI.language.Language;
+import com.frontpagenews.APIs.TranslatorAPI.Language;
+import com.frontpagenews.APIs.TranslatorAPI.TranslatorAPI;
 import com.frontpagenews.models.ArticleModel;
 import com.frontpagenews.models.SourceModel;
 import org.jsoup.Jsoup;
@@ -19,11 +19,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import com.frontpagenews.summar.Summar;
+import com.frontpagenews.APIs.summar.Summar;
 
 import javax.swing.*;
-
-import static com.frontpagenews.APIs.YandexTranslatorAPI.language.Language.*;
 
 @Component
 public class EurosportParser {
@@ -84,7 +82,7 @@ public class EurosportParser {
                 articles.add(articol);
             }
             
-            Language to1=FRENCH,to2=GERMAN,to3=ITALIAN,to4=SPANISH;
+            Language to1=Language.FRENCH,to2=Language.GERMAN,to3=Language.ITALIAN,to4=Language.SPANISH;
             String f_sumar2;
 
             ArticleModel frenchArticle = new ArticleModel();

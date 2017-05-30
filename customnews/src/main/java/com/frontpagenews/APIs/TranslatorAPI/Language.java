@@ -1,7 +1,7 @@
-package com.frontpagenews.APIs.YandexTranslatorAPI.language;
+package com.frontpagenews.APIs.TranslatorAPI;
 
 /**
- * Created by Paula Carp and Dan Gherman on 22.05.2017.
+ * Created by Paula Carp on 30.05.2017.
  */
 public enum Language {
     ALBANIAN("sq"),
@@ -38,36 +38,31 @@ public enum Language {
     SWEDISH("sv"),
     TURKISH("tr"),
     UKRAINIAN("uk");
-
     /**
-     * String representation of this language.
-     */
+       * String representation of this language.
+      */
     private final String language;
-
     /**
-     * Enum constructor.
+      * Enum constructor.
      * @param pLanguage The language identifier.
      */
     private Language(final String pLanguage) {
         language = pLanguage;
     }
-
     public static Language fromString(final String pLanguage) {
         for (Language l : values()) {
             if (l.toString().equals(pLanguage)) {
                 return l;
-            }
+                           }
         }
         return null;
     }
-
     /**
-     * Returns the String representation of this language.
-     * @return The String representation of this language.
-     */
+       * Returns the String representation of this language.
+       * @return The String representation of this language.
+       */
     @Override
     public String toString() {
         return language;
     }
-
 }
