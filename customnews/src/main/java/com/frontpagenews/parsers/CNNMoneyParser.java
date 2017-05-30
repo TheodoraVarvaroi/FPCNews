@@ -62,9 +62,9 @@ public class CNNMoneyParser {
             String extractedDate = rawArticle.select("pubDate").first().text().substring(4, 17).trim().replaceAll(" ", "-");
             DateFormat format = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
             Date f_date = format.parse(extractedDate);
-
-
-            String f_content = rawArticle.select("description").text().split("<img")[0];
+            
+            Document documentForContent = Jsoup.connect(f_site).get();
+            String f_content  = documentForContent.select("#storytext").first().text();
 
             String mediaStardIndex = "<media:thumbnail url=";
             String f_image = rawArticle.html().substring(rawArticle.html().indexOf(mediaStardIndex)+mediaStardIndex.length()+1,rawArticle.html().indexOf("\" height=\"90\" width=\"120\" />"));
