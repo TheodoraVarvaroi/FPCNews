@@ -19,7 +19,6 @@
 <?php include 'templates/preferences-menu.php' ?>
 
 
-
 <div class="body">
   <div id="left">
     <div id="st">
@@ -55,6 +54,7 @@
     <div class="paper-button_container">
       <button class="util preferences-button" onclick="openNav()">Preferences</button>
     </div>
+
   </div>
   <div id="id01" class="register">
     <form class="popup user-form" name="user-register-form" data-action="register" id="user-register-submit"
@@ -98,7 +98,8 @@
       <div class="flipbook">
         <div style="background-image:url(pages/a.jpg)">
           <div class="content">
-            <img src="images/titlu.png" class="centerImage" alt="description" height="240" width="440"> Published on : <?php echo(strftime("%m / %d / %Y"));  ?>
+              Published on : <?php echo(strftime("%m / %d / %Y"));  ?> 
+           <img src="images/titlu.png" class="centerImage" alt="description" height="240" width="440"> 
             <div class="image3"></div>
             ​
             <div class="image4"></div>
@@ -243,6 +244,7 @@
     </div>
   </div>
 </div>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
