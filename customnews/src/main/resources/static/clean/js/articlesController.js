@@ -10,9 +10,9 @@
     $scope.selectedLanguage = 'en';
     $scope.tags_list = [];
     getArticleTags();
-    (function(){
-      ArticlesService.getAdminData().then(function(res){console.log(res);}, function(){});
-    })();
+    // (function(){
+    //   ArticlesService.getAdminData().then(function(res){console.log(res);}, function(){});
+    // })();
 
 
     $scope.getArticlesByTags = function(){
@@ -22,6 +22,13 @@
         .then(function(response){
           console.log(response);
           $scope.list_of_articles = response;
+
+          $('#flipbook-content').turn({
+            width: window.outerWidth,
+            height: window.outerHeight,
+            gradients: true,
+            autoCenter: true
+          });
         }, function(err){
           console.log(err);
         });
@@ -123,7 +130,7 @@
     ];
 
     $timeout(function () {
-      $('.flipbook').turn({
+      $('#flipbook-first').turn({
         width: window.outerWidth,
         height: window.outerHeight,
         gradients: true,

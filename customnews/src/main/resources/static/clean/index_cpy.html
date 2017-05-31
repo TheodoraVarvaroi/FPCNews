@@ -23,7 +23,7 @@
       <!--<div ng-if="showLogoutButton">Logout</div>-->
     <!--</div>-->
 
-    <div class="flipbook" ng-class="!toggleBrightness ? 'reduce-brightness' : ''">
+    <div id="flipbook-first" class="flipbook" ng-show="" ng-class="!toggleBrightness ? 'reduce-brightness' : ''">
       <div>
         <p style="font-size: 50px;">Latest News</p>
           <p style="font-size: 30px;" id="text">Choose your favorite subjects:</p>
@@ -43,6 +43,8 @@
           <div ng-click="getArticlesByTags()" class="butons">Save and Read</div>
         </div>
       </div>
+    </div>
+    <div id="flipbook-content" class="flipbook" style="z-index: 9;">
       <div ng-repeat="article in list_of_articles track by $index">
         <p>{{article.title}}</p>
         <img ng-if="article.id % 2 == 0" ng-src="{{article.imageUrl || ''}}">
