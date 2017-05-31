@@ -56,6 +56,41 @@ body {
     padding: 20px;
     margin: 0;
     overflow: hidden; }
+  .flipbook .page .preferences-list {
+    display: flex;
+    flex-direction: column;
+    max-height: inherit;
+    border: 2px dashed #000;
+    margin-left: 40px;
+    margin-right: 40px; }
+    .flipbook .page .preferences-list .preference {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px; }
+      .flipbook .page .preferences-list .preference .fa-check {
+        color: #fff;
+        font-size: 25px;
+        line-height: 30px; }
+      .flipbook .page .preferences-list .preference > label {
+        width: 39%;
+        text-align: left;
+        font-size: 25px; }
+      .flipbook .page .preferences-list .preference .box {
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        margin-right: 20px;
+        border: 2px solid #cdcdcd; }
+      .flipbook .page .preferences-list .preference .box-checked {
+        background-color: #000; }
+      .flipbook .page .preferences-list .preference > select {
+        width: 32%;
+        height: 30px;
+        align-self: center;
+        margin-right: 65px;
+        font-family: 'Sorts Mill Goudy', serif;
+        font-size: 25px; }
   .flipbook .page > img {
     display: block;
     margin-left: auto;
@@ -70,6 +105,8 @@ body {
     justify-content: flex-end; }
 
 .flipbook {
+  margin-left: auto !important;
+  margin-right: auto !important;
   margin-top: 30px; }
 
 .lamp-container {
@@ -77,46 +114,5 @@ body {
   height: 200px; }
   .lamp-container > img {
     width: inherit; }
-
-#pref {
-  margin-left: 20px; }
-
-.preferinte {
-  width: 175px;
-  height: 310px;
-  border-radius: 9px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-image: url("../images/ziar.png"); }
-
-.box {
-  opacity: 0;
-  position: absolute; }
-
-.box, .lb {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 2px;
-  cursor: pointer; }
-
-.lb {
-  position: relative;
-  font-family: 'Book Antiqua','Lucida Grande', 'Times New Roman', Georgia; }
-
-.box + .lb:before {
-  content: '';
-  background: #fff;
-  border: 2px solid #ddd;
-  display: inline-block;
-  vertical-align: middle;
-  width: 7px;
-  height: 7px;
-  padding: 5px;
-  margin-right: 2px;
-  text-align: center; }
-
-.box:checked + .lb:before {
-  background: #e67300;
-  box-shadow: inset 0px 0px 0px 4px #fff; }
 
 /*# sourceMappingURL=articlesStyle.css.map */

@@ -53,6 +53,10 @@ public class ArticleServiceImpl implements ArticleService {
         return this.repository.findByTagIn(tags);
     }
 
+    public ArticleModel getByTitle(String title) {
+        return this.repository.findByTitle(title);
+    };
+
     public List<ArticleModel> getAllSorted(String language) {
         return this.repository.findByLanguage(language, new Sort(Sort.Direction.DESC, "source.date"));
     }

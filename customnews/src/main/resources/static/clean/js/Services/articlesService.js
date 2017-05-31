@@ -11,7 +11,11 @@
       var deferred = $q.defer();
       $http({
         method : "GET",
-        url : "http://localhost:8181/articles/tags"
+        url : "http://localhost:8181/articles/tags",
+        headers:{
+          'Content-type': 'application/json; charset=utf-8',
+          "Access-Control-Allow-Origin": "*"
+        }
       }).then(function(response) {
         deferred.resolve(response.data);
       }, function(error) {
@@ -24,11 +28,11 @@
       var deferred = $q.defer();
       $http({
         method : "GET",
-        url : "http://localhost:8181/articles/tags/" + _.join(tags, '&') + "/" + lang,
-        headers:{
-          'Content-type': 'application/json; charset=utf-8',
-
-        }
+        url : "http://localhost:8181/articles/tags/" + _.join(tags, '&') + "/" + lang
+        // headers:{
+        //   'Content-type': 'application/json; charset=utf-8',
+        //   "Access-Control-Allow-Origin": "*"
+        // }
       }).then(function(response) {
           deferred.resolve(response.data);
         }, function(error) {
@@ -42,6 +46,19 @@
       $http({
         method : "GET",
         url : "http://localhost:8181/articles/languages"
+      }).then(function(response) {
+        deferred.resolve(response.data);
+      }, function(error) {
+        deferred.reject(error);
+      });
+      return deferred.promise;
+    };
+
+    service.getAdminData = function(){
+      var deferred = $q.defer();
+      $http({
+        method : "GET",
+        url : "http://localhost:8181/admin"
       }).then(function(response) {
         deferred.resolve(response.data);
       }, function(error) {

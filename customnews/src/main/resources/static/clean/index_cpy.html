@@ -12,29 +12,35 @@
   <link rel="stylesheet" href="js/ngDialog-master/css/ngDialog-theme-default.min.css">
   <link href="https://fonts.googleapis.com/css?family=Diplomata" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css">
 </head>
 <body ng-app="app" ng-controller="ArticlesController">
 
   <div class="main-container">
-    <div class="login-panel">
-      <div ng-click="openLoginPopup()">Login</div>
-      <div ng-click="openRegisterPopup()">Register</div>
-      <div ng-if="showLogoutButton">Logout</div>
-    </div>
+    <!--<div class="login-panel">-->
+      <!--<div ng-click="openLoginPopup()">Login</div>-->
+      <!--<div ng-click="openRegisterPopup()">Register</div>-->
+      <!--<div ng-if="showLogoutButton">Logout</div>-->
+    <!--</div>-->
 
     <div class="flipbook" ng-class="!toggleBrightness ? 'reduce-brightness' : ''">
       <div>
-        <p>Latest News</p>
-          <p id="text">Alegeti stirile preferate:</p>
-          <div id="pref" ng-repeat="tag in list_of_tags track by $index">
-            <input type="checkbox" name="preferinte" class="box" ng-click="tag.checked = !tag.checked;">
-            <label class="lb">{{tag.name}}</label> <br>
+        <p style="font-size: 50px;">Latest News</p>
+          <p style="font-size: 30px;" id="text">Choose your favorite subjects:</p>
+        <div class="preferences-list">
+          <div class="preference" ng-repeat="tag in tags_list track by $index">
+            <div class="box" ng-click="tag.checked = !tag.checked;" ng-class="tag.checked ? 'box-checked' : ''">
+              <i class="fa fa-check" aria-hidden="true" ng-if="tag.checked"></i>
+            </div>
+            <label class="lb">{{tag.label | capitalize: true}}</label> <br>
           </div>
-        <select>
-          <option></option>
-        </select>
-        <label></label>
-        <div ng-click="getArticlesByTags()" class="butons">Save and Read</div>
+          <div class="preference">
+            <label>Select your language:</label>
+            <select ng-model="selectedLanguage">
+              <option ng-repeat="language in languages_list track by $index" value="{{language.label}}">{{language.name}}</option>
+            </select>
+          </div>
+          <div ng-click="getArticlesByTags()" class="butons">Save and Read</div>
         </div>
       </div>
       <div ng-repeat="article in list_of_articles track by $index">
@@ -48,10 +54,11 @@
           <p>{{article.source.date | date : 'MM/dd/yyyy'}}</p>
         </div>
       </div>
-      <div class="lamp-container">
-        <img ng-click="toggleBrightness = !toggleBrightness"
-             ng-src="{{!toggleBrightness ? 'https://image.ibb.co/d3o40k/off.png' : 'https://image.ibb.co/k6L6D5/on.png'}}">
-      </div>
+    </div>
+    <div class="lamp-container">
+      <img ng-click="toggleBrightness = !toggleBrightness"
+           ng-src="{{!toggleBrightness ? 'https://image.ibb.co/d3o40k/off.png' : 'https://image.ibb.co/k6L6D5/on.png'}}">
+    </div>
   </div>
 
 </body>

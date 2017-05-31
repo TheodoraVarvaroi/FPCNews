@@ -14,18 +14,22 @@ public class AdminModel {
 
     private String password;
 
+    private String token;
+
     private String email;
 
     public AdminModel() {
         this.username = " ";
         this.password = " ";
         this.email = " ";
+        this.token = "";
     }
 
     public AdminModel(String username, String password, String email) {
         this.username = username;
         this.password = password;
         this.email = email;
+        this.token = "";
     }
 
     public String getId() {
@@ -44,6 +48,10 @@ public class AdminModel {
         return email;
     }
 
+    public String getToken() {
+        return token;
+    }
+
     public void setUsername(String username) {
         this.username = username;
     }
@@ -55,4 +63,8 @@ public class AdminModel {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public void setToken(String token) {
+        this.token = token;
+    };
 }

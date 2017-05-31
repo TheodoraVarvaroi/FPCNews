@@ -34,6 +34,14 @@ public class AdminServiceImpl implements AdminService {
         return this.repository.findByUsernameAndPassword(username, password);
     }
 
+    public AdminModel getByUsername(String username) {
+        return this.repository.findByUsername(username);
+    }
+
+    public AdminModel getByToken(String token) {
+        return this.repository.findByToken(token);
+    }
+
     public boolean verifyAdmin (String username, String password) {
         AdminModel admin = getByUsernameAndPassword(username, password);
         if (admin.getUsername().length() > 0) {

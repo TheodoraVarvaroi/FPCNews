@@ -6,15 +6,19 @@
   app.controller("ArticlesController", ['$scope', '$timeout', 'ngDialog', '$compile', 'ArticlesService', articlesController]);
   function articlesController($scope, $timeout, ngDialog, $compile, ArticlesService) {
     $scope.list_of_articles = [];
-    $scope.list_of_languages = [];
-    $scope.list_of_tags = [];
-    $(function () {
-      getArticleTags();
-      getLanguages();
-    });
+    $scope.currentDate = new Date();
+    $scope.selectedLanguage = 'en';
+    $scope.tags_list = [];
+    getArticleTags();
+    (function(){
+      ArticlesService.getAdminData().then(function(res){console.log(res);}, function(){});
+    })();
+
 
     $scope.getArticlesByTags = function(){
-      ArticlesService.getFavoriteArticles()
+      var pref_tags = getSelectedTags();
+      console.log(pref_tags);
+      ArticlesService.getFavoriteArticles(pref_tags, $scope.selectedLanguage)
         .then(function(response){
           console.log(response);
           $scope.list_of_articles = response;
@@ -22,6 +26,19 @@
           console.log(err);
         });
     };
+
+    function getSelectedTags(){
+      var array = _.filter($scope.tags_list, ['checked', true]);
+      var pref_tags = [];
+      _.each(array, function(item){
+        _.each(item, function(key){
+          if(key !== true){
+            pref_tags.push(key);
+          }
+        });
+      });
+      return pref_tags;
+    }
 
     $scope.openLoginPopup = function(){
       ngDialog.open({
@@ -40,20 +57,9 @@
     function getArticleTags(){
       ArticlesService.getAllTags()
         .then(function(response){
-         _.each(response, function (tag) {
-           $scope.list_of_tags.push({name: tag, checked: false});
+         _.each(response, function (tag){
+           $scope.tags_list.push({label: tag, checked: false});
          });
-        }, function(err){
-          console.log(err);
-        });
-    }
-
-    function getLanguages(){
-      ArticlesService.getAllLanguages()
-        .then(function(response){
-          _.each(response, function (lang) {
-            $scope.list_of_languages.push({name: lang, checked: false});
-          });
         }, function(err){
           console.log(err);
         });
@@ -88,13 +94,40 @@
     //   $('.flipbook').turn('addPage', result, ($scope.number_of_total_pages + 1));
     // }
 
+    $scope.languages_list = [
+      {
+        checked: false,
+        label: 'en',
+        name: 'English'
+      },
+      {
+        checked: false,
+        label: 'fr',
+        name: 'French'
+      },
+      {
+        checked: false,
+        label: 'de',
+        name: 'Deutsch'
+      },
+      {
+        checked: false,
+        label: 'it',
+        name: 'Italian'
+      },
+      {
+        checked: false,
+        label: 'es',
+        name: 'Espaniol'
+      }
+    ];
+
     $timeout(function () {
       $('.flipbook').turn({
         width: window.outerWidth,
         height: window.outerHeight,
         gradients: true,
-        autoCenter: true,
-        pages: 8
+        autoCenter: true
       });
 
     }, 200);

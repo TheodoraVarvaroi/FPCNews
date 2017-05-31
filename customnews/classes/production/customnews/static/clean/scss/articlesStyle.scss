@@ -64,6 +64,48 @@ body{
     margin: 0;
     overflow: hidden;
   }
+  & .preferences-list{
+    display: flex;
+    flex-direction: column;
+    max-height: inherit;
+    border: 2px dashed #000;
+    margin-left: 40px;
+    margin-right: 40px;
+    & .preference{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      & .fa-check{
+        color: #fff;
+        font-size: 25px;
+        line-height: 30px;
+      }
+      & > label{
+        width: 39%;
+        text-align: left;
+        font-size: 25px;
+      }
+      & .box{
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        margin-right: 20px;
+        border: 2px solid #cdcdcd;
+      }
+      & .box-checked{
+        background-color: #000;
+      }
+      & > select{
+        width: 32%;
+        height: 30px;
+        align-self: center;
+        margin-right: 65px;
+        font-family: 'Sorts Mill Goudy', serif;
+        font-size: 25px;
+      }
+    }
+  }
   & > img{
     display: block;
     margin-left: auto;
@@ -80,8 +122,8 @@ body{
   }
 }
 .flipbook {
-  //margin-left: auto !important;
-  //margin-right: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   margin-top: 30px;
 }
 
@@ -91,48 +133,4 @@ body{
   & > img{
     width: inherit;
   }
-}
-
-#pref
-{
-  margin-left:20px;
-}
-.preferinte {
-
-  width:175px;
-  height:310px;
-  border-radius:9px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-image: url("../images/ziar.png");
-}
-.box  {
-  opacity: 0;
-  position: absolute;
-}
-.box, .lb {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 2px;
-  cursor: pointer;
-}
-.lb {
-  position: relative;
-  font-family: 'Book Antiqua','Lucida Grande', 'Times New Roman', Georgia;
-}
-.box + .lb:before{
-  content: '';
-  background: #fff;
-  border: 2px solid #ddd;
-  display: inline-block;
-  vertical-align: middle;
-  width: 7px;
-  height: 7px;
-  padding: 5px;
-  margin-right: 2px;
-  text-align: center;
-}
-.box:checked + .lb:before {
-  background: #e67300;
-  box-shadow: inset 0px 0px 0px 4px #fff;
 }

@@ -11,7 +11,11 @@
       var deferred = $q.defer();
       $http({
         method : "GET",
-        url : "http://localhost:8181/articles/tags"
+        url : "http://localhost:8181/articles/tags",
+        headers:{
+          'Content-type': 'application/json; charset=utf-8',
+          "Access-Control-Allow-Origin": "*"
+        }
       }).then(function(response) {
         deferred.resolve(response.data);
       }, function(error) {
@@ -25,6 +29,10 @@
       $http({
         method : "GET",
         url : "http://localhost:8181/articles/tags/" + _.join(tags, '&') + "/" + lang
+        // headers:{
+        //   'Content-type': 'application/json; charset=utf-8',
+        //   "Access-Control-Allow-Origin": "*"
+        // }
       }).then(function(response) {
           deferred.resolve(response.data);
         }, function(error) {

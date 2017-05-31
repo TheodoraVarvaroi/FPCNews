@@ -4,7 +4,6 @@ $(function () {
 
   $('.user-form').on('submit', function (event) {
 
-
     //default action specified in the html will be ignored
     event.preventDefault();
     var jThis = $(this),

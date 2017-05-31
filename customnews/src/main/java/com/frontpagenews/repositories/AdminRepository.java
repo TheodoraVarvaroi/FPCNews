@@ -12,6 +12,7 @@ public interface AdminRepository extends MongoRepository<AdminModel, String> {
     public AdminModel findOne(String id);
     public AdminModel findByUsernameAndPassword(String username, String password);
     public AdminModel findByUsername(String username);
+    public AdminModel findByToken(String token);
     public AdminModel save(AdminModel admin);
     public void delete(String id);
     public long count();
