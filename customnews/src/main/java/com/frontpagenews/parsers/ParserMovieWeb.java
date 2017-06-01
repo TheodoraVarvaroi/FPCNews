@@ -129,9 +129,13 @@ public class ParserMovieWeb {
                 }
             };
             articol.setContent(currentArticle);
+            
             summar=new Summar(currentArticle);
-            String summary = summar.getSummary();
-            articol.setSummary(summary);
+            String shortSummary = summar.getShortSummary();
+            String longSummary=summar.getLongSummary();
+            articol.setShortSummary(shortSummary);
+            articol.setLongSummary(longSummary);
+        
             articol.setContentLength(currentArticle.length());
             articol.setTag("movie");
             articol.setSourceTags(currentTags);
@@ -155,8 +159,12 @@ public class ParserMovieWeb {
                     f_content2=TranslatorAPI.translate(f_content,language,to1);
                     frenchArticle.setContent(f_content2);
                     frenchArticle.setLanguage(to1.toString());
-                    f_sumar2=TranslatorAPI.translate(summary,language,to1);
-                    frenchArticle.setSummary(f_sumar2);
+                   
+                    f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                    frenchArticle.setShortSummary(f_sumar2);
+                    f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                    frenchArticle.setLongSummary(f_sumar2);
+                    
                     frenchArticle.setImageWidth(articol.getImageWidth());
                     frenchArticle.setImageHeight(articol.getImageHeight());
                     frenchArticle.setSourceTags(articol.getSourceTags());
@@ -176,8 +184,12 @@ public class ParserMovieWeb {
                     f_content2=TranslatorAPI.translate(f_content,language,to2);
                     germanArticle.setContent(f_content2);
                     germanArticle.setLanguage(to2.toString());
-                    f_sumar2=TranslatorAPI.translate(summary,language,to2);
-                    germanArticle.setSummary(f_sumar2);
+                   
+                    f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                    germanArticle.setShortSummary(f_sumar2);
+                    f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                    germanArticle.setLongSummary(f_sumar2);
+                    
                     germanArticle.setImageWidth(articol.getImageWidth());
                     germanArticle.setImageHeight(articol.getImageHeight());
                     germanArticle.setSourceTags(articol.getSourceTags());
@@ -197,8 +209,12 @@ public class ParserMovieWeb {
                     f_content2=TranslatorAPI.translate(f_content,language,to3);
                     italianArticle.setContent(f_content2);
                     italianArticle.setLanguage(to3.toString());
-                    f_sumar2=TranslatorAPI.translate(summary,language,to3);
-                    italianArticle.setSummary(f_sumar2);
+                  
+                     f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                    italianArticle.setShortSummary(f_sumar2);
+                    f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                    italianArticle.setLongSummary(f_sumar2);
+                    
                     italianArticle.setImageWidth(articol.getImageWidth());
                     italianArticle.setImageHeight(articol.getImageHeight());
                     italianArticle.setSourceTags(articol.getSourceTags());
@@ -218,8 +234,12 @@ public class ParserMovieWeb {
                     f_content2=TranslatorAPI.translate(f_content,language,to4);
                     spanishArticle.setContent(f_content2);
                     spanishArticle.setLanguage(to4.toString());
-                    f_sumar2=TranslatorAPI.translate(summary,language,to4);
-                    spanishArticle.setSummary(f_sumar2);
+                
+                    f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                    spanishArticle.setShortSummary(f_sumar2);
+                    f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                    spanishArticle.setLongSummary(f_sumar2);
+                    
                     spanishArticle.setImageWidth(articol.getImageWidth());
                     spanishArticle.setImageHeight(articol.getImageHeight());
                     spanishArticle.setSourceTags(articol.getSourceTags());
