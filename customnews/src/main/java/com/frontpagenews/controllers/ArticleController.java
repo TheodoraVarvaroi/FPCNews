@@ -115,7 +115,8 @@ public class ArticleController {
         articleData.setLanguage(article.getLanguage());
         articleData.setImageHeight(article.getImageHeight());
         articleData.setImageWidth(article.getImageWidth());
-        articleData.setSummary(article.getSummary());
+        articleData.setShortSummary(article.getShortSummary());
+        articleData.setLongSummary(article.getLongSummary());
         articleData.setLanguage(article.getLanguage());
         AdminModel admin = adminService.getByToken(token);
         if (admin != null) {
