@@ -19,7 +19,9 @@ public class ArticleModel {
 
     private int contentLength;
 
-    private String summary;
+    private String shortSummary;
+
+    private String longSummary;
 
     private String imageUrl;
 
@@ -41,7 +43,8 @@ public class ArticleModel {
         this.title = " ";
         this.content = " ";
         this.contentLength = 1;
-        this.summary = "";
+        this.shortSummary = " ";
+        this.longSummary = " ";
         this.imageUrl = " ";
         this.imageWidth = 0;
         this.imageHeight = 0;
@@ -56,7 +59,8 @@ public class ArticleModel {
         this.title = title;
         this.content = content;
         this.contentLength = contentLength;
-        this.summary = "";
+        this.shortSummary = "";
+        this.longSummary =" ";
         this.imageUrl = imageUrl;
         this.imageHeight = imageHeight;
         this.imageWidth = imageWidth;
@@ -83,8 +87,12 @@ public class ArticleModel {
         return contentLength;
     }
 
-    public String getSummary() {
-        return summary;
+    public String getShortSummary() {
+        return shortSummary;
+    }
+    
+    public String getLongSummary() {
+        return longSummary;
     }
 
     public String getImageUrl() {
@@ -129,8 +137,12 @@ public class ArticleModel {
         this.contentLength = contentLength;
     }
 
-    public void setSummary(String summary) {
-        this.summary = summary;
+    public void setShortSummary(String shortSummary) {
+        this.shortSummary = shortSummary;
+    }
+    
+    public void setLongSummary(String longSummary) {
+        this.longSummary = longSummary;
     }
 
     public void setImageUrl(String imageUrl) {
