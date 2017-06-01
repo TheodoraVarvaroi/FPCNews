@@ -118,9 +118,13 @@ public class TheGuardianTravelParser {
                 ArticleModel article = new ArticleModel();
                 article.setTitle(title);
                 article.setContent(formattedArticle.toString());
-                Summar summar=new Summar(formattedArticle.toString());
-                String summary = summar.getSummary();
-                article.setSummary(summary);
+              
+               Summar summar=new Summar(formattedArticle.toString());
+                String shortSummary = summar.getShortSummary();
+                String longSummary=summar.getLongSummary();
+                article.setShortSummary(shortSummary);
+                article.setLongSummary(longSummary);
+              
                 article.setContentLength(formattedArticle.length());
                 article.setImageUrl(imageUrl);
                 if (imageUrl.length() > 5) {
@@ -160,8 +164,12 @@ public class TheGuardianTravelParser {
                         f_content2=TranslatorAPI.translate(f_content,language,to1);
                         frenchArticle.setContent(f_content2);
                         frenchArticle.setLanguage(to1.toString());
-                        f_sumar2=TranslatorAPI.translate(summary,language,to1);
-                        frenchArticle.setSummary(f_sumar2);
+                        
+                        f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                        frenchArticle.setShortSummary(f_sumar2);
+                        f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                        frenchArticle.setLongSummary(f_sumar2);
+                      
                         frenchArticle.setImageWidth(article.getImageWidth());
                         frenchArticle.setImageHeight(article.getImageHeight());
                         frenchArticle.setSourceTags(article.getSourceTags());
@@ -182,8 +190,12 @@ public class TheGuardianTravelParser {
                         f_content2=TranslatorAPI.translate(f_content,language,to2);
                         germanArticle.setContent(f_content2);
                         germanArticle.setLanguage(to2.toString());
-                        f_sumar2=TranslatorAPI.translate(summary,language,to2);
-                        germanArticle.setSummary(f_sumar2);
+                      
+                        f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                        germanArticle.setShortSummary(f_sumar2);
+                        f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                        germanArticle.setLongSummary(f_sumar2);
+                      
                         germanArticle.setImageWidth(article.getImageWidth());
                         germanArticle.setImageHeight(article.getImageHeight());
                         germanArticle.setSourceTags(article.getSourceTags());
@@ -204,8 +216,12 @@ public class TheGuardianTravelParser {
                         f_content2=TranslatorAPI.translate(f_content,language,to3);
                         italianArticle.setContent(f_content2);
                         italianArticle.setLanguage(to3.toString());
-                        f_sumar2=TranslatorAPI.translate(summary,language,to3);
-                        italianArticle.setSummary(f_sumar2);
+                        
+                        f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                        italianArticle.setShortSummary(f_sumar2);
+                        f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                        italianArticle.setLongSummary(f_sumar2);
+                      
                         italianArticle.setImageWidth(article.getImageWidth());
                         italianArticle.setImageHeight(article.getImageHeight());
                         italianArticle.setSourceTags(article.getSourceTags());
@@ -226,8 +242,12 @@ public class TheGuardianTravelParser {
                         f_content2=TranslatorAPI.translate(f_content,language,to4);
                         spanishArticle.setContent(f_content2);
                         spanishArticle.setLanguage(to4.toString());
-                        f_sumar2=TranslatorAPI.translate(summary,language,to4);
-                        spanishArticle.setSummary(f_sumar2);
+                        
+                         f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                        spanishArticle.setShortSummary(f_sumar2);
+                        f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                        spanishArticle.setLongSummary(f_sumar2);
+                      
                         spanishArticle.setImageWidth(article.getImageWidth());
                         spanishArticle.setImageHeight(article.getImageHeight());
                         spanishArticle.setSourceTags(article.getSourceTags());
