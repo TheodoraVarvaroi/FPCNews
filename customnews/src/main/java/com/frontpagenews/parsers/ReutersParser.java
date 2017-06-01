@@ -128,9 +128,9 @@ public class ReutersParser {
                 germanArticle.setContent(f_content2);
                 germanArticle.setLanguage(to2.toString());
                
-                 f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                f_sumar2=TranslatorAPI.translate(shortSummary,language,to2);
                 germanArticle.setShortSummary(f_sumar2);
-                f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                f_sumar2=TranslatorAPI.translate(longSummary,language,to2);
                 germanArticle.setLongSummary(f_sumar2);
                 
                 germanArticle.setImageWidth(articleModel.getImageWidth());
@@ -153,9 +153,9 @@ public class ReutersParser {
                 italianArticle.setContent(f_content2);
                 italianArticle.setLanguage(to3.toString());
                
-                 f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                f_sumar2=TranslatorAPI.translate(shortSummary,language,to3);
                 italianArticle.setShortSummary(f_sumar2);
-                f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                f_sumar2=TranslatorAPI.translate(longSummary,language,to3);
                 italianArticle.setLongSummary(f_sumar2);
                 
                 italianArticle.setImageWidth(articleModel.getImageWidth());
@@ -178,9 +178,9 @@ public class ReutersParser {
                 spanishArticle.setContent(f_content2);
                 spanishArticle.setLanguage(to4.toString());
                
-                f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                f_sumar2=TranslatorAPI.translate(shortSummary,language,to4);
                 spanishArticle.setShortSummary(f_sumar2);
-                f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                f_sumar2=TranslatorAPI.translate(longSummary,language,to4);
                 spanishArticle.setLongSummary(f_sumar2);
                 
                 spanishArticle.setImageWidth(articleModel.getImageWidth());

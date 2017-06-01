@@ -96,7 +96,7 @@ public class EurosportParser {
                 frenchArticle.setContent(TranslatorAPI.translate(articol.getContent(),language,to1));
                 frenchArticle.setLanguage(to1.toString());
                 
-                 f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
                 frenchArticle.setShortSummary(f_sumar2);
                 f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
                 frenchArticle.setLongSummary(f_sumar2);
@@ -119,9 +119,9 @@ public class EurosportParser {
                 germanArticle.setContent(TranslatorAPI.translate(articol.getContent(), language, to2));
                 germanArticle.setLanguage(to2.toString());
                
-                 f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                f_sumar2=TranslatorAPI.translate(shortSummary,language,to2);
                 germanArticle.setShortSummary(f_sumar2);
-                f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                f_sumar2=TranslatorAPI.translate(longSummary,language,to2);
                 germanArticle.setLongSummary(f_sumar2);
                 
                 germanArticle.setImageWidth(articol.getImageWidth());
@@ -142,9 +142,9 @@ public class EurosportParser {
                 italianArticle.setContent(TranslatorAPI.translate(articol.getContent(), language, to3));
                 italianArticle.setLanguage(to3.toString());
                 
-                f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                f_sumar2=TranslatorAPI.translate(shortSummary,language,to3);
                 italianArticle.setShortSummary(f_sumar2);
-                f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                f_sumar2=TranslatorAPI.translate(longSummary,language,to3);
                 italianArticle.setLongSummary(f_sumar2);
                 
                 italianArticle.setImageWidth(articol.getImageWidth());
@@ -165,9 +165,9 @@ public class EurosportParser {
                 spanishArticle.setContent(TranslatorAPI.translate(articol.getContent(), language, to4));
                 spanishArticle.setLanguage(to4.toString());
                 
-                f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                f_sumar2=TranslatorAPI.translate(shortSummary,language,to4);
                 spanishArticle.setShortSummary(f_sumar2);
-                f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                f_sumar2=TranslatorAPI.translate(longSummary,language,to4);
                 spanishArticle.setLongSummary(f_sumar2);
                 
                 spanishArticle.setImageWidth(articol.getImageWidth());
