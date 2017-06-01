@@ -148,8 +148,10 @@ public class BBCHealthParser {
                 article2.setContent(content);
                 
                 summar=new Summar(content);
-                String summary = summar.getSummary();
-                article2.setSummary(summary);
+                String shortSummary = summar.getShortSummary();
+                String longSummary=summar.getLongSummary();
+                article2.setShortSummary(shortSummary);
+                article2.setLongSummary(longSummary);
                     
                 article2.setContentLength(content.length());
                 article2.setImageUrl(urlImg);
@@ -190,8 +192,12 @@ public class BBCHealthParser {
                         f_content2=TranslatorAPI.translate(f_content,language,to1);
                         frenchArticle.setContent(f_content2);
                         frenchArticle.setLanguage(to1.toString());
-                        f_sumar2=TranslatorAPI.translate(summary,language,to1);
-                        frenchArticle.setSummary(f_sumar2);
+                        
+                        f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                        frenchArticle.setShortSummary(f_sumar2);
+                        f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                        frenchArticle.setLongSummary(f_sumar2);
+                        
                         frenchArticle.setImageWidth(article2.getImageWidth());
                         frenchArticle.setImageHeight(article2.getImageHeight());
                         frenchArticle.setSourceTags(article2.getSourceTags());
@@ -211,8 +217,12 @@ public class BBCHealthParser {
                         f_content2=TranslatorAPI.translate(f_content,language,to2);
                         germanArticle.setContent(f_content2);
                         germanArticle.setLanguage(to2.toString());
-                        f_sumar2=TranslatorAPI.translate(summary,language,to2);
-                        germanArticle.setSummary(f_sumar2);
+                        
+                         f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                        germanArticle.setShortSummary(f_sumar2);
+                        f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                        germanArticle.setLongSummary(f_sumar2);
+                        
                         germanArticle.setImageWidth(article2.getImageWidth());
                         germanArticle.setImageHeight(article2.getImageHeight());
                         germanArticle.setSourceTags(article2.getSourceTags());
@@ -232,8 +242,12 @@ public class BBCHealthParser {
                         f_content2=TranslatorAPI.translate(f_content,language,to3);
                         italianArticle.setContent(f_content2);
                         italianArticle.setLanguage(to3.toString());
-                        f_sumar2=TranslatorAPI.translate(summary,language,to3);
-                        italianArticle.setSummary(f_sumar2);
+                        
+                        f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                        italianArticle.setShortSummary(f_sumar2);
+                        f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                        italianArticle.setLongSummary(f_sumar2);
+                        
                         italianArticle.setImageWidth(article2.getImageWidth());
                         italianArticle.setImageHeight(article2.getImageHeight());
                         italianArticle.setSourceTags(article2.getSourceTags());
@@ -253,8 +267,12 @@ public class BBCHealthParser {
                         f_content2=TranslatorAPI.translate(f_content,language,to4);
                         spanishArticle.setContent(f_content2);
                         spanishArticle.setLanguage(to4.toString());
-                        f_sumar2=TranslatorAPI.translate(summary,language,to4);
-                        spanishArticle.setSummary(f_sumar2);
+                        
+                        f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                        spanishArticle.setShortSummary(f_sumar2);
+                        f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                        spanishArticle.setLongSummary(f_sumar2);
+                        
                         spanishArticle.setImageWidth(article2.getImageWidth());
                         spanishArticle.setImageHeight(article2.getImageHeight());
                         spanishArticle.setSourceTags(article2.getSourceTags());
