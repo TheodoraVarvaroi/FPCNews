@@ -6,7 +6,8 @@ import com.frontpagenews.APIs.summar.summarizer.SentencePreprocessor;
 import com.frontpagenews.APIs.summar.summarizer.SentenceSegmenter;
 
 public class Summar {
-    private String summary;
+    private String shortSummary;
+    private String longSummary;
     private String keywords;
     DocumentSummarizer summarizer;
     KeywordExtractor extractor;
@@ -25,15 +26,26 @@ public class Summar {
         extractor = new KeywordExtractor(seg, prep);
         int percentage=99;
         do{
-        summary = summarizer.summarize(content, percentage);
+        shortSummary = summarizer.summarize(content, percentage);
             percentage=percentage-3;
-        }while(summary.length()>400&&percentage>10);
+        }while(shortSummary.length()>400&&percentage>10);
+
+        percentage=99;
+        do{
+            longSummary = summarizer.summarize(content, percentage);
+            percentage=percentage-3;
+        }while(longSummary.length()>700&&percentage>10);
         keywords = extractor.extract(summary);
     }
-    public String getSummary()
+    public String getShortSummary()
     {
-        return summary;
+        return shortSummary;
     }
+    public String getLongSummary()
+    {
+        return longSummary;
+    }
+    
     public String getKeywords()
     {
         return keywords;
