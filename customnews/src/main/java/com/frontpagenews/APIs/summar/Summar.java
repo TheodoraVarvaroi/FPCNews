@@ -35,7 +35,7 @@ public class Summar {
             longSummary = summarizer.summarize(content, percentage);
             percentage=percentage-3;
         }while(longSummary.length()>700&&percentage>10);
-        keywords = extractor.extract(summary);
+        keywords = extractor.extract(shortSummary);
     }
     public String getShortSummary()
     {
