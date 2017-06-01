@@ -47,9 +47,13 @@ public class EurosportParser {
             sourceModel=new SourceModel();
             Document doc= Jsoup.connect(links.get(i)).get();
             String content = getArticleContent(doc.html());
+           
             summar=new Summar(content);
-            String summary = summar.getSummary();
-            articol.setSummary(summary);
+            String shortSummary = summar.getShortSummary();
+            String longSummary=summar.getLongSummary();
+            articol.setShortSummary(shortSummary);
+            articol.setLongSummary(longSummary);
+            
             //detect article language
             Language language = Language.ENGLISH;
             articol.setContent(content);
@@ -91,8 +95,12 @@ public class EurosportParser {
             if (articleE == null) {
                 frenchArticle.setContent(TranslatorAPI.translate(articol.getContent(),language,to1));
                 frenchArticle.setLanguage(to1.toString());
-                f_sumar2=TranslatorAPI.translate(summary,language,to1);
-                frenchArticle.setSummary(f_sumar2);
+                
+                 f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                frenchArticle.setShortSummary(f_sumar2);
+                f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                frenchArticle.setLongSummary(f_sumar2);
+                
                 frenchArticle.setImageWidth(articol.getImageWidth());
                 frenchArticle.setImageHeight(articol.getImageHeight());
                 frenchArticle.setSourceTags(articol.getSourceTags());
@@ -110,8 +118,12 @@ public class EurosportParser {
             if (articleE == null) {
                 germanArticle.setContent(TranslatorAPI.translate(articol.getContent(), language, to2));
                 germanArticle.setLanguage(to2.toString());
-                f_sumar2 = TranslatorAPI.translate(summary, language, to2);
-                germanArticle.setSummary(f_sumar2);
+               
+                 f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                germanArticle.setShortSummary(f_sumar2);
+                f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                germanArticle.setLongSummary(f_sumar2);
+                
                 germanArticle.setImageWidth(articol.getImageWidth());
                 germanArticle.setImageHeight(articol.getImageHeight());
                 germanArticle.setSourceTags(articol.getSourceTags());
@@ -129,8 +141,12 @@ public class EurosportParser {
             if (articleE == null) {
                 italianArticle.setContent(TranslatorAPI.translate(articol.getContent(), language, to3));
                 italianArticle.setLanguage(to3.toString());
-                f_sumar2 = TranslatorAPI.translate(summary, language, to3);
-                italianArticle.setSummary(f_sumar2);
+                
+                f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                italianArticle.setShortSummary(f_sumar2);
+                f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                italianArticle.setLongSummary(f_sumar2);
+                
                 italianArticle.setImageWidth(articol.getImageWidth());
                 italianArticle.setImageHeight(articol.getImageHeight());
                 italianArticle.setSourceTags(articol.getSourceTags());
@@ -148,8 +164,12 @@ public class EurosportParser {
             if (articleE == null) {
                 spanishArticle.setContent(TranslatorAPI.translate(articol.getContent(), language, to4));
                 spanishArticle.setLanguage(to4.toString());
-                f_sumar2 = TranslatorAPI.translate(summary, language, to4);
-                spanishArticle.setSummary(f_sumar2);
+                
+                f_sumar2=TranslatorAPI.translate(shortSummary,language,to1);
+                spanishArticle.setShortSummary(f_sumar2);
+                f_sumar2=TranslatorAPI.translate(longSummary,language,to1);
+                spanishArticle.setLongSummary(f_sumar2);
+                
                 spanishArticle.setImageWidth(articol.getImageWidth());
                 spanishArticle.setImageHeight(articol.getImageHeight());
                 spanishArticle.setSourceTags(articol.getSourceTags());
