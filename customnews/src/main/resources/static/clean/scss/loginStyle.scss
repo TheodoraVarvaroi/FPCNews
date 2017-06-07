@@ -17,23 +17,6 @@
   justify-content: space-between;
   align-items: center;
   padding-left: 0;
-  & .login-panel{
-    background: url('../images/login.png') no-repeat;
-    height: 260px;
-    width: 480px;
-    align-self: flex-start;
-    & > div{
-      @include button(120px, 40px, 20px);
-      border: 1px solid #cdcdcd;
-      margin-bottom: 30px;
-      color: #fff;
-      font-size: 18px;
-      background: url('../images/buton.png') no-repeat;
-      text-align: center;
-      line-height: 40px;
-      cursor: pointer;
-    }
-  }
   & .lamp-container{
     width: 200px;
     align-self: baseline;
@@ -42,6 +25,31 @@
     & > img{
       width: 100%;
     }
+  }
+}
+
+.login-panel{
+  background: url('../images/login.png') no-repeat;
+  height: 260px;
+  width: 480px;
+  align-self: flex-start;
+  padding-left: 50px;
+  padding-top: 40px;
+  & > p{
+    font-size: 30px;
+    font-family: 'Sorts Mill Goudy', serif;
+  }
+  & > div{
+    @include button(120px, 40px, 20px);
+    border: 1px solid #cdcdcd;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 18px;
+    background: url('../images/buton.png') no-repeat;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    font-family: 'Sorts Mill Goudy', serif;
   }
 }
 
@@ -99,5 +107,6 @@ input[type=text], input[type=password]{
   cursor: pointer;
   border-radius: 10px;
   cursor: pointer;
+  font-family: 'Sorts Mill Goudy', serif;
 }
 

@@ -7,14 +7,15 @@
   function adminService($http, $q) {
     var service = {};
 
-    service.getAllArticles = function () {
+    service.deleteThisArticle = function(article_id) {
       var deferred = $q.defer();
       $http({
-        method: "GET",
-        url: "http://localhost:8181/articles/",
+        method: "DELETE",
+        url: "http://localhost:8181/articles/" + article_id,
         headers: {
           'Content-type': 'application/json; charset=utf-8',
-          "Access-Control-Allow-Origin": "*"
+          "Access-Control-Allow-Origin": "*",
+          "Token" : localStorage.getItem('token')
         }
       }).then(function (response) {
         deferred.resolve(response.data);
@@ -24,14 +25,16 @@
       return deferred.promise;
     };
 
-    service.deleteThisArticle = function (article_id) {
+    service.editThisArticle = function (edited_article){
       var deferred = $q.defer();
       $http({
-        method: "DELETE",
-        url: "http://localhost:8181/articles/" + article_id,
+        method: "PUT",
+        url: "http://localhost:8181/articles/" + edited_article.id,
+        data: edited_article,
         headers: {
           'Content-type': 'application/json; charset=utf-8',
-          "Access-Control-Allow-Origin": "*"
+          "Access-Control-Allow-Origin": "*",
+          "Token" : localStorage.getItem('token')
         }
       }).then(function (response) {
         deferred.resolve(response.data);
@@ -40,22 +43,6 @@
       });
       return deferred.promise;
     };
-
-    service.editThisArticle = function (article_id) {
-      var deferred = $q.defer();
-      $http({
-        method: "DELETE",
-        url: "http://localhost:8181/articles/" + article_id,
-        headers: {
-          'Content-type': 'application/json; charset=utf-8',
-          "Access-Control-Allow-Origin": "*"
-        }
-      }).then(function (response) {
-        deferred.resolve(response.data);
-      }, function (error) {
-        deferred.reject(error);
-      });
-      return deferred.promise;
-    };
+    return service;
   }
 })();

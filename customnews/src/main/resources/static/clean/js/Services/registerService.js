@@ -11,10 +11,11 @@
       var deferred = $q.defer();
       $http({
         method : "POST",
-        url : "http://localhost:8181/api/user",
+        url : "http://localhost:8181/admin",
         data: user_data,
         headers: {
-          'Access-Control-Allow-Origin' : '*'
+          'Access-Control-Allow-Origin' : '*',
+          'Token': localStorage.getItem('token')
         }
       }).then(function(response) {
         deferred.resolve(response.data);
