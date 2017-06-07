@@ -15,7 +15,12 @@
     background: url("../images/login.png") no-repeat;
     height: 260px;
     width: 480px;
-    align-self: flex-start; }
+    align-self: flex-start;
+    padding-left: 50px;
+    padding-top: 40px; }
+    .main-container .login-panel > p {
+      font-size: 30px;
+      font-family: 'Sorts Mill Goudy', serif; }
     .main-container .login-panel > div {
       width: 120px;
       height: 40px;
@@ -27,7 +32,8 @@
       background: url("../images/buton.png") no-repeat;
       text-align: center;
       line-height: 40px;
-      cursor: pointer; }
+      cursor: pointer;
+      font-family: 'Sorts Mill Goudy', serif; }
   .main-container .lamp-container {
     width: 200px;
     align-self: baseline;
@@ -85,6 +91,7 @@ input[type=text], input[type=password] {
   border: none;
   cursor: pointer;
   border-radius: 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: 'Sorts Mill Goudy', serif; }
 
 /*# sourceMappingURL=loginStyle.css.map */

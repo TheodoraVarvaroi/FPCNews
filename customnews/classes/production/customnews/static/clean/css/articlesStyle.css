@@ -15,6 +15,28 @@ body {
     body a:visited {
       color: #000; }
 
+.site-presentation {
+  border-radius: 25%;
+  width: 670px;
+  height: 600px;
+  position: absolute;
+  left: 150px;
+  top: 200px;
+  background-image: url("../images/welcome-paper.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .site-presentation > p {
+    text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 40px;
+    line-height: 48px;
+    padding: 20px; }
+    .site-presentation > p:first-child {
+      font-size: 45px;
+      line-height: 30px;
+      font-family: 'Diplomata', cursive; }
+
 .butons {
   font-family: 'Book Antiqua','Lucida Grande', 'Times New Roman', Georgia;
   padding: 5px 10px;
@@ -33,22 +55,23 @@ body {
   width: 500px;
   overflow: hidden;
   color: #000;
-  background: url("../images/background-page.jpg") no-repeat; }
-  .flipbook .page > p, .flipbook .page > a {
+  background: url("../pages/a.jpg") no-repeat;
+  background-size: 100% 100%; }
+  .flipbook .page > p, .flipbook .page > a, .flipbook .page > div:not(.metadata-article-container) > p {
     text-align: center;
     font-family: 'Sorts Mill Goudy', serif;
     font-size: 20px;
     line-height: 20px;
     padding: 20px; }
-    .flipbook .page > p:first-child, .flipbook .page > a:first-child {
+    .flipbook .page > p:first-child, .flipbook .page > a:first-child, .flipbook .page > div:not(.metadata-article-container) > p:first-child {
       font-size: 22px;
       line-height: 30px;
       font-family: 'Diplomata', cursive; }
   .flipbook .page > a {
     display: block;
     text-decoration: none; }
-  .flipbook .page > div {
-    max-height: 30%;
+  .flipbook .page > div:not(.article_next_page) {
+    max-height: 40%;
     text-align: center;
     font-family: 'Sorts Mill Goudy', serif;
     font-size: 20px;
@@ -56,13 +79,20 @@ body {
     padding: 20px;
     margin: 0;
     overflow: hidden; }
+  .flipbook .page .article_next_page {
+    text-align: justify;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 20px;
+    height: 100%; }
   .flipbook .page .preferences-list {
     display: flex;
+    max-height: 100% !important;
     flex-direction: column;
-    max-height: inherit;
     border: 2px dashed #000;
-    margin-left: 40px;
-    margin-right: 40px; }
+    margin-left: 40px !important;
+    margin-right: 40px !important; }
     .flipbook .page .preferences-list .preference {
       display: flex;
       align-items: center;
@@ -73,7 +103,7 @@ body {
         font-size: 25px;
         line-height: 30px; }
       .flipbook .page .preferences-list .preference > label {
-        width: 39%;
+        width: 40%;
         text-align: left;
         font-size: 25px; }
       .flipbook .page .preferences-list .preference .box {
@@ -109,10 +139,40 @@ body {
   margin-right: auto !important;
   margin-top: 30px; }
 
+.newspaper-day {
+  position: absolute;
+  top: 110px;
+  left: 50px;
+  font-size: 30px !important; }
+
 .lamp-container {
   width: 150px;
   height: 200px; }
   .lamp-container > img {
     width: inherit; }
+
+/*busola*/
+#tot {
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  display: table;
+  z-index: 25; }
+
+#linie {
+  display: table-row; }
+
+#coloana {
+  display: table-cell; }
+
+#tabel {
+  display: table-row-group; }
+
+#facebook, #reddit {
+  margin-left: 45px; }
+
+#twitter, #google {
+  display: table-cell;
+  transform: translateY(-47px); }
 
 /*# sourceMappingURL=articlesStyle.css.map */

@@ -22,6 +22,12 @@
     height: 260px;
     width: 480px;
     align-self: flex-start;
+    padding-left: 50px;
+    padding-top: 40px;
+    & > p{
+      font-size: 30px;
+      font-family: 'Sorts Mill Goudy', serif;
+    }
     & > div{
       @include button(120px, 40px, 20px);
       border: 1px solid #cdcdcd;
@@ -32,6 +38,7 @@
       text-align: center;
       line-height: 40px;
       cursor: pointer;
+      font-family: 'Sorts Mill Goudy', serif;
     }
   }
   & .lamp-container{
@@ -99,5 +106,6 @@ input[type=text], input[type=password]{
   cursor: pointer;
   border-radius: 10px;
   cursor: pointer;
+  font-family: 'Sorts Mill Goudy', serif;
 }
 

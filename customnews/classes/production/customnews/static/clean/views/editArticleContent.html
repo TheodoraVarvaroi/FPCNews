@@ -1,0 +1,12 @@
+<div class="article-popup-for-edit">
+  <input ng-model="$parent.editedArticle.title"/>
+  <textarea ng-model="$parent.editedArticle.content"></textarea>
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+    <input ng-model="$parent.editedArticle.source.author"/>
+    <input ng-model="$parent.editedArticle.source.date"/>
+  </div>
+  <div>
+    <div class="buton" ng-click="$parent.editArticle($parent.editedArticle)">Save Changes</div>
+    <div ng-click="closeThisDialog()">Close</div>
+  </div>
+</div>

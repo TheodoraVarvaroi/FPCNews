@@ -1,0 +1,58 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.2em;
+  margin-top: 50px;
+}
+table{
+  margin-left:60px;
+  border-collapse: collapse;
+  background-image: url('../images/paper.jpg');
+  text-align:center;
+  margin: 0 auto;
+  width:80%;
+  height: 100%;
+  overflow-y: scroll;
+  border-radius: 10px;
+}
+
+table th, td {
+  padding: 15px;
+
+}
+
+table th {
+  height: 50px;
+}
+button {
+  border-radius:10px;
+  color: #835C3B;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.article-popup-for-edit{
+  left: 700px;
+  padding: 30px;
+  min-width: 600px;
+  height: 800px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  background-color: rgba(0,0,0,0.4);
+  & > input, & > textarea, & > div > input{
+    margin-bottom: 20px;
+    height: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  & > textarea{
+    height: 80%;
+  }
+}
+

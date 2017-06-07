@@ -19,6 +19,31 @@ body{
   }
 }
 
+.site-presentation{
+  border-radius: 25%;
+  width: 670px;
+  height: 600px;
+  position: absolute;
+  left: 150px;
+  top: 200px;
+  background-image: url('../images/welcome-paper.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  & > p{
+    text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 40px;
+    line-height: 48px;
+    padding: 20px;
+    &:first-child {
+      font-size: 45px;
+      line-height: 30px;
+      font-family: 'Diplomata', cursive;
+    }
+  }
+}
+
 .butons {
   font-family:'Book Antiqua','Lucida Grande', 'Times New Roman', Georgia;
   padding: 5px 10px;
@@ -37,8 +62,9 @@ body{
   width: 500px;
   overflow: hidden;
   color: #000;
-  background: url("../images/background-page.jpg") no-repeat;
-  & > p, & > a{
+  background: url("../pages/a.jpg") no-repeat;
+  background-size: 100% 100%;
+  & > p, & > a, & > div:not(.metadata-article-container) > p{
     text-align: center;
     font-family: 'Sorts Mill Goudy', serif;
     font-size: 20px;
@@ -54,8 +80,8 @@ body{
     display: block;
     text-decoration: none;
   }
-  & > div{
-    max-height: 30%;
+  & > div:not(.article_next_page){
+    max-height: 40%;
     text-align: center;
     font-family: 'Sorts Mill Goudy', serif;
     font-size: 20px;
@@ -64,13 +90,21 @@ body{
     margin: 0;
     overflow: hidden;
   }
+  & .article_next_page {
+    text-align: justify;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 20px;
+    height: 100%;
+  }
   & .preferences-list{
     display: flex;
+    max-height: 100% !important;
     flex-direction: column;
-    max-height: inherit;
     border: 2px dashed #000;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 40px !important;
+    margin-right: 40px !important;
     & .preference{
       display: flex;
       align-items: center;
@@ -82,7 +116,7 @@ body{
         line-height: 30px;
       }
       & > label{
-        width: 39%;
+        width: 40%;
         text-align: left;
         font-size: 25px;
       }
@@ -127,10 +161,48 @@ body{
   margin-top: 30px;
 }
 
+.newspaper-day{
+  position: absolute;
+  top: 110px;
+  left: 50px;
+  font-size: 30px !important;
+}
+
 .lamp-container{
   width: 150px;
   height: 200px;
   & > img{
     width: inherit;
   }
+}
+
+// wtf-uri???
+
+
+/*busola*/
+
+#tot{
+  position:absolute;
+  right:1px;
+  bottom:1px;
+  display: table;
+  z-index: 25;
+}
+#linie {
+  display: table-row;
+}
+#coloana {
+  display: table-cell;
+}
+#tabel {
+  display: table-row-group;
+}
+#facebook , #reddit
+{
+  margin-left:45px;
+}
+#twitter , #google
+{
+  display: table-cell;
+  transform: translateY(-47px);
 }
