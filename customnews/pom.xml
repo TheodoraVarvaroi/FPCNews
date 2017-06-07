@@ -69,7 +69,12 @@
 			<version>3.7.0</version>
 			<classifier>models</classifier>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-parent</artifactId>
+            <version>1.5.3.RELEASE</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
